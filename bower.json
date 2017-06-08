@@ -1,0 +1,8 @@
+{
+  "name": "siatwe",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "prism": "^1.6.0"
+  }
+}

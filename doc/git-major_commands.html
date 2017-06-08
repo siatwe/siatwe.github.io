@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/themes/prism-funky.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" href="../assets/style/main.css">
+    <title>git major commands</title>
+</head>
+<body>
+<div class="container arcticle">
+    <h2>git major commands</h2>
+    <h3><a href="../index.html" class="index">back</a></h3>
+    <h4>config</h4>
+    <p>Setzt die Konfigurationswerte fest. Festgelegt werden kann zum Beispiel die Email-Adresse oder der Nutzername.
+    </p>
+    <p class="example">Example</p>
+    <pre><code class="language-bash">$ git config --global user.name "John Smith"</code></pre>
+    <h4>init</h4>
+    <p>Initialisiert ein Verzeichnis als git Verzeichnis. Ein leeres Verzeichnis kann mit diesem Befehl als git
+        Verzeichnis identifiziert werden. Dazu wird ein versteckter Ordner (.git) und die Datei .gitignore erstellt.
+    </p>
+    <p class="example">Example</p>
+    <pre><code class="language-bash">$ git init</code></pre>
+    <h4>clone</h4>
+    <p> Mit diesem Befehl klont man ein git Verzeichnis von einem Server in das angegebene Verzeichnis auf dem lokalen
+        Computer.
+    </p>
+    <p class="example">Example</p>
+    <pre><code class="language-bash">$ git clone https://github.com/siatwe/doc.git</code></pre>
+    <h4>add</h4>
+    <p>Fuegt Dateien dem git Verzeichnis hinzu (Dateien die spaeter commitet werden). Mit der 'git add .' werden alle
+        Dateien die sich gerade im Verzeichnis befinden der Versionskontrolle hinzugefuegt.
+    </p>
+    <p class="example">Example</p>
+    <pre><code class="language-bash">$ git add .</code></pre>
+    <h4>rm</h4>
+    <p>Analog wie der add Befehl nur werden in diesem Fall Dateien geloescht.
+    </p>
+    <p class="example">Example</p>
+    <pre><code class="language-bash">$ git rm file.txt</code></pre>
+    <h4>commit</h4>
+    <p>Nimmt alle Aenderungen, neue Dateien oder Loeschungen fuegt sie zu einem Objekt zusammen, die dann versehen mit
+        einem Kommentar der Versionskontrolle uebergeben werden.
+    </p>
+    <p class="example">Example</p>
+    <pre><code class="language-bash">$ git commit -m "initial commit"</code></pre>
+    <h4>status</h4>
+    <p>Ueberprueft den Zustand der Dateien im git Verzeichnis. Angezeigt wird bspw. ob geaenderte oder neue Dateien noch
+        nicht mit dem commit Befehl der Versionskontrolle uebergeben wurden.
+    </p>
+    <p class="example">Example</p>
+    <pre><code class="language-bash">$ git status</code></pre>
+    <h4>branch</h4>
+    <p>Listet existierende Zweige des Verzeichnisses auf.
+    </p>
+    <p class="example">Example</p>
+    <pre><code class="language-bash">$ git branch</code></pre>
+    <h4>checkout</h4>
+    <p>Mit diesem Befehl checkt man aus einem anderen Zweig (Branch) aus.
+    </p>
+    <p class="example">Example</p>
+    <pre><code class="language-bash">$ git checkout</code></pre>
+    <h4>merge</h4>
+    <p>Fuegt Aenderungen zusammen und erstellt daraus einen neunen Commit.
+    </p>
+    <p class="example">Example</p>
+    <pre><code class="language-bash">$ git merge</code></pre>
+    <h4>reset</h4>
+    <p>Setzt das Verzeichnis auf den Stand des letzten Commits zurueck.
+    </p>
+    <p class="example">Example</p>
+    <pre><code class="language-bash">$ git reset</code></pre>
+    <h4>fetch</h4>
+    <p>Wenn man seine lokalen Aenderungen wieder auf den Stand des bspw. Master Branches auf dem Server zuruecksetzen
+        moechte, wuerde der Befehl 'git fetch master' lauten.
+    </p>
+    <p class="example">Example</p>
+    <pre><code class="language-bash">$ git fetch master</code></pre>
+    <h4>pull</h4>
+    <p>Kombination von fetch und merge. Nimmt die Aenderungen des Servers und fuehrt sie mit den eigenen Aenderungen
+        zusammen.
+    </p>
+    <p class="example">Example</p>
+    <pre><code class="language-bash">$ git pull</code></pre>
+    <h4>push</h4>
+    <p>Laedt alle lokalen Aenderungen auf den Server.
+    </p>
+    <p class="example">Example</p>
+    <pre><code class="language-bash">$ git push</code></pre>
+
+</div>
+<script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../assets/vendor/prism/prism.js"></script>
+<script src="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-php.min.js"></script>
+</body>
+</html>
