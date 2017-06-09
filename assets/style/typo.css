@@ -5,7 +5,7 @@ body {
   padding-bottom: 50px;
 }
 hr {
-  opacity: .25;
+  opacity: .1;
 }
 a {
   color: white;
@@ -14,6 +14,11 @@ a {
 a:hover {
   color: white;
   text-decoration: none;
+}
+a:focus,
+a:active,
+a:visited {
+  color: white;
 }
 h2 {
   text-align: center;
@@ -41,6 +46,7 @@ p.date {
 }
 p.first {
   color: lightcoral;
+  font-weight: bolder;
 }
 p.second {
   color: lightseagreen;
@@ -50,4 +56,7 @@ p.example {
   font-size: 13px;
   margin-top: 25px;
   margin-bottom: -5px;
+}
+ul {
+  list-style: none;
 }
