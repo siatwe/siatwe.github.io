@@ -5,120 +5,38 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/ebur.png">
     <link rel="stylesheet" href="../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="../assets/vendor/prism/themes/prism-okaidia.css">
     <link rel="stylesheet" href="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
     <link rel="stylesheet" href="../assets/vendor/prism/plugins/command-line/prism-command-line.css">
     <link rel="stylesheet" href="../assets/style/main.css">
-    <title>arch installation</title>
+    <title>docker set up</title>
 </head>
 <body>
 <div class="container arcticle">
-    <h2>arch installation</h2>
-    <p class="date">20170509</p>
+    <h2>docker set up</h2>
+    <p class="date">20170510</p>
     <h3><a href="../index.html" class="index">back</a></h3>
-    <h4>Download</h4>
-    <a href="https://www.archlinux.org/download/" target="_blank">https://www.archlinux.org/download/</a>
-    <h4>Kommandos</h4>
-    <ol>
-        <li>Ueberpruefen ob eine Verbindung zum Internet besteht
-            <pre data-user="root"><code class="language-bash command-line-prompt">ping -c 3 google.com</code></pre>
-        </li>
-        <li>Alle Netzwerk Schnittstellen anzeigen
-            <pre data-user="root"><code class="language-bash command-line-prompt">ip link</code></pre>
-        </li>
-        <li>Optional: Wlan Verbindung herstellen. Sollten dazu propitaere Treiber noetig sein, koennen diese nachtraeglich ab
-            Punkt 12 installiert werden
-            <pre data-user="root"><code class="language-bash command-line-prompt">wifi-menu</code></pre>
-        </li>
-        <li>Installation des reflector Pakets, ein Script zum erstellen optimaler mirrorlists
-            <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S reflector</code></pre>
-        </li>
-        <li>Reflector ausfuehren
-            <pre data-user="root"><code class="language-bash command-line-prompt">reflector -c "Germany" -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist</code></pre>
-        </li>
-        <li>Vorhandene Festplatten anzeigen lassen
-            <pre data-user="root"><code class="language-bash command-line-prompt">fdisk -l</code></pre>
-        </li>
-        <li>Cfdisk auf gewaehlter Festplatte ausfuehren
-            <pre data-user="root"><code class="language-bash command-line-prompt">cfdisk /dev/sdX</code></pre>
-        </li>
-        <li>Formatieren der erstellten Partition
-            <pre data-user="root"><code class="language-bash command-line-prompt">mkfs.btrfs /dev/sdaXX</code></pre>
-        </li>
-        <li>Generierte Partition einhaengen
-            <pre data-user="root"><code class="language-bash command-line-prompt">mount /dev/sdXX /mnt</code></pre>
-        </li>
-        <li>Basis System installieren
-            <pre data-user="root"><code class="language-bash command-line-prompt">pacstrap -i /mnt base base-devel</code></pre>
-        </li>
-        <li>fstab generieren
-            <pre data-user="root"><code class="language-bash command-line-prompt">genfstab -U -p /mnt >> /mnt/etc/fstab</code></pre>
-        </li>
-        <li>Chroot ins Arch Verzeichnis
-            <pre data-user="root"><code class="language-bash command-line-prompt">arch-chroot /mnt /bin/bash</code></pre>
-        </li>
-        <li>/etc/locale.gen edieren und eine Sprache auswaehlen
-            <pre data-user="root"><code class="language-bash command-line-prompt">nano /etc/locale.gen</code></pre>
-        </li>
-        <li>Locale generieren
-            <pre data-user="root"><code class="language-bash command-line-prompt">locale-gen</code></pre>
-        </li>
-        <li>Zeitzone festlegen
-            <pre data-user="root"><code class="language-bash command-line-prompt">ln -sf /usr/share/zoneinfo/KONTINET/TOWN /etc/localtime</code></pre>
-        </li>
-        <li>Hardware Uhr updaten
-            <pre data-user="root"><code class="language-bash command-line-prompt">hwclock --systohc --utc</code></pre>
-        </li>
-        <li>Hostnamen festlegen
-            <pre data-user="root"><code class="language-bash command-line-prompt">echo HOSTNAME > /etc/hostname</code></pre>
-        </li>
-        <li>/etc/hosts um folgende Zeile erweitern: % 127.0.1.1 ... hostname
-        </li>
-        <li>Roots Passwort aendern
-            <pre data-user="root"><code class="language-bash command-line-prompt">passwd</code></pre>
-        </li>
-        <li>Grub, ggf. Wlan Pakete und sudo installieren
-            <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S grub dialog netcfg wpa_supplicant sudo</code></pre>
-        </li>
-        <li>Grub auf Festplatte installieren
-            <pre data-user="root"><code class="language-bash command-line-prompt">grub-install /dev/sdX</code></pre>
-        </li>
-        <li>Grub Konfigurations Datei erstellen
-            <pre data-user="root"><code class="language-bash command-line-prompt">grub mkconfig -o /boot/grub/grub.cfg</code></pre>
-        </li>
-        <li>Aus der Chroot Umgebung ausloggen
-            <pre data-user="root"><code class="language-bash command-line-prompt">exit</code></pre>
-        </li>
-        <li>Die Arch Partition aushaengen
-            <pre data-user="root"><code class="language-bash command-line-prompt">umount -R /mnt</code></pre>
-        </li>
-        <li>Neustart
-            <pre data-user="root"><code class="language-bash command-line-prompt">reboot</code></pre>
-        </li>
-        <li>Login mit Root und Passwort</li>
-        <li>Neuen User erstellen
-            <pre data-user="root"><code class="language-bash command-line-prompt">useradd -m -g users -G wheel -s /bin/bash USER</code></pre>
-        </li>
-        <li>Passwort fuer neuen Nutzer erstellen
-            <pre data-user="root"><code class="language-bash command-line-prompt">passwd USER</code></pre>
-        </li>
-        <li>Visudo Datei edieren und %wheel ALL=(ALL) ALL auskommentieren</li>
-        <li>Root Umgebung verlassen
-            <pre data-user="root"><code class="language-bash command-line-prompt">exit</code></pre>
-        </li>
-        <li>Als USER anmelden</li>
-        <li>Pakete fuer Audioausgabe, X und ggf. einen Windowmanager installieren
-            <pre data-user="user"><code class="language-bash command-line-prompt">sudo pacman -S pulseaudio pulsaudio-alsa alsa-utils xorg xorg-xinit i3</code></pre>
-        </li>
-        <li>Windowmanager in ~/.xinitrc registrieren
-            <pre data-user="user"><code class="language-bash command-line-prompt">echo "exec i3" > ~/.xinitrc</code></pre>
-        </li>
-        <li>X starten
-            <pre data-user="user"><code class="language-bash command-line-prompt">startx</code></pre>
-        </li>
-    </ol>
+    <h4>Installation</h4>
+    <p>Arch Linux</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">sudo pacman -S docker docker-compose</code></pre>
+    <p>Debian based</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">sudo apt-get install docker docker-compose</code></pre>
+    <h4>Docker Group</h4>
+    <p> Soll ein nicht Root User faehig sein, Docker ohne sudo Kommando auszufuehren, muss er zunaechst in die docker Gruppe
+        eingetragen werden:</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">sudo gpasswd -a user docker</code></pre>
+    <h4>Docker starten</h4>
+    <p> Um docker zu nutzen, muss zunaechst der entsprechende Systemdamon gestartet werden:</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">sudo systemctl start docker</code></pre>
+    <p>Bzw. fuer den dauerhaften Start von docker bei Systemstart:</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">sudo systemctl enable docker</code></pre>
+    <p>Danach in das root Verzeichnis, in welchem sich der .docker Ordner befindet, wechseln und folgendes ausfuehren:</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">docker-compose up --build -d</code></pre>
+    <p>In den Container chrooten:</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">docker-compose exec --user=1000 php sh</code></pre>
 </div>
 <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../assets/vendor/prism/prism.js"></script>
