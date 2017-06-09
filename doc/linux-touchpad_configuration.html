@@ -12,53 +12,35 @@
     <link rel="stylesheet" href="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
     <link rel="stylesheet" href="../assets/vendor/prism/plugins/command-line/prism-command-line.css">
     <link rel="stylesheet" href="../assets/style/main.css">
-    <title>php oop constructor</title>
+    <title>linux touchpad configuration</title>
 </head>
 <body>
 <div class="container arcticle">
-    <h2>php oop constructor</h2>
-    <p class="date">20170510</p>
+    <h2>linux touchpad configuration</h2>
+    <p class="date">20170609</p>
     <h3><a href="../index.html" class="index">back</a></h3>
-    <p>Die __construct()-Methode wird aufgerufen, sobald ein Objekt der Klasse erzeugt wird.</p>
-    <p class="example">Example</p>
-    <pre><code class="language-php line-numbers">class User
-{
-    public $created;
-    public $name;
-    public $email;
-
-    public function __construct()
-    {
-        //Erstellt die Klassenvariable bei Erzeugung einer Instanz
-        $this->created = date("d.m.Y H:i:s");
-    }
-}
-
-$simon = new User();
-$simon->name = "Simon Weis";
-
-echo "Das Objekt von $simon->name wurde erstellt am $simon->created";</code></pre>
-    <p>Im Konstruktor kann man Parameter spezifizieren.</p>
-    <p class="example">Example</p>
-    <pre><code class="language-php line-numbers">class User
-{
-    public $created;
-    public $name;
-    public $email;
-
-    //$name ist ein Pflichtfeld bei Erzeugung eines Objekts der Klasse User, $email ist optional...
-    //...$created wird automatisch erstellt.
-    public function __construct($name, $email = "")
-    {
-        $this->name = $name;
-        $this->email = $email;
-        $this->created = date("d.m.Y H:i:s");
-    }
-}
-
-$simon = new User("Simon Weis", "simon@web.de");
-
-echo "Das Objekt von $simon->name wurde erstellt am $simon->created";</code></pre>
+    <h4>Via synaptics</h4>
+    <pre data-user="root"><code class="language-bash command-line-prompt">nano /usr/share/X11/xorg.conf.d/70-synaptics.conf</code></pre>
+    <pre><code class="language-bash">Section "InputClass"
+    Identifier "touchpad"
+    Driver "synaptics"
+    MatchIsTouchpad "on"
+        Option "TapButton1" "1"
+        Option "TapButton2" "3"
+        Option "TapButton3" "2"
+        Option "VertEdgeScroll" "on"
+        Option "VertTwoFingerScroll" "on"
+        Option "HorizEdgeScroll" "on"
+        Option "HorizTwoFingerScroll" "on"
+        Option "CircularScrolling" "on"
+        Option "CircScrollTrigger" "2"
+        Option "EmulateTwoFingerMinZ" "40"
+        Option "EmulateTwoFingerMinW" "8"
+        Option "CoastingSpeed" "0"
+        Option "FingerLow" "30"
+        Option "FingerHigh" "50"
+        Option "MaxTapTime" "125"
+EndSection</code></pre>
 </div>
 <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../assets/vendor/prism/prism.js"></script>

@@ -12,53 +12,31 @@
     <link rel="stylesheet" href="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
     <link rel="stylesheet" href="../assets/vendor/prism/plugins/command-line/prism-command-line.css">
     <link rel="stylesheet" href="../assets/style/main.css">
-    <title>php oop constructor</title>
+    <title>i3 enable multimedia keys</title>
 </head>
 <body>
 <div class="container arcticle">
-    <h2>php oop constructor</h2>
-    <p class="date">20170510</p>
+    <h2>i3 enable mulitmedia keys</h2>
+    <p class="date">20170609</p>
     <h3><a href="../index.html" class="index">back</a></h3>
-    <p>Die __construct()-Methode wird aufgerufen, sobald ein Objekt der Klasse erzeugt wird.</p>
-    <p class="example">Example</p>
-    <pre><code class="language-php line-numbers">class User
-{
-    public $created;
-    public $name;
-    public $email;
+    <pre data-user="user"><code class="language-bash command-line-prompt">nano ~/.config/i3/config</code></pre>
+    <pre><code class="language-bash"># Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
-    public function __construct()
-    {
-        //Erstellt die Klassenvariable bei Erzeugung einer Instanz
-        $this->created = date("d.m.Y H:i:s");
-    }
-}
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
-$simon = new User();
-$simon->name = "Simon Weis";
+# Touchpad controls
+bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
-echo "Das Objekt von $simon->name wurde erstellt am $simon->created";</code></pre>
-    <p>Im Konstruktor kann man Parameter spezifizieren.</p>
-    <p class="example">Example</p>
-    <pre><code class="language-php line-numbers">class User
-{
-    public $created;
-    public $name;
-    public $email;
-
-    //$name ist ein Pflichtfeld bei Erzeugung eines Objekts der Klasse User, $email ist optional...
-    //...$created wird automatisch erstellt.
-    public function __construct($name, $email = "")
-    {
-        $this->name = $name;
-        $this->email = $email;
-        $this->created = date("d.m.Y H:i:s");
-    }
-}
-
-$simon = new User("Simon Weis", "simon@web.de");
-
-echo "Das Objekt von $simon->name wurde erstellt am $simon->created";</code></pre>
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous</code></pre>
 </div>
 <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../assets/vendor/prism/prism.js"></script>

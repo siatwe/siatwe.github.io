@@ -12,53 +12,32 @@
     <link rel="stylesheet" href="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
     <link rel="stylesheet" href="../assets/vendor/prism/plugins/command-line/prism-command-line.css">
     <link rel="stylesheet" href="../assets/style/main.css">
-    <title>php oop constructor</title>
+    <title>arch yaourt</title>
 </head>
 <body>
 <div class="container arcticle">
-    <h2>php oop constructor</h2>
-    <p class="date">20170510</p>
+    <h2>arch yaourt</h2>
+    <p class="date">20170609</p>
     <h3><a href="../index.html" class="index">back</a></h3>
-    <p>Die __construct()-Methode wird aufgerufen, sobald ein Objekt der Klasse erzeugt wird.</p>
-    <p class="example">Example</p>
-    <pre><code class="language-php line-numbers">class User
-{
-    public $created;
-    public $name;
-    public $email;
-
-    public function __construct()
-    {
-        //Erstellt die Klassenvariable bei Erzeugung einer Instanz
-        $this->created = date("d.m.Y H:i:s");
-    }
-}
-
-$simon = new User();
-$simon->name = "Simon Weis";
-
-echo "Das Objekt von $simon->name wurde erstellt am $simon->created";</code></pre>
-    <p>Im Konstruktor kann man Parameter spezifizieren.</p>
-    <p class="example">Example</p>
-    <pre><code class="language-php line-numbers">class User
-{
-    public $created;
-    public $name;
-    public $email;
-
-    //$name ist ein Pflichtfeld bei Erzeugung eines Objekts der Klasse User, $email ist optional...
-    //...$created wird automatisch erstellt.
-    public function __construct($name, $email = "")
-    {
-        $this->name = $name;
-        $this->email = $email;
-        $this->created = date("d.m.Y H:i:s");
-    }
-}
-
-$simon = new User("Simon Weis", "simon@web.de");
-
-echo "Das Objekt von $simon->name wurde erstellt am $simon->created";</code></pre>
+    <h4>Installation</h4>
+    <p>Dependencies</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">sudo pacman -S base-devel curl</code></pre>
+    <p>package-query<sup>AUR</sup></p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">curl -O https://aur.archlinux.org/cgit/aur.git/snapshot/package-query.tar.gz
+tar -xvzf package-query.tar.gz
+cd package-query
+makepkg -si</code></pre>
+    <p>yaourt<sup>AUR</sup></p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">cd ..
+curl -O https://aur.archlinux.org/cgit/aur.git/snapshot/yaourt.tar.gz
+tar -xvzf yaourt.tar.gz
+cd yaourt
+makepkg -si</code></pre>
+    <h4>Usage</h4>
+    <p>Package Installation</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">yaourt package_name</code></pre>
+    <p>Complete System Upgrade</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">yaourt -Syua</code></pre>
 </div>
 <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../assets/vendor/prism/prism.js"></script>
