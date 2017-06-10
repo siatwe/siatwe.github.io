@@ -12,49 +12,21 @@
     <link rel="stylesheet" href="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
     <link rel="stylesheet" href="../assets/vendor/prism/plugins/command-line/prism-command-line.css">
     <link rel="stylesheet" href="../assets/style/main.css">
-    <title>php oop terms and definitions</title>
+    <title>ssd TRIM</title>
 </head>
 <body>
 <div class="container arcticle">
-    <h2>php oop terms and definitions</h2>
+    <h2>ssd TRIM</h2>
     <p class="date">20170510</p>
     <h3><a href="../index.html" class="index">back</a></h3>
-    <ul>
-        <li>Klassen (begrifflicher (abstrakter) Entwurf (Konzept) - "Blaupause"
-            <ul>
-                <li>mit Eigenschaften</li>
-                <li>mit Methoden</li>
-            </ul>
-        </li>
-        <li>Objekte (anschauliche) Klasse (gefüllt mit Daten)
-            <ul>
-                <li>z. B.: Name = Simon</li>
-                <li>z. B.: Email = simon@netz.de</li>
-            </ul>
-        </li>
-    </ul>
-    <pre><code class="language-php line-numbers">//Definition der Klasse: User
-class User
-{
-    public $name;
-    public $email;
-    public $password;
-
-    function changeName($newName)
-    {
-        $this->name = $newName;
-    }
-}
-
-//Definition des Objects: Simon
-$simon = new User();
-$simon->name = "Hans Wurst";
-$simon->email = "simon@web.de";
-
-// Aufrufen der Methode changeName($newName)
-$simon->changeName("Simon Weis");
-
-echo "$simon->name hat die Email $simon->email";</code></pre>
+    <h4>Check ssd TRIM support</h4>
+    <pre data-user="user"><code class="language-bash command-line-prompt">sudo lsblk -D</code></pre>
+    <p>And check the values of DISC-GRAN and DISC-MAX columns. Non-zero values indicate TRIM support.</p>
+    <h4>Continuous TRIM</h4>
+    <p>Using the discard option for a mount in /etc/fstab enables continuous TRIM in device operations:</p>
+    <pre><code class="language-bash line-numbers">/dev/sda2  /boot       btrfs  defaults,discard   0  2
+/dev/sda1  /boot/efi   btrfs  defaults,discard   0  2
+/dev/sda3  /           btrfs  defaults,discard   0  2</code></pre>
 </div>
 <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../assets/vendor/prism/prism.js"></script>
