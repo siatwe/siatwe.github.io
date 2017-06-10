@@ -37,6 +37,13 @@ bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous</code></pre>
+    <p>The script toggletouchpad.sh for toggling your touchpad should have following content:</p>
+    <pre><code class="language-bash line-numbers">#!/bin/bash
+if synclient -l | grep "TouchpadOff .*=.*0" ; then
+    synclient TouchpadOff=1 ;
+else
+    synclient TouchpadOff=0 ;
+fi</code></pre>
 </div>
 <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../assets/vendor/prism/prism.js"></script>
