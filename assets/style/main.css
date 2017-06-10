@@ -67,6 +67,11 @@ ul {
 sup {
   color: #1793d1;
 }
+.fmogh {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 .arcticle {
   padding-left: 10%;
   padding-right: 10%;
