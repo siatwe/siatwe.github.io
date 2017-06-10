@@ -64,6 +64,9 @@ p.example {
 ul {
   list-style: none;
 }
+sup {
+  color: #1793d1;
+}
 .arcticle {
   padding-left: 10%;
   padding-right: 10%;
