@@ -96,7 +96,7 @@ a.footer {
 a.index {
   font-size: 16px;
 }
-a .key {
+.key {
   display: inline-block;
   padding: 3px;
   background: white;
@@ -111,13 +111,13 @@ a .key {
   min-width: 30px;
   text-align: center;
 }
-a table,
-a th,
-a td {
+table,
+th,
+td {
   border: 1px solid gray;
   border-collapse: collapse;
   padding: 10px;
 }
-a table {
+table {
   width: 100%;
 }
