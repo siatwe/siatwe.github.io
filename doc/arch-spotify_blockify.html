@@ -12,38 +12,34 @@
     <link rel="stylesheet" href="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
     <link rel="stylesheet" href="../assets/vendor/prism/plugins/command-line/prism-command-line.css">
     <link rel="stylesheet" href="../assets/style/main.css">
-    <title>i3 enable multimedia keys</title>
+    <title>arch spotify blockify</title>
 </head>
 <body>
 <div class="container arcticle">
-    <h2>i3 enable multimedia keys</h2>
-    <p class="date">20170609</p>
+    <h2>arch spotify blockify</h2>
+    <p class="date">20170510</p>
     <h3><a href="../index.html" class="index">back</a></h3>
-    <pre data-user="user"><code class="language-bash command-line-prompt">nano ~/.config/i3/config</code></pre>
-    <pre><code class="language-bash"># Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+    <p>With blockify you can mute commercials. It is available in the AUR as blockify. To have this start and run in the
+        background every time Spotify starts you will need to automate this yourself:</p>
+    <h4>Install spotify<sup>AUR</sup> with <a href="../doc/arch-yaourt.html">yaourt</a><sup>AUR</sup></h4>
+    <pre data-user="user"><code class="language-bash command-line-prompt">yaourt spotify</code></pre>
+    <h4>Install blockify<sup>AUR</sup> with <a href="../doc/arch-yaourt.html">yaourt</a><sup>AUR</sup></h4>
+    <pre data-user="user"><code class="language-bash command-line-prompt">yaourt blockify</code></pre>
+    <h4>Custom Spotify script</h4>
+    <p>By placing this script at /usr/local/bin/spotify, it gets preferred to /usr/bin/spotify everytime you start
+        Spotify, so there's nothing else to change and updates won't break it.</p>
+    <pre><code class="language-bash line-numbers">#!/bin/sh
 
-# Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+spotify=/usr/bin/spotify
 
-# Touchpad controls
-bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
-
-# Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous</code></pre>
-    <p>The script toggletouchpad.sh for toggling your touchpad should have following content:</p>
-    <pre><code class="language-bash line-numbers">#!/bin/bash
-if synclient -l | grep "TouchpadOff .*=.*0" ; then
-    synclient TouchpadOff=1 ;
-else
-    synclient TouchpadOff=0 ;
+if [[ -x $spotify && -x /usr/bin/blockify ]];
+then
+  blockify &
+  block_pid=$!
+  $spotify
+  trap "kill -9 $block_pid" SIGINT SIGTERM EXIT
 fi</code></pre>
+
 </div>
 <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../assets/vendor/prism/prism.js"></script>

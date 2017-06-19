@@ -45,6 +45,7 @@ p.date {
   font-size: 12px;
   text-align: center;
   font-weight: bolder;
+  color: lightsalmon;
 }
 p.first {
   color: lightcoral;
@@ -52,6 +53,7 @@ p.first {
 }
 p.second {
   color: lightseagreen;
+  margin-bottom: 0;
 }
 p.example {
   font-style: italic;
@@ -61,4 +63,12 @@ p.example {
 }
 ul {
   list-style: none;
+}
+sup {
+  color: #1793d1;
+}
+.fmogh {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
