@@ -3,14 +3,17 @@
   padding-right: 10%;
 }
 pre {
-  border-radius: 0!important;
+  border-radius: 0 !important;
   border: 1px solid gray;
   margin-bottom: 25px;
 }
 a.footer {
   margin-top: 50px;
 }
-.key {
+a.index {
+  font-size: 16px;
+}
+a .key {
   display: inline-block;
   padding: 3px;
   background: white;
@@ -25,13 +28,13 @@ a.footer {
   min-width: 30px;
   text-align: center;
 }
-table,
-th,
-td {
+a table,
+a th,
+a td {
   border: 1px solid gray;
   border-collapse: collapse;
   padding: 10px;
 }
-table {
+a table {
   width: 100%;
 }

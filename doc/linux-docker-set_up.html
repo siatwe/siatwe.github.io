@@ -17,25 +17,27 @@
 <body>
 <div class="container arcticle">
     <h2>linux docker set up</h2>
-    <p class="date">20170510</p>
+    <p class="date">created: 20170510</p>
+    <p class="updated">updated: 20170519</p>
     <h3><a href="../index.html" class="index">back</a></h3>
     <h4>Installation</h4>
     <p>Arch Linux</p>
-    <pre data-user="user"><code class="language-bash command-line-prompt">sudo pacman -S docker docker-compose</code></pre>
+    <pre data-user="user"><code
+            class="language-bash command-line-prompt">sudo pacman -S docker docker-compose</code></pre>
     <p>Debian based</p>
-    <pre data-user="user"><code class="language-bash command-line-prompt">sudo apt-get install docker docker-compose</code></pre>
+    <pre data-user="user"><code
+            class="language-bash command-line-prompt">sudo apt-get install docker docker-compose</code></pre>
     <h4>Docker Group</h4>
-    <p> Soll ein nicht Root User faehig sein, Docker ohne sudo Kommando auszufuehren, muss er zunaechst in die docker Gruppe
-        eingetragen werden:</p>
+    <p>Add user to docker group:</p>
     <pre data-user="user"><code class="language-bash command-line-prompt">sudo gpasswd -a user docker</code></pre>
-    <h4>Docker starten</h4>
-    <p> Um docker zu nutzen, muss zunaechst der entsprechende Systemdamon gestartet werden:</p>
+    <h4>Start docker:</h4>
+    <p>Start the docker system daemon:</p>
     <pre data-user="user"><code class="language-bash command-line-prompt">sudo systemctl start docker</code></pre>
-    <p>Bzw. fuer den dauerhaften Start von docker bei Systemstart:</p>
+    <p>Enable docker system daemon on startup:</p>
     <pre data-user="user"><code class="language-bash command-line-prompt">sudo systemctl enable docker</code></pre>
-    <p>Danach in das root Verzeichnis, in welchem sich der .docker Ordner befindet, wechseln und folgendes ausfuehren:</p>
+    <p>Change into / dir and execute the following: </p>
     <pre data-user="user"><code class="language-bash command-line-prompt">docker-compose up --build -d</code></pre>
-    <p>In den Container chrooten:</p>
+    <p>Chroot into the docker container:</p>
     <pre data-user="user"><code class="language-bash command-line-prompt">docker-compose exec --user=1000 php sh</code></pre>
 </div>
 <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>

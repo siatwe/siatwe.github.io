@@ -16,82 +16,93 @@
 <body>
 <div class="container arcticle">
     <h2>git major commands</h2>
-    <p class="date">20161212</p>
+    <p class="date">created: 20161212</p>
+    <p class="updated">updated: 20170619</p>
     <h3><a href="../index.html" class="index">back</a></h3>
     <h4>config</h4>
-    <p>Setzt die Konfigurationswerte fest. Festgelegt werden kann zum Beispiel die Email-Adresse oder der Nutzername.
-    </p>
+    <p>Sets the configuration values. The email address or the username can be defined.</p>
     <p class="example">Example</p>
     <pre><code class="language-bash">$ git config --global user.name "John Smith"</code></pre>
     <h4>init</h4>
-    <p>Initialisiert ein Verzeichnis als git Verzeichnis. Ein leeres Verzeichnis kann mit diesem Befehl als git
-        Verzeichnis identifiziert werden. Dazu wird ein versteckter Ordner (.git) und die Datei .gitignore erstellt.
+    <p>
+        Initializes a directory as a git directory. An empty directory can be used with this command as git
+        directory. This creates a hidden folder (.git) and the .gitignore file.
     </p>
     <p class="example">Example</p>
     <pre><code class="language-bash">$ git init</code></pre>
     <h4>clone</h4>
-    <p> Mit diesem Befehl klont man ein git Verzeichnis von einem Server in das angegebene Verzeichnis auf dem lokalen
+    <p>
+        Using this command, you clone a git directory from a server to the specified directory on the local directory
         Computer.
     </p>
     <p class="example">Example</p>
     <pre><code class="language-bash">$ git clone https://github.com/siatwe/doc.git</code></pre>
     <h4>add</h4>
-    <p>Fuegt Dateien dem git Verzeichnis hinzu (Dateien die spaeter commitet werden). Mit der 'git add .' werden alle
-        Dateien die sich gerade im Verzeichnis befinden der Versionskontrolle hinzugefuegt.
+    <p>
+        Add files to the git directory (files to be committed later). With the 'git add .'- command all
+        files that are currently in the directory will be added to the version control.
     </p>
     <p class="example">Example</p>
     <pre><code class="language-bash">$ git add .</code></pre>
     <h4>rm</h4>
-    <p>Analog wie der add Befehl nur werden in diesem Fall Dateien geloescht.
+    <p>
+        Just like the add command, only files are deleted in this case.
     </p>
     <p class="example">Example</p>
     <pre><code class="language-bash">$ git rm file.txt</code></pre>
     <h4>commit</h4>
-    <p>Nimmt alle Aenderungen, neue Dateien oder Loeschungen fuegt sie zu einem Objekt zusammen, die dann versehen mit
-        einem Kommentar der Versionskontrolle uebergeben werden.
+    <p>
+        Takes all changes, adds new files or deletions to an object that is then tagged with
+        a comment of the version control.
     </p>
     <p class="example">Example</p>
     <pre><code class="language-bash">$ git commit -m "initial commit"</code></pre>
     <h4>status</h4>
-    <p>Ueberprueft den Zustand der Dateien im git Verzeichnis. Angezeigt wird bspw. ob geaenderte oder neue Dateien noch
-        nicht mit dem commit Befehl der Versionskontrolle uebergeben wurden.
+    <p>
+        Checks the state of the files in the git directory. It shows whether changed or new files still
+        not with the commit command of the version control.
     </p>
     <p class="example">Example</p>
     <pre><code class="language-bash">$ git status</code></pre>
     <h4>branch</h4>
-    <p>Listet existierende Zweige des Verzeichnisses auf.
+    <p>List all branches
     </p>
     <p class="example">Example</p>
     <pre><code class="language-bash">$ git branch</code></pre>
     <h4>checkout</h4>
-    <p>Mit diesem Befehl checkt man aus einem anderen Zweig (Branch) aus.
+    <p>Checkout to a branch
     </p>
     <p class="example">Example</p>
     <pre><code class="language-bash">$ git checkout</code></pre>
     <h4>merge</h4>
-    <p>Fuegt Aenderungen zusammen und erstellt daraus einen neunen Commit.
+    <p>
+        Compile changes and create a new commit.
     </p>
     <p class="example">Example</p>
     <pre><code class="language-bash">$ git merge</code></pre>
     <h4>reset</h4>
-    <p>Setzt das Verzeichnis auf den Stand des letzten Commits zurueck.
+    <p>
+        Resets the directory to the state of the last commit.
     </p>
     <p class="example">Example</p>
     <pre><code class="language-bash">$ git reset</code></pre>
     <h4>fetch</h4>
-    <p>Wenn man seine lokalen Aenderungen wieder auf den Stand des bspw. Master Branches auf dem Server zuruecksetzen
-        moechte, wuerde der Befehl 'git fetch master' lauten.
+    <p>
+        If you reset your local changes to the state of the master branch on the server, the command would be 'git fetch
+        master'.
     </p>
     <p class="example">Example</p>
     <pre><code class="language-bash">$ git fetch master</code></pre>
     <h4>pull</h4>
-    <p>Kombination von fetch und merge. Nimmt die Aenderungen des Servers und fuehrt sie mit den eigenen Aenderungen
-        zusammen.
+    <p>
+        Combination of fetch and merge. Takes the changes of the server and guides them with their own changes
+        together.
     </p>
     <p class="example">Example</p>
     <pre><code class="language-bash">$ git pull</code></pre>
     <h4>push</h4>
-    <p>Laedt alle lokalen Aenderungen auf den Server.
+    <p>
+        Launches all local changes to the server.
     </p>
     <p class="example">Example</p>
     <pre><code class="language-bash">$ git push</code></pre>

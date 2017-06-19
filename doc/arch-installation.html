@@ -17,106 +17,106 @@
 <body>
 <div class="container arcticle">
     <h2>arch installation</h2>
-    <p class="date">20170509</p>
+    <p class="date">created: 20170509</p>
+    <p class="updated">updated: 20170619</p>
     <h3><a href="../index.html" class="index">back</a></h3>
     <h4>Download</h4>
     <a href="https://www.archlinux.org/download/" target="_blank">https://www.archlinux.org/download/</a>
-    <h4>Kommandos</h4>
+    <h4>Commands</h4>
     <ol>
-        <li>Ueberpruefen ob eine Verbindung zum Internet besteht
+        <li>Check internet connection
             <pre data-user="root"><code class="language-bash command-line-prompt">ping -c 3 google.com</code></pre>
         </li>
-        <li>Alle Netzwerk Schnittstellen anzeigen
+        <li>Show network interfaces
             <pre data-user="root"><code class="language-bash command-line-prompt">ip link</code></pre>
         </li>
-        <li>Optional: Wlan Verbindung herstellen. Sollten dazu propitaere Treiber noetig sein, koennen diese nachtraeglich ab
-            Punkt 12 installiert werden
+        <li>Optional: Enable wlan
             <pre data-user="root"><code class="language-bash command-line-prompt">wifi-menu</code></pre>
         </li>
-        <li>Installation des reflector Pakets, ein Script zum erstellen optimaler mirrorlists
+        <li>Installation of the reflector package
             <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S reflector</code></pre>
         </li>
-        <li>Reflector ausfuehren
+        <li>Run reflector
             <pre data-user="root"><code class="language-bash command-line-prompt">reflector -c "Germany" -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist</code></pre>
         </li>
-        <li>Vorhandene Festplatten anzeigen lassen
+        <li>Show hard disks
             <pre data-user="root"><code class="language-bash command-line-prompt">fdisk -l</code></pre>
         </li>
-        <li>Cfdisk auf gewaehlter Festplatte ausfuehren
+        <li>Run cfdisk on selected hard disk and create a primary, bootable partition
             <pre data-user="root"><code class="language-bash command-line-prompt">cfdisk /dev/sdX</code></pre>
         </li>
-        <li>Formatieren der erstellten Partition
+        <li>Format the created partition
             <pre data-user="root"><code class="language-bash command-line-prompt">mkfs.btrfs /dev/sdaXX</code></pre>
         </li>
-        <li>Generierte Partition einhaengen
+        <li>Mount generated partition to /mnt
             <pre data-user="root"><code class="language-bash command-line-prompt">mount /dev/sdXX /mnt</code></pre>
         </li>
-        <li>Basis System installieren
+        <li>Install the base system
             <pre data-user="root"><code class="language-bash command-line-prompt">pacstrap -i /mnt base base-devel</code></pre>
         </li>
-        <li>fstab generieren
+        <li>Create fstab
             <pre data-user="root"><code class="language-bash command-line-prompt">genfstab -U -p /mnt >> /mnt/etc/fstab</code></pre>
         </li>
-        <li>Chroot ins Arch Verzeichnis
+        <li>Chroot into arch dir
             <pre data-user="root"><code class="language-bash command-line-prompt">arch-chroot /mnt /bin/bash</code></pre>
         </li>
-        <li>/etc/locale.gen edieren und eine Sprache auswaehlen
+        <li>Edit /etc/locale.gen and uncomment prefered language
             <pre data-user="root"><code class="language-bash command-line-prompt">nano /etc/locale.gen</code></pre>
         </li>
-        <li>Locale generieren
+        <li>Create locale
             <pre data-user="root"><code class="language-bash command-line-prompt">locale-gen</code></pre>
         </li>
-        <li>Zeitzone festlegen
+        <li>Select timezone
             <pre data-user="root"><code class="language-bash command-line-prompt">ln -sf /usr/share/zoneinfo/KONTINET/TOWN /etc/localtime</code></pre>
         </li>
-        <li>Hardware Uhr updaten
+        <li>Update the hardware clock
             <pre data-user="root"><code class="language-bash command-line-prompt">hwclock --systohc --utc</code></pre>
         </li>
-        <li>Hostnamen festlegen
+        <li>Create a hostname
             <pre data-user="root"><code class="language-bash command-line-prompt">echo HOSTNAME > /etc/hostname</code></pre>
         </li>
-        <li>/etc/hosts um folgende Zeile erweitern: % 127.0.1.1 ... hostname
+        <li>/etc/hosts +: % 127.0.1.1 ... hostname
         </li>
-        <li>Roots Passwort aendern
+        <li>Change root password
             <pre data-user="root"><code class="language-bash command-line-prompt">passwd</code></pre>
         </li>
-        <li>Grub, ggf. Wlan Pakete und sudo installieren
+        <li>Install some additional packages
             <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S grub dialog netcfg wpa_supplicant sudo</code></pre>
         </li>
-        <li>Grub auf Festplatte installieren
+        <li>Install grub on your hard disk
             <pre data-user="root"><code class="language-bash command-line-prompt">grub-install /dev/sdX</code></pre>
         </li>
-        <li>Grub Konfigurations Datei erstellen
+        <li>Create grub configuration file
             <pre data-user="root"><code class="language-bash command-line-prompt">grub mkconfig -o /boot/grub/grub.cfg</code></pre>
         </li>
-        <li>Aus der Chroot Umgebung ausloggen
+        <li>Exit the chroot environment
             <pre data-user="root"><code class="language-bash command-line-prompt">exit</code></pre>
         </li>
-        <li>Die Arch Partition aushaengen
+        <li>Unmount the arch partition
             <pre data-user="root"><code class="language-bash command-line-prompt">umount -R /mnt</code></pre>
         </li>
-        <li>Neustart
+        <li>Reboot
             <pre data-user="root"><code class="language-bash command-line-prompt">reboot</code></pre>
         </li>
-        <li>Login mit Root und Passwort</li>
-        <li>Neuen User erstellen
+        <li>Login with root and password</li>
+        <li>Create new user
             <pre data-user="root"><code class="language-bash command-line-prompt">useradd -m -g users -G wheel -s /bin/bash USER</code></pre>
         </li>
-        <li>Passwort fuer neuen Nutzer erstellen
+        <li>Create password for new user
             <pre data-user="root"><code class="language-bash command-line-prompt">passwd USER</code></pre>
         </li>
-        <li>Visudo Datei edieren und %wheel ALL=(ALL) ALL auskommentieren</li>
-        <li>Root Umgebung verlassen
+        <li>Edit visudo file and uncomment wheel ALL=(ALL) ALL</li>
+        <li>Exit root environment
             <pre data-user="root"><code class="language-bash command-line-prompt">exit</code></pre>
         </li>
-        <li>Als USER anmelden</li>
-        <li>Pakete fuer Audioausgabe, X und ggf. einen Windowmanager installieren
+        <li>Login as USER</li>
+        <li>Install audio, X and wm packages
             <pre data-user="user"><code class="language-bash command-line-prompt">sudo pacman -S pulseaudio pulsaudio-alsa alsa-utils xorg xorg-xinit i3</code></pre>
         </li>
-        <li>Windowmanager in ~/.xinitrc registrieren
+        <li>Register window manager in ~/.xinitrc
             <pre data-user="user"><code class="language-bash command-line-prompt">echo "exec i3" > ~/.xinitrc</code></pre>
         </li>
-        <li>X starten
+        <li>Start X
             <pre data-user="user"><code class="language-bash command-line-prompt">startx</code></pre>
         </li>
     </ol>
