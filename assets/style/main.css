@@ -6,8 +6,8 @@ body {
   position: relative;
 }
 hr {
-  opacity: .1;
-  border-color: lightgreen;
+  opacity: .3;
+  border-color: #f17600;
 }
 a {
   color: white;
