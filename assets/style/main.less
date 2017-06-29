@@ -1,2 +1,137 @@
-@import "typo";
-@import "article";
+.arcticle {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+pre {
+  border-radius: 0 !important;
+  border: 1px solid gray;
+  margin-bottom: 25px;
+}
+
+a {
+  &.footer {
+    margin-top: 50px;
+
+  }
+  &.index {
+    font-size: 16px;
+  }
+}
+
+.key {
+  display: inline-block;
+  padding: 3px;
+  background: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  color: black;
+  font-family: "Courier New", monospace;
+  -webkit-box-shadow: 0px 6px 1px -2px rgb(192, 192, 192);
+  -moz-box-shadow: 0px 6px 1px -2px rgb(192, 192, 192);
+  box-shadow: 0px 6px 1px -2px rgb(192, 192, 192);
+  margin: 5px;
+  min-width: 30px;
+  text-align: center;
+}
+
+table, th, td {
+  border: 1px solid gray;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+}
+
+body {
+  background: #333;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+hr {
+  opacity: .3;
+  border-color: #f17600;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+  &:focus, &:active, &:visited {
+    color: white;
+  }
+}
+
+h2 {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+h3 {
+  text-align: center;
+  margin: 0 0 25px 0;
+  padding: 0;
+}
+
+h4 {
+  color: lightgreen;
+  margin-top: 50px;
+}
+
+p {
+  font-size: 16px;
+  text-align: justify;
+  &.date {
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bolder;
+    color: lightsalmon;
+    margin-bottom: 0;
+  }
+  &.updated {
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bolder;
+    color: #00a544;
+    margin-top: 0;
+  }
+  &.first {
+    color: lightcoral;
+    font-weight: bolder;
+  }
+  &.second {
+    color: lightseagreen;
+    margin-bottom: 0;
+  }
+  &.example {
+    font-style: italic;
+    font-size: 13px;
+    margin-top: 25px;
+    margin-bottom: -5px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+sup {
+  color: #1793d1;
+}
+
+.fmogh {
+  position: absolute;
+  right: 0;
+  top: 0;
+}

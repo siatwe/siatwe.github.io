@@ -1,3 +1,43 @@
+.arcticle {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+pre {
+  border-radius: 0 !important;
+  border: 1px solid gray;
+  margin-bottom: 25px;
+}
+a.footer {
+  margin-top: 50px;
+}
+a.index {
+  font-size: 16px;
+}
+.key {
+  display: inline-block;
+  padding: 3px;
+  background: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  color: black;
+  font-family: "Courier New", monospace;
+  -webkit-box-shadow: 0px 6px 1px -2px #c0c0c0;
+  -moz-box-shadow: 0px 6px 1px -2px #c0c0c0;
+  box-shadow: 0px 6px 1px -2px #c0c0c0;
+  margin: 5px;
+  min-width: 30px;
+  text-align: center;
+}
+table,
+th,
+td {
+  border: 1px solid gray;
+  border-collapse: collapse;
+  padding: 10px;
+}
+table {
+  width: 100%;
+}
 body {
   background: #333;
   color: white;
@@ -80,44 +120,4 @@ sup {
   position: absolute;
   right: 0;
   top: 0;
-}
-.arcticle {
-  padding-left: 10%;
-  padding-right: 10%;
-}
-pre {
-  border-radius: 0 !important;
-  border: 1px solid gray;
-  margin-bottom: 25px;
-}
-a.footer {
-  margin-top: 50px;
-}
-a.index {
-  font-size: 16px;
-}
-.key {
-  display: inline-block;
-  padding: 3px;
-  background: white;
-  border: 1px solid gray;
-  border-radius: 5px;
-  color: black;
-  font-family: "Courier New", monospace;
-  -webkit-box-shadow: 0px 6px 1px -2px #c0c0c0;
-  -moz-box-shadow: 0px 6px 1px -2px #c0c0c0;
-  box-shadow: 0px 6px 1px -2px #c0c0c0;
-  margin: 5px;
-  min-width: 30px;
-  text-align: center;
-}
-table,
-th,
-td {
-  border: 1px solid gray;
-  border-collapse: collapse;
-  padding: 10px;
-}
-table {
-  width: 100%;
 }
