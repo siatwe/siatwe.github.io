@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/ebur.png">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/plugins/command-line/prism-command-line.css">
+    <link rel="stylesheet" href="../assets/style/main.css">
+    <title>linux touchpad configuration</title>
+</head>
+<body>
+<div class="container arcticle">
+    <h2>linux touchpad configuration</h2>
+    <p class="date">created: 20170609</p>
+    <h3><a href="../index.html" class="index">back</a></h3>
+    <h4>Via synaptics</h4>
+    <pre data-user="root"><code class="language-bash command-line-prompt">nano /usr/share/X11/xorg.conf.d/70-synaptics.conf</code></pre>
+    <pre><code class="language-bash">Section "InputClass"
+    Identifier "touchpad"
+    Driver "synaptics"
+    MatchIsTouchpad "on"
+        Option "TapButton1" "1"
+        Option "TapButton2" "3"
+        Option "TapButton3" "2"
+        Option "VertEdgeScroll" "on"
+        Option "VertTwoFingerScroll" "on"
+        Option "HorizEdgeScroll" "on"
+        Option "HorizTwoFingerScroll" "on"
+        Option "CircularScrolling" "on"
+        Option "CircScrollTrigger" "2"
+        Option "EmulateTwoFingerMinZ" "40"
+        Option "EmulateTwoFingerMinW" "8"
+        Option "CoastingSpeed" "0"
+        Option "FingerLow" "30"
+        Option "FingerHigh" "50"
+        Option "MaxTapTime" "125"
+EndSection</code></pre>
+</div>
+<script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../assets/vendor/prism/prism.js"></script>
+<script src="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../assets/vendor/prism/plugins/command-line/prism-command-line.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-php.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-bash.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-twig.min.js"></script>
+</body>
+</html>

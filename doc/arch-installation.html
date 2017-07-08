@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/ebur.png">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/plugins/command-line/prism-command-line.css">
+    <link rel="stylesheet" href="../assets/style/main.css">
+    <title>arch installation</title>
+</head>
+<body>
+<div class="container arcticle">
+    <h2>arch installation</h2>
+    <p class="date">created: 20170509</p>
+    <p class="updated">updated: 20170619</p>
+    <h3><a href="../index.html" class="index">back</a></h3>
+    <h4>Download</h4>
+    <a href="https://www.archlinux.org/download/" target="_blank">https://www.archlinux.org/download/</a>
+    <h4>Commands</h4>
+    <ol>
+        <li>Check internet connection
+            <pre data-user="root"><code class="language-bash command-line-prompt">ping -c 3 google.com</code></pre>
+        </li>
+        <li>Show network interfaces
+            <pre data-user="root"><code class="language-bash command-line-prompt">ip link</code></pre>
+        </li>
+        <li>Optional: Enable wlan
+            <pre data-user="root"><code class="language-bash command-line-prompt">wifi-menu</code></pre>
+        </li>
+        <li>Installation of the reflector package
+            <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S reflector</code></pre>
+        </li>
+        <li>Run reflector
+            <pre data-user="root"><code class="language-bash command-line-prompt">reflector -c "Germany" -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist</code></pre>
+        </li>
+        <li>Show hard disks
+            <pre data-user="root"><code class="language-bash command-line-prompt">fdisk -l</code></pre>
+        </li>
+        <li>Run cfdisk on selected hard disk and create a primary, bootable partition
+            <pre data-user="root"><code class="language-bash command-line-prompt">cfdisk /dev/sdX</code></pre>
+        </li>
+        <li>Format the created partition
+            <pre data-user="root"><code class="language-bash command-line-prompt">mkfs.btrfs /dev/sdaXX</code></pre>
+        </li>
+        <li>Mount generated partition to /mnt
+            <pre data-user="root"><code class="language-bash command-line-prompt">mount /dev/sdXX /mnt</code></pre>
+        </li>
+        <li>Install the base system
+            <pre data-user="root"><code class="language-bash command-line-prompt">pacstrap -i /mnt base base-devel</code></pre>
+        </li>
+        <li>Create fstab
+            <pre data-user="root"><code class="language-bash command-line-prompt">genfstab -U -p /mnt >> /mnt/etc/fstab</code></pre>
+        </li>
+        <li>Chroot into arch dir
+            <pre data-user="root"><code class="language-bash command-line-prompt">arch-chroot /mnt /bin/bash</code></pre>
+        </li>
+        <li>Edit /etc/locale.gen and uncomment prefered language
+            <pre data-user="root"><code class="language-bash command-line-prompt">nano /etc/locale.gen</code></pre>
+        </li>
+        <li>Create locale
+            <pre data-user="root"><code class="language-bash command-line-prompt">locale-gen</code></pre>
+        </li>
+        <li>Select timezone
+            <pre data-user="root"><code class="language-bash command-line-prompt">ln -sf /usr/share/zoneinfo/KONTINET/TOWN /etc/localtime</code></pre>
+        </li>
+        <li>Update the hardware clock
+            <pre data-user="root"><code class="language-bash command-line-prompt">hwclock --systohc --utc</code></pre>
+        </li>
+        <li>Create a hostname
+            <pre data-user="root"><code class="language-bash command-line-prompt">echo HOSTNAME > /etc/hostname</code></pre>
+        </li>
+        <li>/etc/hosts +: % 127.0.1.1 ... hostname
+        </li>
+        <li>Change root password
+            <pre data-user="root"><code class="language-bash command-line-prompt">passwd</code></pre>
+        </li>
+        <li>Install some additional packages
+            <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S grub dialog netcfg wpa_supplicant sudo</code></pre>
+        </li>
+        <li>Install grub on your hard disk
+            <pre data-user="root"><code class="language-bash command-line-prompt">grub-install /dev/sdX</code></pre>
+        </li>
+        <li>Create grub configuration file
+            <pre data-user="root"><code class="language-bash command-line-prompt">grub mkconfig -o /boot/grub/grub.cfg</code></pre>
+        </li>
+        <li>Exit the chroot environment
+            <pre data-user="root"><code class="language-bash command-line-prompt">exit</code></pre>
+        </li>
+        <li>Unmount the arch partition
+            <pre data-user="root"><code class="language-bash command-line-prompt">umount -R /mnt</code></pre>
+        </li>
+        <li>Reboot
+            <pre data-user="root"><code class="language-bash command-line-prompt">reboot</code></pre>
+        </li>
+        <li>Login with root and password</li>
+        <li>Create new user
+            <pre data-user="root"><code class="language-bash command-line-prompt">useradd -m -g users -G wheel -s /bin/bash USER</code></pre>
+        </li>
+        <li>Create password for new user
+            <pre data-user="root"><code class="language-bash command-line-prompt">passwd USER</code></pre>
+        </li>
+        <li>Edit visudo file and uncomment wheel ALL=(ALL) ALL</li>
+        <li>Exit root environment
+            <pre data-user="root"><code class="language-bash command-line-prompt">exit</code></pre>
+        </li>
+        <li>Login as USER</li>
+        <li>Install audio, X and wm packages
+            <pre data-user="user"><code class="language-bash command-line-prompt">sudo pacman -S pulseaudio pulsaudio-alsa alsa-utils xorg xorg-xinit i3</code></pre>
+        </li>
+        <li>Register window manager in ~/.xinitrc
+            <pre data-user="user"><code class="language-bash command-line-prompt">echo "exec i3" > ~/.xinitrc</code></pre>
+        </li>
+        <li>Start X
+            <pre data-user="user"><code class="language-bash command-line-prompt">startx</code></pre>
+        </li>
+    </ol>
+</div>
+<script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../assets/vendor/prism/prism.js"></script>
+<script src="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../assets/vendor/prism/plugins/command-line/prism-command-line.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-php.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-bash.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-twig.min.js"></script>
+</body>
+</html>

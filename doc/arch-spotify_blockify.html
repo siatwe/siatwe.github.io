@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/ebur.png">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/plugins/command-line/prism-command-line.css">
+    <link rel="stylesheet" href="../assets/style/main.css">
+    <title>arch spotify blockify</title>
+</head>
+<body>
+<div class="container arcticle">
+    <h2>arch spotify blockify</h2>
+    <p class="date">created: 20170510</p>
+    <h3><a href="../index.html" class="index">back</a></h3>
+    <p>With blockify you can mute commercials. It is available in the AUR as blockify. To have this start and run in the
+        background every time Spotify starts you will need to automate this yourself:</p>
+    <h4>Install spotify<sup>AUR</sup> with <a href="../doc/arch-yaourt.html">yaourt</a><sup>AUR</sup></h4>
+    <pre data-user="user"><code class="language-bash command-line-prompt">yaourt spotify</code></pre>
+    <h4>Install blockify<sup>AUR</sup> with <a href="../doc/arch-yaourt.html">yaourt</a><sup>AUR</sup></h4>
+    <pre data-user="user"><code class="language-bash command-line-prompt">yaourt blockify</code></pre>
+    <h4>Custom Spotify script</h4>
+    <p>By placing this script at /usr/local/bin/spotify, it gets preferred to /usr/bin/spotify everytime you start
+        Spotify, so there's nothing else to change and updates won't break it.</p>
+    <pre><code class="language-bash line-numbers">#!/bin/sh
+
+spotify=/usr/bin/spotify
+
+if [[ -x $spotify && -x /usr/bin/blockify ]];
+then
+  blockify &
+  block_pid=$!
+  $spotify
+  trap "kill -9 $block_pid" SIGINT SIGTERM EXIT
+fi</code></pre>
+
+</div>
+<script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../assets/vendor/prism/prism.js"></script>
+<script src="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../assets/vendor/prism/plugins/command-line/prism-command-line.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-php.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-bash.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-twig.min.js"></script>
+</body>
+</html>

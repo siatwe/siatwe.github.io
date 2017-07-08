@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/ebur.png">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/plugins/command-line/prism-command-line.css">
+    <link rel="stylesheet" href="../assets/style/main.css">
+    <title>symfony create commands</title>
+</head>
+<body>
+<div class="container arcticle">
+    <h2>symfony create commands</h2>
+    <p class="date">20170512</p>
+    <h3><a href="../index.html" class="index">back</a></h3>
+    <h4>Konfiguration</h4>
+    <p>Die Konfiguration des Kommandos erfolgt in der configure() Methode.</p>
+    <p class="example">Example</p>
+    <pre><code class="language-php line-numbers">protected function configure()
+{
+    $this
+        // Besimmt den Namen des Kommandos (der Teil nach "bin/console")
+        ->setName('app:create-user')
+
+        // Eine kurze Beschreibung des Kommandos, wird angezeigt bei: "php bin/console list"
+        ->setDescription('Creates a new user.')
+
+        // Die volle Beschreibung des Kommandos, wird angezeigt wenn das Kommando mit --help ausgefuehrt wird.
+        ->setHelp('This command allows you to create a user...')
+    ;
+}
+    </code></pre>
+    <h4>Execute</h4>
+    <p>Die execute()-Methode hat Zugriff zum in- und output Stream der Konsole. Der Input Stream beinhaltet z. B. Optionen
+        und Argumente. Der Output Stream schreibt Nachrichten in das Konsolenfenster.</p>
+    <pre><code class="language-php line-numbers">protected function execute(InputInterface $input, OutputInterface $output)
+{
+    // Schreibt mehrere Zeilen mit Zeilenumbruch in die Konsole
+    $output->writeln([
+        'User Creator',
+        '============',
+        '',
+    ]);
+
+    // Schreibt eine Zeile mit Zeilenumbruch in die Konsole
+    $output->writeln('Whoa!');
+
+    // Schreibt eine Zeile ohne Zeilenumbruch in die Konsole
+    $output->write('You are about to ');
+    $output->write('create a user.');
+}
+    </code></pre>
+</div>
+<script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../assets/vendor/prism/prism.js"></script>
+<script src="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../assets/vendor/prism/plugins/command-line/prism-command-line.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-php.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-bash.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-twig.min.js"></script>
+</body>
+</html>

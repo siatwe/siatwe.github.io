@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/ebur.png">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/plugins/command-line/prism-command-line.css">
+    <link rel="stylesheet" href="../assets/style/main.css">
+    <title>twig syntax</title>
+</head>
+<body>
+<div class="container arcticle">
+    <h2>twig syntax</h2>
+    <p class="date">20170510</p>
+    <h3><a href="../index.html" class="index">back</a></h3>
+    <pre><code class="language-twig line-numbers">{{ variable }}</code></pre>
+    <p>"Sage etwas...": Schreibt eine Variable oder das Resultat einer Operation in die Vorlage.</p>
+    <pre><code class="language-twig line-numbers">{% for variable in variables %}</code></pre>
+    <p>"Tu etwas...": Dieser Tag kontrolliert die Logik des Templates und wird genutzt um bspw. For-Schleifen im
+        Template auszufuehren.</p>
+    <pre><code class="language-twig line-numbers">{# What's up? #}</code></pre>
+    <p>"Kommentiere etwas...": Das Gegenstueck zum /* PHP */ Kommentar.</p>
+    <p>Twig enthaelt ausserdem Filterfunktionen. Diese modifizieren den Inhalt bevor er angezeigt wird. Das folgende Beispiel
+        schreibt den Inhalt der Variable in Grossbuchstaben, bevor sie ausgegeben wird:</p>
+    <p class="example">Example</p>
+    <pre><code class="language-twig line-numbers">{{ title|upper }}</code></pre>
+    <p>Ein anderes Beispiel zeigt den 'raw' Filter. Mit ihm wird der rohe Inhalt ohne Beschneidung ausgegeben. Das
+        bedeutet zum Beispiel, dass HTML Tags vom Template erkannt und normal verarbeitet werden bevor die Ausgabe erfolgt</p>
+    <p class="example">Example</p>
+    <pre><code class="language-twig line-numbers">{{ title|raw }}</code></pre>
+</div>
+<script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../assets/vendor/prism/prism.js"></script>
+<script src="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../assets/vendor/prism/plugins/command-line/prism-command-line.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-php.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-bash.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-twig.min.js"></script>
+</body>
+</html>
