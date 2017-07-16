@@ -33,7 +33,10 @@
         <li>Optional: Enable wlan
             <pre data-user="root"><code class="language-bash command-line-prompt">wifi-menu</code></pre>
         </li>
-        <li>Installation of the reflector package
+        <li>Update the package repository
+            <pre data-user="root"><code class="language-bash command-line-prompt">pacman -Syu</code></pre>
+        </li>
+        <li>Install the reflector package
             <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S reflector</code></pre>
         </li>
         <li>Run reflector
@@ -52,13 +55,16 @@
             <pre data-user="root"><code class="language-bash command-line-prompt">mount /dev/sdXX /mnt</code></pre>
         </li>
         <li>Install the base system
-            <pre data-user="root"><code class="language-bash command-line-prompt">pacstrap -i /mnt base base-devel</code></pre>
+            <pre data-user="root"><code
+                    class="language-bash command-line-prompt">pacstrap -i /mnt base base-devel</code></pre>
         </li>
         <li>Create fstab
-            <pre data-user="root"><code class="language-bash command-line-prompt">genfstab -U -p /mnt >> /mnt/etc/fstab</code></pre>
+            <pre data-user="root"><code
+                    class="language-bash command-line-prompt">genfstab -U -p /mnt >> /mnt/etc/fstab</code></pre>
         </li>
         <li>Chroot into arch dir
-            <pre data-user="root"><code class="language-bash command-line-prompt">arch-chroot /mnt /bin/bash</code></pre>
+            <pre data-user="root"><code
+                    class="language-bash command-line-prompt">arch-chroot /mnt /bin/bash</code></pre>
         </li>
         <li>Edit /etc/locale.gen and uncomment prefered language
             <pre data-user="root"><code class="language-bash command-line-prompt">nano /etc/locale.gen</code></pre>
@@ -73,7 +79,8 @@
             <pre data-user="root"><code class="language-bash command-line-prompt">hwclock --systohc --utc</code></pre>
         </li>
         <li>Create a hostname
-            <pre data-user="root"><code class="language-bash command-line-prompt">echo HOSTNAME > /etc/hostname</code></pre>
+            <pre data-user="root"><code
+                    class="language-bash command-line-prompt">echo HOSTNAME > /etc/hostname</code></pre>
         </li>
         <li>/etc/hosts +: % 127.0.1.1 ... hostname
         </li>
@@ -81,13 +88,14 @@
             <pre data-user="root"><code class="language-bash command-line-prompt">passwd</code></pre>
         </li>
         <li>Install some additional packages
-            <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S grub dialog netcfg wpa_supplicant sudo</code></pre>
+            <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S grub dialog netctl wpa_supplicant sudo</code></pre>
         </li>
         <li>Install grub on your hard disk
             <pre data-user="root"><code class="language-bash command-line-prompt">grub-install /dev/sdX</code></pre>
         </li>
         <li>Create grub configuration file
-            <pre data-user="root"><code class="language-bash command-line-prompt">grub mkconfig -o /boot/grub/grub.cfg</code></pre>
+            <pre data-user="root"><code
+                    class="language-bash command-line-prompt">grub mkconfig -o /boot/grub/grub.cfg</code></pre>
         </li>
         <li>Exit the chroot environment
             <pre data-user="root"><code class="language-bash command-line-prompt">exit</code></pre>
@@ -105,7 +113,7 @@
         <li>Create password for new user
             <pre data-user="root"><code class="language-bash command-line-prompt">passwd USER</code></pre>
         </li>
-        <li>Edit visudo file and uncomment wheel ALL=(ALL) ALL</li>
+        <li>Edit /etc/visudo file and uncomment wheel ALL=(ALL) ALL</li>
         <li>Exit root environment
             <pre data-user="root"><code class="language-bash command-line-prompt">exit</code></pre>
         </li>
@@ -114,7 +122,8 @@
             <pre data-user="user"><code class="language-bash command-line-prompt">sudo pacman -S pulseaudio pulsaudio-alsa alsa-utils xorg xorg-xinit i3</code></pre>
         </li>
         <li>Register window manager in ~/.xinitrc
-            <pre data-user="user"><code class="language-bash command-line-prompt">echo "exec i3" > ~/.xinitrc</code></pre>
+            <pre data-user="user"><code
+                    class="language-bash command-line-prompt">echo "exec i3" > ~/.xinitrc</code></pre>
         </li>
         <li>Start X
             <pre data-user="user"><code class="language-bash command-line-prompt">startx</code></pre>
