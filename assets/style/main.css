@@ -3,7 +3,11 @@
   padding-right: 5%;
 }
 pre {
+<<<<<<< HEAD
   border-radius: 0 !important;
+=======
+  border-radius: 0!important;
+>>>>>>> fffbf3a1dab35827654e6c1e023f5df156abedea
   border: 1px solid gray;
   margin-bottom: 25px;
 }
@@ -85,7 +89,11 @@ p.date {
   font-size: 12px;
   text-align: center;
   font-weight: bolder;
+<<<<<<< HEAD
   color: #00a544;
+=======
+  color: lightsalmon;
+>>>>>>> fffbf3a1dab35827654e6c1e023f5df156abedea
   margin-bottom: 0;
 }
 p.updated {
@@ -93,7 +101,11 @@ p.updated {
   font-size: 12px;
   text-align: center;
   font-weight: bolder;
+<<<<<<< HEAD
   color: lightsalmon;
+=======
+  color: #00a544;
+>>>>>>> fffbf3a1dab35827654e6c1e023f5df156abedea
   margin-top: 0;
 }
 p.first {

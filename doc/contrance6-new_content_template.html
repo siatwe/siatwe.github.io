@@ -19,8 +19,13 @@
     <h2>contrance6 new content template</h2>
     <p class="date">created: 20170629</p>
     <h3><a href="../index.html" class="index">back</a></h3>
+<<<<<<< HEAD
     <h4>contrance</h4>
 <p class="example">contrance/plugin/Contents/Model/Content.php</p>
+=======
+    <h4>/contrance</h4>
+    <p class="example">contrance/plugin/Contents/Model/Content.php</p>
+>>>>>>> fffbf3a1dab35827654e6c1e023f5df156abedea
     <pre><code class="language-php line-numbers">App::uses('ContentsAppModel', 'Contents.Model');
 // ..
 class Content extends ContentsAppModel
@@ -42,6 +47,22 @@ class Content extends ContentsAppModel
     ];
     // ..
 }</code></pre>
+<<<<<<< HEAD
+=======
+    <h4>Database</h4>
+    <p>Extend Database Enum: 'example'</p>
+    <h4>/Plugin</h4>
+    <p class="example">/Plugin/FrontendContents/Controller/FrontendContentsController</p>
+    <pre><code class="language-php line-numbers">public function example_index($id)
+{
+    $this->set('row', $this->Content->findById($id));
+}</code></pre>
+    <h4>View</h4>
+    <p class="example">/Plugin/FrontendContents/View/FrontendContents/example_index.php</p>
+    <pre><code class="language-php line-numbers">$this->extend('FrontendContents.FrontendContents/base');
+$this->append('base-content');
+print_r($row);</code></pre>
+>>>>>>> fffbf3a1dab35827654e6c1e023f5df156abedea
 </div>
 <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../assets/vendor/prism/prism.js"></script>
