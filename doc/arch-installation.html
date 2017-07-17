@@ -18,11 +18,8 @@
 <div class="container arcticle">
     <h2>arch installation</h2>
     <p class="date">created: 20170509</p>
-<<<<<<< HEAD
     <p class="updated">updated: 20170716</p>
-=======
     <p class="updated">updated: 20170619</p>
->>>>>>> fffbf3a1dab35827654e6c1e023f5df156abedea
     <h3><a href="../index.html" class="index">back</a></h3>
     <h4>Download</h4>
     <a href="https://www.archlinux.org/download/" target="_blank">https://www.archlinux.org/download/</a>
@@ -37,14 +34,11 @@
         <li>Optional: Enable wlan
             <pre data-user="root"><code class="language-bash command-line-prompt">wifi-menu</code></pre>
         </li>
-<<<<<<< HEAD
         <li>Installation of the reflector package
-=======
         <li>Update the package repository
             <pre data-user="root"><code class="language-bash command-line-prompt">pacman -Syu</code></pre>
         </li>
         <li>Install the reflector package
->>>>>>> fffbf3a1dab35827654e6c1e023f5df156abedea
             <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S reflector</code></pre>
         </li>
         <li>Run reflector
@@ -63,7 +57,6 @@
             <pre data-user="root"><code class="language-bash command-line-prompt">mount /dev/sdXX /mnt</code></pre>
         </li>
         <li>Install the base system
-<<<<<<< HEAD
             <pre data-user="root"><code class="language-bash command-line-prompt">pacstrap -i /mnt base base-devel</code></pre>
         </li>
         <li>Create fstab
@@ -71,7 +64,6 @@
         </li>
         <li>Chroot into arch dir
             <pre data-user="root"><code class="language-bash command-line-prompt">arch-chroot /mnt /bin/bash</code></pre>
-=======
             <pre data-user="root"><code
                     class="language-bash command-line-prompt">pacstrap -i /mnt base base-devel</code></pre>
         </li>
@@ -82,7 +74,6 @@
         <li>Chroot into arch dir
             <pre data-user="root"><code
                     class="language-bash command-line-prompt">arch-chroot /mnt /bin/bash</code></pre>
->>>>>>> fffbf3a1dab35827654e6c1e023f5df156abedea
         </li>
         <li>Edit /etc/locale.gen and uncomment prefered language
             <pre data-user="root"><code class="language-bash command-line-prompt">nano /etc/locale.gen</code></pre>
@@ -97,12 +88,9 @@
             <pre data-user="root"><code class="language-bash command-line-prompt">hwclock --systohc --utc</code></pre>
         </li>
         <li>Create a hostname
-<<<<<<< HEAD
             <pre data-user="root"><code class="language-bash command-line-prompt">echo HOSTNAME > /etc/hostname</code></pre>
-=======
             <pre data-user="root"><code
                     class="language-bash command-line-prompt">echo HOSTNAME > /etc/hostname</code></pre>
->>>>>>> fffbf3a1dab35827654e6c1e023f5df156abedea
         </li>
         <li>/etc/hosts +: % 127.0.1.1 ... hostname
         </li>
@@ -110,22 +98,16 @@
             <pre data-user="root"><code class="language-bash command-line-prompt">passwd</code></pre>
         </li>
         <li>Install some additional packages
-<<<<<<< HEAD
             <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S grub dialog netcfg wpa_supplicant sudo</code></pre>
-=======
             <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S grub dialog netctl wpa_supplicant sudo</code></pre>
->>>>>>> fffbf3a1dab35827654e6c1e023f5df156abedea
         </li>
         <li>Install grub on your hard disk
             <pre data-user="root"><code class="language-bash command-line-prompt">grub-install /dev/sdX</code></pre>
         </li>
         <li>Create grub configuration file
-<<<<<<< HEAD
             <pre data-user="root"><code class="language-bash command-line-prompt">grub mkconfig -o /boot/grub/grub.cfg</code></pre>
-=======
             <pre data-user="root"><code
                     class="language-bash command-line-prompt">grub mkconfig -o /boot/grub/grub.cfg</code></pre>
->>>>>>> fffbf3a1dab35827654e6c1e023f5df156abedea
         </li>
         <li>Exit the chroot environment
             <pre data-user="root"><code class="language-bash command-line-prompt">exit</code></pre>
@@ -143,28 +125,22 @@
         <li>Create password for new user
             <pre data-user="root"><code class="language-bash command-line-prompt">passwd USER</code></pre>
         </li>
-<<<<<<< HEAD
         <li>Edit visudo file and uncomment wheel ALL=(ALL) ALL</li>
-=======
         <li>Edit /etc/visudo file and uncomment wheel ALL=(ALL) ALL</li>
->>>>>>> fffbf3a1dab35827654e6c1e023f5df156abedea
         <li>Exit root environment
             <pre data-user="root"><code class="language-bash command-line-prompt">exit</code></pre>
         </li>
         <li>Login as USER</li>
         <li>Install audio, X and wm packages
-<<<<<<< HEAD
             <pre data-user="user"><code class="language-bash command-line-prompt">sudo pacman -S pulseaudio pulsaudio-alsa alsa-utils xorg xorg-xinit i3</code></pre>
         </li>
         <li>Register window manager in ~/.xinitrc
             <pre data-user="user"><code class="language-bash command-line-prompt">echo "exec i3" > ~/.xinitrc</code></pre>
-=======
             <pre data-user="user"><code class="language-bash command-line-prompt">sudo pacman -S pulseaudio pulsaudio-alsa alsa-utils xorg xorg-xinit i3 dmenu</code></pre>
         </li>
         <li>Register window manager in ~/.xinitrc
             <pre data-user="user"><code
                     class="language-bash command-line-prompt">echo "exec i3" > ~/.xinitrc</code></pre>
->>>>>>> fffbf3a1dab35827654e6c1e023f5df156abedea
         </li>
         <li>Start X
             <pre data-user="user"><code class="language-bash command-line-prompt">startx</code></pre>
