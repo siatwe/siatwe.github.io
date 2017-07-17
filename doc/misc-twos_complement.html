@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/ebur.png">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/plugins/command-line/prism-command-line.css">
+    <link rel="stylesheet" href="../assets/style/main.css">
+    <title>misc numeral systems two's complement</title>
+</head>
+<body>
+<div class="container arcticle">
+    <h2>misc numeral systems two's complement</h2>
+    <p class="date">created: 20170717</p>
+    <h3><a href="../index.html" class="index">back</a></h3>
+    <h4>Introduction</h4>
+    <p>Two's complement is a mathematical operation on binary numbers, but also works with all other numerical
+        systems!</p>
+    <h4>Examples</h4>
+    <pre><code class="language-bash">-10-> 100 -2-> 1100100 -16-> 64 (x) Minuend
+-10->  90 -2-> 1011010 -16-> 5A (y) Subtrahend</code></pre>
+    <p class="example">Example: Binary digit system</p>
+    <pre><code class="language-bash">
+1. Step: Ones complement of y, invert all digits:
+0100101
+
+2. Step: Twos complement of y, add 1:
+0100111
+
+3. Step: Add x and y:
+   1100100
+ + 0100111
+ =========
+(1)0001010 -10-> 10 Difference</code></pre>
+    <p class="example">Example: Decimal digit system</p>
+    <pre><code class="language-bash">Numeral circle:
+0 9
+1 8
+2 7
+3 6
+4 5
+-->
+
+1. Step: Invert all digits:
+09
+
+2. Step: Add one:
+10
+
+3. Step: Add x and y:
+  100
++  10
+=====
+(1)10</code></pre>
+    <p class="example">Example: Hexadecimal digit system</p>
+    <pre><code class="language-bash">Numeral circle:
+0 F
+1 E
+2 D
+3 C
+4 B
+5 A
+6 9
+7 8
+-->
+
+1. Step: Invert all digits of y:
+A5
+
+2. Step: Add one to y:
+A6
+
+3. Step: Add x and y:
+   64
++  A6
+=====
+(1)0A</code></pre>
+    <h4>Why it works?</h4>
+    <p>Given a set of all possible N-bit values, we can assign the lower (by the binary value) half to be the integers
+        from 0 to (2N − 1 − 1) inclusive and the upper half to be −2N − 1 to −1 inclusive. The upper half (again, by the
+        binary value) can be used to represent negative integers from −2N − 1 to −1 because, under addition modulo 2N
+        they behave the same way as those negative integers. That is to say that because i + j mod 2N = i + (j + 2N) mod
+        2N any value in the set { j + k 2N | k is an integer }  can be used in place of j.[8]</p>
+        <p>For example, with eight bits, the unsigned bytes are 0 to 255. Subtracting 256 from the top half (128 to 255)
+            yields the signed bytes −128 to −1.</p>
+        <p>The relationship to two's complement is realised by noting that 256 = 255 + 1, and (255 − x) is the ones'
+        complement of x.</p>
+</div>
+<script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../assets/vendor/prism/prism.js"></script>
+<script src="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../assets/vendor/prism/plugins/command-line/prism-command-line.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-php.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-bash.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-twig.min.js"></script>
+</body>
+</html>

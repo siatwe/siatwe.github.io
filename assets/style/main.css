@@ -85,7 +85,7 @@ p.date {
   font-size: 12px;
   text-align: center;
   font-weight: bolder;
-  color: lightsalmon;
+  color: #00a544;
   margin-bottom: 0;
 }
 p.updated {
@@ -93,7 +93,7 @@ p.updated {
   font-size: 12px;
   text-align: center;
   font-weight: bolder;
-  color: #00a544;
+  color: lightsalmon;
   margin-top: 0;
 }
 p.first {
