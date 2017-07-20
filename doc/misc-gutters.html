@@ -91,6 +91,47 @@ class XorGutter
         }
     }
 }</code></pre>
+    <h4>NOT Gutter</h4>
+    <p>The NOT gutter inverts all incoming streams.</p>
+    <pre><code class="language-php">namespace Gutter;
+
+class NotGutter
+{
+    /**
+     * @param $x
+     *
+     * @return int
+     */
+    public function out($x)
+    {
+        if($x < 0 || $x > 1){
+            throw new \InvalidArgumentException("Invalid input(s)!");
+        } else {
+            return ($x === 0) ? 1 : 0;
+        }
+    }
+}</code></pre>
+    <h4>Halfadder</h4>
+    <p>The XOR gutter returns 1 if only one input is 1.</p>
+    <pre><code class="language-php">namespace Gutter;
+
+class XorGutter
+{
+    /**
+     * @param $a
+     * @param $b
+     *
+     * @return int
+     */
+    public function out($a, $b)
+    {
+        if ($a > 1 || $a < 0 || $b > 1 || $b < 0) {
+            throw new \InvalidArgumentException("Invalid input(s)!");
+        } else {
+            return (($a === 1 && $b === 0) || ($a === 0 && $b === 1)) ? 1 : 0;
+        }
+    }
+}</code></pre>
 </div>
 <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../assets/vendor/prism/prism.js"></script>
