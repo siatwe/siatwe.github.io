@@ -16,8 +16,11 @@
 </head>
 <body>
 <div class="container arcticle">
-    <h2>misc 32 bit add/sub machine in php</h2>
+    <h2>misc 32 bit add/sub machine in php <a href="https://github.com/siatwe/pgutters" target="_blank" class="clone">download
+        me</a></h2>
+
     <p class="date">20170720</p>
+    <p class="updated">20170721</p>
     <h3><a href="../index.html" class="index">back</a></h3>
     <h4>AND Gutter</h4>
     <p>The AND gutter returns 1 if all inputs are 1.</p>
@@ -51,6 +54,15 @@ class AndGutter
 }</code></pre>
     <h4>OR Gutter</h4>
     <p>The OR gutter returns 1 if one or all inputs are 1.</p>
+    <pre><code class="language-bash">Truth Table
++-------+
+|a b   s|
+|-------|
+|0 0   0|
+|0 1   1|
+|1 0   1|
+|1 1   1|
++-------+</code></pre>
     <pre><code class="language-php">namespace Gutter;
 
 class OrGutter
@@ -72,6 +84,15 @@ class OrGutter
 }</code></pre>
     <h4>XOR Gutter</h4>
     <p>The XOR gutter returns 1 if only one input is 1.</p>
+    <pre><code class="language-bash">Truth Table
++-------+
+|a b   s|
+|-------|
+|0 0   0|
+|0 1   1|
+|1 0   1|
+|1 1   0|
++-------+</code></pre>
     <pre><code class="language-php">namespace Gutter;
 
 class XorGutter
@@ -112,7 +133,7 @@ class NotGutter
     }
 }</code></pre>
     <h4>Halfadder</h4>
-    <p>A halfadder circuit is able to add two bits and returns the sum and carry. The truth table will show the
+    <p>A halfadder circuit is able to add two bits and returns the sum and carry. The truth table will show its
         functionality.</p>
     <pre><code class="language-bash">Truth Table
 +---------+

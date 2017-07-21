@@ -63,9 +63,23 @@ a:visited {
   color: white;
 }
 h2 {
+  position: relative;
   text-align: center;
-  font-style: italic;
-  margin-bottom: 0;
+  margin-bottom: 25px;
+  font-weight: bolder;
+  font-size: 40px;
+  text-transform: lowercase;
+}
+h2 .clone {
+  position: absolute;
+  color: #31C854;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color .3s;
+}
+h2 .clone:hover {
+  color: white;
+  transition: color .3s;
 }
 h3 {
   text-align: center;
@@ -73,7 +87,7 @@ h3 {
   padding: 0;
 }
 h4 {
-  color: lightgreen;
+  color: #31C854;
   margin-top: 50px;
 }
 p {
@@ -85,7 +99,7 @@ p.date {
   font-size: 12px;
   text-align: center;
   font-weight: bolder;
-  color: #00a544;
+  color: #31C854;
   margin-bottom: 0;
 }
 p.updated {
