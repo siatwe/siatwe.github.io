@@ -34,7 +34,6 @@
         <li>Optional: Enable wlan
             <pre data-user="root"><code class="language-bash command-line-prompt">wifi-menu</code></pre>
         </li>
-        <li>Installation of the reflector package
         <li>Update the package repository
             <pre data-user="root"><code class="language-bash command-line-prompt">pacman -Syu</code></pre>
         </li>
@@ -64,8 +63,6 @@
         </li>
         <li>Chroot into arch dir
             <pre data-user="root"><code class="language-bash command-line-prompt">arch-chroot /mnt /bin/bash</code></pre>
-            <pre data-user="root"><code
-                    class="language-bash command-line-prompt">pacstrap -i /mnt base base-devel</code></pre>
         </li>
         <li>Create fstab
             <pre data-user="root"><code
@@ -99,15 +96,12 @@
         </li>
         <li>Install some additional packages
             <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S grub dialog netcfg wpa_supplicant sudo</code></pre>
-            <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S grub dialog netctl wpa_supplicant sudo</code></pre>
         </li>
         <li>Install grub on your hard disk
             <pre data-user="root"><code class="language-bash command-line-prompt">grub-install /dev/sdX</code></pre>
         </li>
         <li>Create grub configuration file
             <pre data-user="root"><code class="language-bash command-line-prompt">grub mkconfig -o /boot/grub/grub.cfg</code></pre>
-            <pre data-user="root"><code
-                    class="language-bash command-line-prompt">grub mkconfig -o /boot/grub/grub.cfg</code></pre>
         </li>
         <li>Exit the chroot environment
             <pre data-user="root"><code class="language-bash command-line-prompt">exit</code></pre>
@@ -125,8 +119,7 @@
         <li>Create password for new user
             <pre data-user="root"><code class="language-bash command-line-prompt">passwd USER</code></pre>
         </li>
-        <li>Edit visudo file and uncomment wheel ALL=(ALL) ALL</li>
-        <li>Edit /etc/visudo file and uncomment wheel ALL=(ALL) ALL</li>
+        <li>Edit /etc/sudoer file and uncomment wheel ALL=(ALL) ALL</li>
         <li>Exit root environment
             <pre data-user="root"><code class="language-bash command-line-prompt">exit</code></pre>
         </li>
@@ -136,7 +129,6 @@
         </li>
         <li>Register window manager in ~/.xinitrc
             <pre data-user="user"><code class="language-bash command-line-prompt">echo "exec i3" > ~/.xinitrc</code></pre>
-            <pre data-user="user"><code class="language-bash command-line-prompt">sudo pacman -S pulseaudio pulsaudio-alsa alsa-utils xorg xorg-xinit i3 dmenu</code></pre>
         </li>
         <li>Register window manager in ~/.xinitrc
             <pre data-user="user"><code
