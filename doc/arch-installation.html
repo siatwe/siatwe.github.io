@@ -18,8 +18,7 @@
 <div class="container arcticle">
     <h2>arch installation</h2>
     <p class="date">created: 20170509</p>
-    <p class="updated">updated: 20170716</p>
-    <p class="updated">updated: 20170619</p>
+    <p class="updated">updated: 20170725</p>
     <h3><a href="../index.html" class="index">back</a></h3>
     <h4>Download</h4>
     <a href="https://www.archlinux.org/download/" target="_blank">https://www.archlinux.org/download/</a>
@@ -62,13 +61,6 @@
             <pre data-user="root"><code class="language-bash command-line-prompt">genfstab -U -p /mnt >> /mnt/etc/fstab</code></pre>
         </li>
         <li>Chroot into arch dir
-            <pre data-user="root"><code class="language-bash command-line-prompt">arch-chroot /mnt /bin/bash</code></pre>
-        </li>
-        <li>Create fstab
-            <pre data-user="root"><code
-                    class="language-bash command-line-prompt">genfstab -U -p /mnt >> /mnt/etc/fstab</code></pre>
-        </li>
-        <li>Chroot into arch dir
             <pre data-user="root"><code
                     class="language-bash command-line-prompt">arch-chroot /mnt /bin/bash</code></pre>
         </li>
@@ -86,16 +78,14 @@
         </li>
         <li>Create a hostname
             <pre data-user="root"><code class="language-bash command-line-prompt">echo HOSTNAME > /etc/hostname</code></pre>
-            <pre data-user="root"><code
-                    class="language-bash command-line-prompt">echo HOSTNAME > /etc/hostname</code></pre>
         </li>
-        <li>/etc/hosts +: % 127.0.1.1 ... hostname
+        <li>Edit /etc/hosts +: % 127.0.1.1 ... hostname
         </li>
         <li>Change root password
             <pre data-user="root"><code class="language-bash command-line-prompt">passwd</code></pre>
         </li>
         <li>Install some additional packages
-            <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S grub dialog netcfg wpa_supplicant sudo</code></pre>
+            <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S grub dialog netctl wpa_supplicant sudo</code></pre>
         </li>
         <li>Install grub on your hard disk
             <pre data-user="root"><code class="language-bash command-line-prompt">grub-install /dev/sdX</code></pre>
@@ -125,7 +115,7 @@
         </li>
         <li>Login as USER</li>
         <li>Install audio, X and wm packages
-            <pre data-user="user"><code class="language-bash command-line-prompt">sudo pacman -S pulseaudio pulsaudio-alsa alsa-utils xorg xorg-xinit i3</code></pre>
+            <pre data-user="user"><code class="language-bash command-line-prompt">sudo pacman -S pulseaudio pulsaudio-alsa alsa-utils xorg xorg-xinit i3-gaps dmenu i3status</code></pre>
         </li>
         <li>Register window manager in ~/.xinitrc
             <pre data-user="user"><code class="language-bash command-line-prompt">echo "exec i3" > ~/.xinitrc</code></pre>
