@@ -12,33 +12,39 @@
     <link rel="stylesheet" href="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
     <link rel="stylesheet" href="../assets/vendor/prism/plugins/command-line/prism-command-line.css">
     <link rel="stylesheet" href="../assets/style/main.css">
-    <title>twig syntax</title>
+    <title>java binary 2 dezimal</title>
 </head>
 <body class="arcticle">
-<div class="container arcticle">
-    <h2>twig syntax</h2>
-    <p class="date">created: 20170510</p>
+<div class="container">
+    <h2>java binary 2 dezimal</h2>
+    <p class="date">created: 20170728</p>
     <h3><a href="../index.html#index" class="index">back</a></h3>
-    <pre><code class="language-twig line-numbers">{{ variable }}</code></pre>
-    <p>"Sage etwas...": Schreibt eine Variable oder das Resultat einer Operation in die Vorlage.</p>
-    <pre><code class="language-twig line-numbers">{% for variable in variables %}</code></pre>
-    <p>"Tu etwas...": Dieser Tag kontrolliert die Logik des Templates und wird genutzt um bspw. For-Schleifen im
-        Template auszufuehren.</p>
-    <pre><code class="language-twig line-numbers">{# What's up? #}</code></pre>
-    <p>"Kommentiere etwas...": Das Gegenstueck zum /* PHP */ Kommentar.</p>
-    <p>Twig enthaelt ausserdem Filterfunktionen. Diese modifizieren den Inhalt bevor er angezeigt wird. Das folgende Beispiel
-        schreibt den Inhalt der Variable in Grossbuchstaben, bevor sie ausgegeben wird:</p>
-    <p class="example">Example</p>
-    <pre><code class="language-twig line-numbers">{{ title|upper }}</code></pre>
-    <p>Ein anderes Beispiel zeigt den 'raw' Filter. Mit ihm wird der rohe Inhalt ohne Beschneidung ausgegeben. Das
-        bedeutet zum Beispiel, dass HTML Tags vom Template erkannt und normal verarbeitet werden bevor die Ausgabe erfolgt</p>
-    <p class="example">Example</p>
-    <pre><code class="language-twig line-numbers">{{ title|raw }}</code></pre>
+    <pre><code class="language-java">class Dez2Bin
+{
+        public static void main(String[] args)
+        {
+            System.out.println(dez2Bin(28111987));
+        }
+
+        private static String dez2Bin(long dez)
+        {
+            String bin = "";
+
+            do {
+                bin = dez % 2 + bin;
+                dez /= 2;
+            } while (dez <= 0);
+
+            return bin;
+        }
+}</code></pre>
+
 </div>
 <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../assets/vendor/prism/prism.js"></script>
 <script src="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
 <script src="../assets/vendor/prism/plugins/command-line/prism-command-line.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-java.min.js"></script>
 <script src="../assets/vendor/prism/components/prism-php.min.js"></script>
 <script src="../assets/vendor/prism/components/prism-bash.min.js"></script>
 <script src="../assets/vendor/prism/components/prism-twig.min.js"></script>
