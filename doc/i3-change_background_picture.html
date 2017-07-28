@@ -18,12 +18,15 @@
 <div class="container arcticle">
     <h2>i3 change background picture</h2>
     <p class="date">created: 20170609</p>
+    <p class="updated">created: 20170728</p>
     <h3><a href="../index.html" class="index">back</a></h3>
     <h4>feh</h4>
     <pre data-user="user"><code class="language-bash command-line-prompt">sudo pacman -S feh</code></pre>
     <h4>i3 config</h4>
     <pre data-user="user"><code class="language-bash command-line-prompt">nano ~/.config/i3/config</code></pre>
     <pre><code class="language-bash">exec feh --bg-scale /path/to/image.jpg</code></pre>
+    <h4>Mulitple screens</h4>
+    <pre><code class="language-bash">exec feh --bg-scale /path/to/image.jpg --bg-scale /path/to/image2.jpg ...</code></pre>
 </div>
 <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../assets/vendor/prism/prism.js"></script>
