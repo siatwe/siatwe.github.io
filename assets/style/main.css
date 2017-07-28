@@ -3,8 +3,7 @@
   padding-top: 25px;
 }
 .arcticle {
-  padding-left: 5%;
-  padding-right: 5%;
+  background: #333;
 }
 pre {
   border-radius: 0 !important;
@@ -22,6 +21,7 @@ a.footer {
 }
 a.index {
   font-size: 16px;
+  background: transparent!important;
 }
 .key {
   display: inline-block;
@@ -221,12 +221,10 @@ ul li:last-of-type {
 .start-picture {
   height: 100vh;
   padding-top: 12%;
-  background: url(../img/start.png) no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background: url(../img/start.jpg) no-repeat center center fixed;
 }
 .start-picture .start {
   display: block;
-  background: #333;
+  background: #333333;
   padding: 2% 0;
 }
