@@ -91,15 +91,18 @@ h2 {
   margin-bottom: 25px;
   font-size: 50px;
   color: #1793d1;
+  font-family: 'Megrim', cursive;
 }
 h3 {
   text-align: center;
   margin: 0 0 25px 0;
   padding: 0;
+  font-family: 'Megrim', cursive;
 }
 h4 {
   color: #31C854;
   margin-top: 50px;
+  font-family: 'Megrim', cursive;
 }
 p {
   font-size: 16px;
@@ -284,4 +287,10 @@ ul li:last-of-type {
 }
 .box__link.box__link--small {
   font-size: 11px;
+}
+span.command-line-prompt {
+  border-color: #1793d1;
+}
+.command-line-prompt > span:before {
+  color: #1793d1;
 }
