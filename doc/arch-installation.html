@@ -18,60 +18,63 @@
 <div class="container arcticle">
     <h2>arch installation</h2>
     <p class="date">created: 20170509</p>
-    <p class="updated">updated: 20170725</p>
+    <p class="updated">updated: 20170728</p>
     <h3><a href="../index.html" class="index">back</a></h3>
     <h4>Download</h4>
     <a href="https://www.archlinux.org/download/" target="_blank">https://www.archlinux.org/download/</a>
     <h4>Commands</h4>
     <ol>
-        <li>Check internet connection
+        <li>Check internet connection (-c COUNT: Stop after sending COUNT ECHO_REQUEST packets)
             <pre data-user="root"><code class="language-bash command-line-prompt">ping -c 3 google.com</code></pre>
         </li>
         <li>Show network interfaces
             <pre data-user="root"><code class="language-bash command-line-prompt">ip link</code></pre>
         </li>
-        <li>Optional: Enable wlan
+        <li>Optional: Enable wlan connection
             <pre data-user="root"><code class="language-bash command-line-prompt">wifi-menu</code></pre>
         </li>
-        <li>Update the package repository
-            <pre data-user="root"><code class="language-bash command-line-prompt">pacman -Syu</code></pre>
+        <li>If step 1 fails, try to run dhcpd on your prefered INTERFACE showed in step 2
+            <pre data-user="root"><code class="language-bash command-line-prompt">dhcpd INTERFACE</code></pre>
+        </li>
+        <li>Update the package repository (see: <a href="arch-pacman.html">pacman reference</a>)
+            <pre data-user="root"><code class="language-bash command-line-prompt">pacman -Syy</code></pre>
         </li>
         <li>Install the reflector package
             <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S reflector</code></pre>
         </li>
-        <li>Run reflector
+        <li>Run reflector(-c: COUNTRY)
             <pre data-user="root"><code class="language-bash command-line-prompt">reflector -c "Germany" -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist</code></pre>
         </li>
-        <li>Show hard disks
+        <li>Show hard disks (-l: List the partition tables for the specified devices and then exit)
             <pre data-user="root"><code class="language-bash command-line-prompt">fdisk -l</code></pre>
         </li>
-        <li>Run cfdisk on selected hard disk and create a primary, bootable partition
+        <li>Run cfdisk on selected hard disk and create a primary, bootable partition (and a swap partition, if needed)
             <pre data-user="root"><code class="language-bash command-line-prompt">cfdisk /dev/sdX</code></pre>
         </li>
-        <li>Format the created partition
+        <li>Format the created partition (e. g.: <a href="https://en.wikipedia.org/wiki/Btrfs" target="_blank">btrfs file system</a>)
             <pre data-user="root"><code class="language-bash command-line-prompt">mkfs.btrfs /dev/sdaXX</code></pre>
         </li>
         <li>Mount generated partition to /mnt
             <pre data-user="root"><code class="language-bash command-line-prompt">mount /dev/sdXX /mnt</code></pre>
         </li>
-        <li>Install the base system
+        <li>Install the base system (-i: Install from existing arch linux)
             <pre data-user="root"><code class="language-bash command-line-prompt">pacstrap -i /mnt base base-devel</code></pre>
         </li>
-        <li>Create fstab
+        <li>Create fstab (-U: Use UUIDs for source identifiers, -p:  Avoid printing pseudofs mounts)
             <pre data-user="root"><code class="language-bash command-line-prompt">genfstab -U -p /mnt >> /mnt/etc/fstab</code></pre>
         </li>
-        <li>Chroot into arch dir
+        <li>Change root into the new system
             <pre data-user="root"><code
                     class="language-bash command-line-prompt">arch-chroot /mnt /bin/bash</code></pre>
         </li>
-        <li>Edit /etc/locale.gen and uncomment prefered language
+        <li>Edit /etc/locale.gen and uncomment prefered language (utf8)
             <pre data-user="root"><code class="language-bash command-line-prompt">nano /etc/locale.gen</code></pre>
         </li>
         <li>Create locale
             <pre data-user="root"><code class="language-bash command-line-prompt">locale-gen</code></pre>
         </li>
-        <li>Select timezone
-            <pre data-user="root"><code class="language-bash command-line-prompt">ln -sf /usr/share/zoneinfo/KONTINET/TOWN /etc/localtime</code></pre>
+        <li>Select timezone (-sf: Make symbolic links instead of hard links, remove existing destination files)
+            <pre data-user="root"><code class="language-bash command-line-prompt">ln -sf /usr/share/zoneinfo/CONTINENT/TOWN /etc/localtime</code></pre>
         </li>
         <li>Update the hardware clock
             <pre data-user="root"><code class="language-bash command-line-prompt">hwclock --systohc --utc</code></pre>
@@ -79,46 +82,50 @@
         <li>Create a hostname
             <pre data-user="root"><code class="language-bash command-line-prompt">echo HOSTNAME > /etc/hostname</code></pre>
         </li>
-        <li>Edit /etc/hosts +: % 127.0.1.1 ... hostname
+        <li>Edit /etc/hosts, add your HOSTNAME and some needed informations
+            <pre data-user="root"><code class="language-bash command-line-prompt">nano /etc/hosts</code></pre>
+            <pre><code class="language-bash">/etc/hosts
+127.0.0.1	localhost.localdomain	localhost
+::1		    localhost.localdomain	localhost
+127.0.1.1	localhost.localdomain	HOSTNAME</code></pre>
         </li>
         <li>Change root password
             <pre data-user="root"><code class="language-bash command-line-prompt">passwd</code></pre>
         </li>
-        <li>Install some additional packages
-            <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S grub dialog netctl wpa_supplicant sudo</code></pre>
+        <li>Install sudo (needed later) and grub (optional:  dialog, netctl and wpa_supplicant for wlan network functionality)
+            <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S grub sudo dialog netctl wpa_supplicant</code></pre>
         </li>
         <li>Install grub on your hard disk
             <pre data-user="root"><code class="language-bash command-line-prompt">grub-install /dev/sdX</code></pre>
         </li>
-        <li>Create grub configuration file
-            <pre data-user="root"><code class="language-bash command-line-prompt">grub mkconfig -o /boot/grub/grub.cfg</code></pre>
+        <li>Create grub configuration file (-o: --output=file)
+            <pre data-user="root"><code class="language-bash command-line-prompt">grub-mkconfig -o /boot/grub/grub.cfg</code></pre>
         </li>
         <li>Exit the chroot environment
             <pre data-user="root"><code class="language-bash command-line-prompt">exit</code></pre>
         </li>
-        <li>Unmount the arch partition
+        <li>Unmount the arch partition (-R, --recursive: Recursively unmount each specified directory)
             <pre data-user="root"><code class="language-bash command-line-prompt">umount -R /mnt</code></pre>
         </li>
         <li>Reboot
             <pre data-user="root"><code class="language-bash command-line-prompt">reboot</code></pre>
         </li>
-        <li>Login with root and password</li>
-        <li>Create new user
+        <li>Login as root</li>
+        <li>Create new user (-m: Create home, -g: --gid GROUP, -s: --shell SHELL)
             <pre data-user="root"><code class="language-bash command-line-prompt">useradd -m -g users -G wheel -s /bin/bash USER</code></pre>
         </li>
         <li>Create password for new user
             <pre data-user="root"><code class="language-bash command-line-prompt">passwd USER</code></pre>
         </li>
-        <li>Edit /etc/sudoer file and uncomment wheel ALL=(ALL) ALL</li>
+        <li>Edit /etc/sudoer file and uncomment the following line</li>
+        <pre data-user="root"><code class="language-bash command-line-prompt">nano /etc/sudoer</code></pre>
+        <pre><code class="language-bash">%wheel      ALL=(ALL) ALL</code></pre>
         <li>Exit root environment
             <pre data-user="root"><code class="language-bash command-line-prompt">exit</code></pre>
         </li>
         <li>Login as USER</li>
-        <li>Install audio, X and wm packages
+        <li>Install audio, X and wm packages (e. g.: i3-gaps)
             <pre data-user="user"><code class="language-bash command-line-prompt">sudo pacman -S pulseaudio pulsaudio-alsa alsa-utils xorg xorg-xinit i3-gaps dmenu i3status</code></pre>
-        </li>
-        <li>Register window manager in ~/.xinitrc
-            <pre data-user="user"><code class="language-bash command-line-prompt">echo "exec i3" > ~/.xinitrc</code></pre>
         </li>
         <li>Register window manager in ~/.xinitrc
             <pre data-user="user"><code
