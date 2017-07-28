@@ -1,11 +1,21 @@
+.index {
+  background: #333;
+  padding-top: 25px;
+}
 .arcticle {
   padding-left: 5%;
   padding-right: 5%;
 }
 pre {
   border-radius: 0 !important;
-  border: 1px solid gray;
+  border: 1px solid #1793d1;
   margin-bottom: 25px;
+}
+pre span.line-numbers-rows {
+  border-color: #1793d1 !important;
+}
+pre span.line-numbers-rows span:before {
+  color: #1793d1;
 }
 a.footer {
   margin-top: 50px;
@@ -39,10 +49,7 @@ table {
   width: 100%;
 }
 body {
-  background: #333;
   color: white;
-  font-family: Arial, sans-serif;
-  padding-bottom: 50px;
   position: relative;
 }
 hr {
@@ -64,25 +71,16 @@ a:visited {
 }
 h1 {
   text-align: center;
+  font-size: 80px;
+  font-family: 'Megrim', cursive;
 }
 h2 {
   position: relative;
   text-align: center;
   margin-bottom: 25px;
-  font-weight: bolder;
-  font-size: 40px;
+  font-size: 50px;
   text-transform: lowercase;
-}
-h2 .clone {
-  position: absolute;
-  color: #31C854;
-  font-size: 12px;
-  text-decoration: none;
-  transition: color .3s;
-}
-h2 .clone:hover {
-  color: white;
-  transition: color .3s;
+  color: #1793d1;
 }
 h3 {
   text-align: center;
@@ -110,16 +108,24 @@ p.updated {
   font-size: 12px;
   text-align: center;
   font-weight: bolder;
-  color: lightsalmon;
+  color: lightcoral;
   margin-top: 0;
 }
 p.first {
   color: lightcoral;
   font-weight: bolder;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid lightcoral;
+  font-size: 30px;
 }
 p.second {
-  color: lightseagreen;
+  color: #1793d1;
   margin-bottom: 0;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #1793d1;
+  font-size: 20px;
 }
 p.example {
   font-style: italic;
@@ -184,9 +190,43 @@ ul.subindex .subindex-link {
 .search {
   font-style: italic;
   display: block;
-  margin: 0 auto;
   text-align: center;
+  margin-bottom: 50px;
 }
 .search div {
   display: inline-block;
+}
+ul {
+  list-style: none;
+}
+ul li:last-of-type {
+  margin-bottom: 25px;
+}
+.fmogh {
+  position: relative;
+}
+.fmogh :after {
+  content: 'github repos';
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 12px;
+  font-family: Arial, monospace;
+  color: #31C854;
+}
+.fmogh a {
+  text-decoration: none;
+  color: #1793d1;
+}
+.start-picture {
+  height: 100vh;
+  padding-top: 12%;
+  background: url(../img/start.png) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.start-picture .start {
+  display: block;
+  background: #333;
+  padding: 2% 0;
 }
