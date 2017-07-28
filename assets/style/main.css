@@ -62,6 +62,9 @@ a:active,
 a:visited {
   color: white;
 }
+h1 {
+  text-align: center;
+}
 h2 {
   position: relative;
   text-align: center;
@@ -126,4 +129,55 @@ p.example {
 }
 sup {
   color: #1793d1;
+}
+.index-navigation {
+  margin-top: 20%;
+}
+.dropdown {
+  margin-bottom: 15px;
+}
+.dropdown button {
+  display: block !important;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 0;
+  background: transparent;
+  border-color: #31C854;
+  color: white;
+  text-transform: uppercase;
+}
+.dropdown button:hover,
+.dropdown button:active,
+.dropdown button:focus {
+  background: transparent !important;
+  color: white !important;
+  border-color: white !important;
+}
+.dropdown .dropdown-menu {
+  position: relative;
+  margin: 0 auto;
+  float: none;
+  width: 50%;
+  background: #31C854;
+  color: black;
+  border-radius: 0;
+}
+ul.subindex {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.subindex li {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  border: 1px solid #31C854;
+}
+ul.subindex li a {
+  text-decoration: none;
+}
+ul.subindex .subindex-link {
+  margin-bottom: 15px;
 }
