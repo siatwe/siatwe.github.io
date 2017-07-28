@@ -249,9 +249,10 @@ ul li:last-of-type {
 }
 .start-picture .index-arrow {
   position: absolute;
-  top: 95vh;
+  top: 90vh;
   left: 50%;
   transform: translateX(-50%);
   font-size: 50px;
   cursor: pointer;
+  color: #1793d1;
 }
