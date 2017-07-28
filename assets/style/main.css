@@ -4,6 +4,7 @@
 }
 .arcticle {
   background: #333;
+  padding-bottom: 25px;
 }
 pre {
   border-radius: 0 !important;
@@ -21,7 +22,7 @@ a.footer {
 }
 a.index {
   font-size: 16px;
-  background: transparent!important;
+  background: transparent !important;
 }
 .key {
   display: inline-block;
@@ -73,6 +74,16 @@ h1 {
   text-align: center;
   font-size: 80px;
   font-family: 'Megrim', cursive;
+}
+@media (max-width: 729px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 380px) {
+  h1 {
+    font-size: 30px;
+  }
 }
 h2 {
   position: relative;
@@ -206,7 +217,7 @@ ul li:last-of-type {
   position: relative;
 }
 .fmogh :after {
-  content: 'github repos';
+  content: 'see github profile';
   position: absolute;
   right: 0;
   top: 0;
@@ -214,17 +225,33 @@ ul li:last-of-type {
   font-family: Arial, monospace;
   color: #31C854;
 }
+@media (max-width: 729px) {
+  .fmogh :after {
+    display: none;
+  }
+}
 .fmogh a {
   text-decoration: none;
   color: #1793d1;
 }
 .start-picture {
   height: 100vh;
-  padding-top: 12%;
   background: url(../img/start.jpg) no-repeat center center fixed;
+  position: relative;
 }
 .start-picture .start {
-  display: block;
-  background: #333333;
-  padding: 2% 0;
+  position: absolute;
+  background: rgba(51, 51, 51, 0.9);
+  padding: 1%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.start-picture .index-arrow {
+  position: absolute;
+  top: 95vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  cursor: pointer;
 }

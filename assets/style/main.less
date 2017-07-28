@@ -5,6 +5,7 @@
 
 .arcticle {
   background: #333;
+  padding-bottom: 25px;
 }
 
 pre {
@@ -26,7 +27,7 @@ a {
   }
   &.index {
     font-size: 16px;
-    background: transparent!important;
+    background: transparent !important;
   }
 }
 
@@ -82,6 +83,12 @@ h1 {
   text-align: center;
   font-size: 80px;
   font-family: 'Megrim', cursive;
+  @media (max-width: 729px) {
+    font-size: 40px;
+  }
+  @media (max-width: 380px) {
+    font-size: 30px;
+  }
 }
 
 h2 {
@@ -224,13 +231,16 @@ ul {
 .fmogh {
   position: relative;
   :after {
-    content: 'github repos';
+    content: 'see github profile';
     position: absolute;
     right: 0;
     top: 0;
     font-size: 12px;
     font-family: Arial, monospace;
     color: #31C854;
+    @media (max-width: 729px) {
+      display: none;
+    }
   }
   a {
     text-decoration: none;
@@ -240,11 +250,22 @@ ul {
 
 .start-picture {
   height: 100vh;
-  padding-top: 12%;
   background: url(../img/start.jpg) no-repeat center center fixed;
+  position: relative;
   .start {
-    display: block;
-    background: rgb(51, 51, 51);
-    padding: 2% 0;
+    position: absolute;
+    background: rgba(51, 51, 51, .9);
+    padding: 1%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .index-arrow {
+    position: absolute;
+    top: 95vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    cursor: pointer;
   }
 }

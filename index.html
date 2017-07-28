@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/ebur.png">
     <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="assets/vendor/prism/themes/prism-okaidia.css">
@@ -14,12 +15,22 @@
     <title>docs/tuts/howtos</title>
 </head>
 <body>
+<script>
+    $(document).ready(function () {
+        $(".index-arrow").click(function () {
+            $('html, body').animate({
+                scrollTop: $(".index").offset().top
+            }, 600);
+        });
+    });
+</script>
 <div class="start-picture">
     <div class="start">
         <h1><span class="fmogh"><a href="http://www.github.com/siatwe" target="_blank">siatwe</a></span><br>docs/tuts/howtos
         </h1>
-        <span class="search">Search<br><div class="key">Ctrl</div> +  <div class="key">F</div></span>
+        <span class="search">Search<br><span class="key">Ctrl</span> +  <span class="key">F</span></span>
     </div>
+    <span class="index-arrow glyphicon glyphicon-chevron-down"></span>
 </div>
 <div class="index">
     <div class="container">
@@ -136,7 +147,6 @@
         </ul>
     </div>
 </div>
-<script src="assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="assets/vendor/prism/prism.js"></script>
 <script src="assets/vendor/prism/components/prism-twig.min.js"></script>
 </body>
