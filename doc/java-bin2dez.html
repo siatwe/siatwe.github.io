@@ -19,6 +19,7 @@
     <h2>java binary 2 dezimal</h2>
     <p class="date">created: 20170728</p>
     <h3><a href="../index.html#index" class="index">back</a></h3>
+    <h4>Normal</h4>
     <pre><code class="language-java">class Dez2Bin
 {
         public static void main(String[] args)
@@ -38,7 +39,23 @@
             return bin;
         }
 }</code></pre>
+<h4>Recursive</h4>
+    <pre><code class="language-java">class Dez2Bin
+{
+        public static void main(String[] args)
+        {
+            System.out.println(dez2Bin(28111987));
+        }
 
+        private static String dez2Bin(long dez)
+        {
+            if (dez <= 0) {
+                return "0";
+            } else {
+                return dez2Bin(dez / 2) + dez % 2;
+            }
+        }
+}</code></pre>
 </div>
 <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../assets/vendor/prism/prism.js"></script>
