@@ -181,3 +181,12 @@ ul.subindex li a {
 ul.subindex .subindex-link {
   margin-bottom: 15px;
 }
+.search {
+  font-style: italic;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.search div {
+  display: inline-block;
+}
