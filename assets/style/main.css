@@ -294,3 +294,6 @@ span.command-line-prompt {
 .command-line-prompt > span:before {
   color: #1793d1;
 }
+::-webkit-scrollbar {
+  display: none;
+}
