@@ -103,6 +103,7 @@ h4 {
   color: #31C854;
   margin-top: 50px;
   font-family: 'Megrim', cursive;
+  font-weight: bolder;
 }
 span.date {
   font-family: "Courier New", monospace;
@@ -282,6 +283,7 @@ ul li:last-of-type {
 }
 .fmogh {
   position: relative;
+  font-weight: bolder;
 }
 .fmogh :after {
   content: 'see github profile';
