@@ -13,14 +13,26 @@
     <link rel="stylesheet" href="../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
     <link rel="stylesheet" href="../assets/vendor/prism/plugins/command-line/prism-command-line.css">
     <link rel="stylesheet" href="../assets/style/main.css">
-    <title>symfony bugfix console permission denied</title>
+    <title>symfony using sqlite as database</title>
 </head>
 <body class="arcticle">
 <div class="container arcticle">
-    <h2>symfony bugfix console permission denied</h2>
-    <p class="date">created: 20170510</p>
+    <h2>symfony using sqlite as database</h2>
+    <p class="date">created: 20170731</p>
     <h3><a href="../index.html#index" class="index">back</a></h3>
-    <pre data-user="user"><code class="language-bash command-line">chmod +x bin/console</code></pre>
+    <p>If you want to use SQLite as your database, you need to set the path where your database file should be stored
+        and change the driver:</p>
+    <pre><code class="language-yaml line-numbers"># app/config/config.yml
+doctrine:
+    dbal:
+        driver: pdo_sqlite
+        path: "%kernel.root_dir%/sqlite.db"
+        charset: UTF8</code></pre>
+    <p>Then execute the following commands (Of cource, after creating some <a href="doctrine-entity_class.html">entities</a>):</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">php bin/bash doctrine:database:create
+php bin/bash doctrine:schema:update --force</code></pre>
+    <p>After that, you're able to add the database to your IDE, e. g. PHPStorm:</p>
+    <img src="../assets/img/phpstorm-database.png" alt="" class="img-responsive">
 </div>
 <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../assets/vendor/prism/prism.js"></script>
@@ -29,5 +41,6 @@
 <script src="../assets/vendor/prism/components/prism-php.min.js"></script>
 <script src="../assets/vendor/prism/components/prism-bash.min.js"></script>
 <script src="../assets/vendor/prism/components/prism-twig.min.js"></script>
+<script src="../assets/vendor/prism/components/prism-yaml.min.js"></script>
 </body>
 </html>

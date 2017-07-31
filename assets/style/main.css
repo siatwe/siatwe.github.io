@@ -1,5 +1,5 @@
 .index {
-  background: #333;
+  background: #333333;
   padding-top: 25px;
 }
 .arcticle {
@@ -24,7 +24,7 @@ a.index {
   font-size: 16px;
   background: transparent !important;
 }
-.key {
+.keys {
   display: inline-block;
   padding: 3px;
   background: white;
@@ -104,12 +104,6 @@ h4 {
   margin-top: 50px;
   font-family: 'Megrim', cursive;
 }
-p,
-span {
-  font-size: 16px;
-  text-align: justify;
-}
-p.date,
 span.date {
   font-family: "Courier New", monospace;
   font-size: 12px;
@@ -118,7 +112,6 @@ span.date {
   color: #31C854;
   margin-bottom: 0;
 }
-p.updated,
 span.updated {
   font-family: "Courier New", monospace;
   font-size: 12px;
@@ -126,9 +119,35 @@ span.updated {
   font-weight: bolder;
   color: lightcoral;
   margin-top: 0;
+  margin-right: 10px;
 }
-p.first,
-span.first {
+@media (max-width: 395px) {
+  span.updated {
+    display: none;
+    margin-right: 0;
+  }
+}
+p {
+  font-size: 16px;
+  text-align: justify;
+}
+p.date {
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bolder;
+  color: #31C854;
+  margin-bottom: 0;
+}
+p.updated {
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bolder;
+  color: lightcoral;
+  margin-top: 0;
+}
+p.first {
   color: lightcoral;
   display: block;
   width: 100%;
@@ -137,19 +156,51 @@ span.first {
   font-size: 30px;
   font-family: 'Megrim', cursive;
 }
-p.second,
-span.second {
+p.second {
+  position: relative;
   color: #1793d1;
-  margin-bottom: 0;
   display: block;
   width: 100%;
   border-bottom: 1px solid #1793d1;
   font-size: 20px;
   font-weight: bolder;
   font-family: 'Megrim', cursive;
+  margin-bottom: 20px;
 }
-p.example,
-span.example {
+p.second:before {
+  position: absolute;
+  content: 'created: ';
+  color: #31C854;
+  font-size: 12px;
+  font-family: "Courier New", monospace;
+  bottom: -22px;
+  left: 42px;
+}
+@media (max-width: 515px) {
+  p.second:before {
+    left: 2px;
+  }
+}
+p.second:after {
+  position: absolute;
+  content: 'updated: ';
+  color: lightcoral;
+  font-size: 12px;
+  font-family: "Courier New", monospace;
+  bottom: -22px;
+  left: 112px;
+}
+@media (max-width: 515px) {
+  p.second:after {
+    left: 72px;
+  }
+}
+@media (max-width: 395px) {
+  p.second:after {
+    display: none;
+  }
+}
+p.example {
   font-style: italic;
   font-size: 13px;
   margin-top: 25px;
@@ -220,6 +271,11 @@ ul.subindex .subindex-link {
 }
 ul {
   list-style: none;
+}
+@media (max-width: 515px) {
+  ul {
+    padding: 0;
+  }
 }
 ul li:last-of-type {
   margin-bottom: 25px;
