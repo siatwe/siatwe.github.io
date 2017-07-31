@@ -382,3 +382,11 @@ span.command-line-prompt {
   background: url(../img/articles_bg.jpg) no-repeat center center fixed;
   background-position-y: -236px;
 }
+footer {
+  text-align: center;
+  background: #1793d1;
+  padding: 20px;
+}
+footer a.impressum {
+  color: white;
+}
