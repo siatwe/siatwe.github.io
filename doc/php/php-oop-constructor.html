@@ -22,7 +22,7 @@
     <p class="date">created: 20170510</p>
     <h3><a href="../../index.html#index" class="index">back</a></h3>
     <p>The __conctruct() method will be called, when an object of the class are created.</p>
-    <p class="example">Example</p>
+    <p class="example">Example:</p>
     <pre><code class="language-php line-numbers">class User
 {
     public $created;
@@ -31,7 +31,6 @@
 
     public function __construct()
     {
-        //Erstellt die Klassenvariable bei Erzeugung einer Instanz
         $this->created = date("d.m.Y H:i:s");
     }
 }
@@ -39,17 +38,15 @@
 $simon = new User();
 $simon->name = "Simon Weis";
 
-echo "Das Objekt von $simon->name wurde erstellt am $simon->created";</code></pre>
-    <p>Im Konstruktor kann man Parameter spezifizieren.</p>
-    <p class="example">Example</p>
+echo "$simon->created";</code></pre>
+    <p>In the constructor, you can specify parameters.</p>
+    <p class="example">Example:</p>
     <pre><code class="language-php line-numbers">class User
 {
     public $created;
     public $name;
     public $email;
 
-    //$name ist ein Pflichtfeld bei Erzeugung eines Objekts der Klasse User, $email ist optional...
-    //...$created wird automatisch erstellt.
     public function __construct($name, $email = "")
     {
         $this->name = $name;
@@ -60,7 +57,7 @@ echo "Das Objekt von $simon->name wurde erstellt am $simon->created";</code></pr
 
 $simon = new User("Simon Weis", "simon@web.de");
 
-echo "Das Objekt von $simon->name wurde erstellt am $simon->created";</code></pre>
+echo "$simon->created";</code></pre>
 </div>
 <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../../assets/vendor/prism/prism.js"></script>

@@ -41,10 +41,8 @@ public function createAction()
 
     $em = $this->getDoctrine()->getManager();
 
-    // teilt Doctrine mit, dass man eventuell das Product speichern moechte
     $em->persist($product);
 
-    // Fuehrt die Statements aus und speichert (z. B. the INSERT query)
     $em->flush();
 
     return new Response('Saved new product with id '.$product->getId());
