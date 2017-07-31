@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/ebur.png">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/command-line/prism-command-line.css">
+    <link rel="stylesheet" href="../../assets/style/main.css">
+    <title>linux docker set up</title>
+</head>
+<body class="arcticle">
+<div class="container arcticle">
+    <h2>linux docker set up</h2>
+    <p class="date">created: 20170510</p>
+    <p class="updated">updated: 20170519</p>
+    <h3><a href="../../index.html#index" class="index">back</a></h3>
+    <h4>Installation</h4>
+    <p>Arch Linux</p>
+    <pre data-user="user"><code
+            class="language-bash command-line-prompt">sudo pacman -S docker docker-compose</code></pre>
+    <p>Debian based</p>
+    <pre data-user="user"><code
+            class="language-bash command-line-prompt">sudo apt-get install docker docker-compose</code></pre>
+    <h4>Docker Group</h4>
+    <p>Add user to docker group:</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">sudo gpasswd -a user docker</code></pre>
+    <h4>Start docker:</h4>
+    <p>Start the docker system daemon:</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">sudo systemctl start docker</code></pre>
+    <p>Enable docker system daemon on startup:</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">sudo systemctl enable docker</code></pre>
+    <p>Change into / dir and execute the following: </p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">docker-compose up --build -d</code></pre>
+    <p>Chroot into the docker container:</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">docker-compose exec --user=1000 php sh</code></pre>
+</div>
+<script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../../assets/vendor/prism/prism.js"></script>
+<script src="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../../assets/vendor/prism/plugins/command-line/prism-command-line.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-php.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-bash.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-twig.min.js"></script>
+</body>
+</html>

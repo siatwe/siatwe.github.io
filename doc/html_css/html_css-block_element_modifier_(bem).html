@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/ebur.png">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/command-line/prism-command-line.css">
+    <link rel="stylesheet" href="../../assets/style/main.css">
+    <title>html block element modifier (bem)</title>
+</head>
+<body class="arcticle">
+<div class="container arcticle">
+    <h2>html block element modifier (bem)</h2>
+    <p class="date">created: 20170728</p>
+    <h3><a href="../../index.html#index" class="index">back</a></h3>
+    <h4>Block</h4>
+    <p>Standalone entity that is meaningful on its own. Examples: header, container, menu, checkbox, input.</p>
+    <h4>Element</h4>
+    <p>A part of a block that has no standalone meaning and is semantically tied to its block. Examples: menu item, list
+        item, checkbox caption, header title. Syntax: block__element.</p>
+    <h4>Modifier</h4>
+    <p>A flag on a block or element. Use them to change appearance or behavior. Examples: disabled, highlighted,
+        checked, fixed, size big, color yellow. Syntax: block__element--modifier.</p>
+    <h4>Example</h4>
+    <div class="box">
+        <h6 class="box__heading">Box Heading</h6>
+        <p class="box__text">Box Text lorem ipsum dolor</p>
+        <a href="#" class="box__link box__link--small">Box Link small</a>
+    </div>
+    <p class="example">HTML</p>
+    <pre><code class="language-html line-numbers">&lt;div class="box"&gt;
+        &lt;h6 class="box__heading"&gt;Box Heading&lt;/h6&gt;
+        &lt;p class="box__text"&gt;Box Text lorem ipsum dolor&lt;/p&gt;
+        &lt;a href="#" class="box__link box__link--small"&gt;Box Link small&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+    <p class="example">CSS/LESS</p>
+    <pre><code class="language-less line-numbers">.box {
+  padding: 20px;
+  border: 1px solid white;
+}
+
+.box__heading {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.box__text {
+  font-size: 13px;
+  color: gray;
+}
+
+.box__link {
+  color: #d30000;
+  text-decoration: none;
+  font-size: 14px;
+  &:hover {
+    font-weight: bolder;
+    color: indianred;
+  }
+  &.box__link--small {
+    font-size: 11px;
+  }
+}</code></pre>
+    <h4>Modularity</h4>
+    <p>Block styles are never dependent on other elements on a page, so you will never experience problems from
+        cascading.
+        You also get the ability to transfer blocks from your finished projects to new ones.</p>
+    <h4>Reusability</h4>
+    <p>Composing independent blocks in different ways, and reusing them intelligently, reduces the amount of CSS code
+        that you will have to maintain.
+        With a set of style guidelines in place, you can build a library of blocks, making your CSS super effective.</p>
+    <h4>Structure</h4>
+    <p>BEM methodology gives your CSS code a solid structure that remains simple and easy to understand.</p>
+</div>
+<script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../../assets/vendor/prism/prism.js"></script>
+<script src="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../../assets/vendor/prism/plugins/command-line/prism-command-line.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-php.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-bash.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-less.min.js"></script>
+</body>
+</html>

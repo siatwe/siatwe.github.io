@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/ebur.png">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/command-line/prism-command-line.css">
+    <link rel="stylesheet" href="../../assets/style/main.css">
+    <title>arch yaourt</title>
+</head>
+<body class="arcticle">
+<div class="container arcticle">
+    <h2>arch yaourt</h2>
+    <p class="date">created: 20170609</p>
+    <p class="updated">updated: 20170728</p>
+    <h3><a href="../../index.html#index" class="index">back</a></h3>
+    <h4>Installation</h4>
+    <p>Dependencies</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">sudo pacman -S base-devel curl</code></pre>
+    <p>package-query<sup>AUR</sup></p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">curl -O https://aur.archlinux.org/cgit/aur.git/snapshot/package-query.tar.gz
+tar -xvzf package-query.tar.gz
+cd package-query
+makepkg -si</code></pre>
+    <p>yaourt<sup>AUR</sup></p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">cd ..
+curl -O https://aur.archlinux.org/cgit/aur.git/snapshot/yaourt.tar.gz
+tar -xvzf yaourt.tar.gz
+cd yaourt
+makepkg -si</code></pre>
+    <h4>Usage</h4>
+    <p>Package Installation</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">yaourt package_name</code></pre>
+    <p>Full upgrade with aur packages</p>
+    <pre data-user="user"><code class="language-bash command-line-prompt">yaourt -Syua</code></pre>
+    <a href="arch-pacman.html">See pacman reference.</a>
+</div>
+<script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../../assets/vendor/prism/prism.js"></script>
+<script src="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../../assets/vendor/prism/plugins/command-line/prism-command-line.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-php.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-bash.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-twig.min.js"></script>
+</body>
+</html>

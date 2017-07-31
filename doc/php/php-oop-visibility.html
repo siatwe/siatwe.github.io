@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/ebur.png">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/command-line/prism-command-line.css">
+    <link rel="stylesheet" href="../../assets/style/main.css">
+    <title>php oop visibility</title>
+</head>
+<body class="arcticle">
+<div class="container arcticle">
+    <h2>php oop visibility</h2>
+    <p class="date">created: 20170510</p>
+    <h3><a href="../../index.html#index" class="index">back</a></h3>
+    <ul>
+        <li>public
+            <ul>
+                <li>Vollzugriff: Jeder kann auf diese Variable oder Methode zugreifen</li>
+            </ul>
+        </li>
+        <li>protected
+            <ul>
+                <li>Zugriff nur innerhalb der Klasse und vererbten Klassen</li>
+            </ul>
+        </li>
+        <li>private
+            <ul>
+                <li>Zugriff nur innerhalb der Klasse</li>
+            </ul>
+        </li>
+    </ul>
+    <pre><code class="language-php line-numbers">class User
+{
+    public $name;
+    protected $email;
+    private $password;
+
+    public function setEmail($newEmail)
+    {
+        //Prueft ob $newEmail ueber die noch folgende Methode isValidEmail($email) gueltig ist...
+        if ($this->isValidEmail($newEmail)) {
+            //...wen ja, setze die Email
+            $this->email = $newEmail;
+        }
+    }
+
+    public function getEmail()
+    {
+        //Wirft die Email-Adresse zurueck
+        return $this->email;
+    }
+
+    public function setRandomPassword()
+    {
+        //Erstellt eine zufaellige Zahl zwischen 1 und 10
+        $randomPassword = strval(rand(1, 10));
+        //Speichert die Zahl als $password, nachdem sie durch die noch folgende Funktion hashPassword in sha1
+        //verschluesselt wurde
+        $this->password = $this->hashPassword($randomPassword);
+
+        return $randomPassword;
+    }
+
+    public function isCorrectPassword($password)
+    {
+        //Gibt zurueck ob $password dem Klassen-Password entspricht
+        return $this->hashPassword($password) == $this->password;
+    }
+
+    protected function isValidEmail($email)
+    {
+        //Prueft, ab es sich um eine gueltige Email-Adresse handelt, wenn ja, wird sie zurueckgeworfen...
+        //...filter_var ueberprueft die uebergebende Variable dabei mit dem Filter FILTER_VALIDATE_EMAIL
+        return filter_var($email, FILTER_VALIDATE_EMAIL) !==false;
+    }
+
+    private function hashPassword($password)
+    {
+        //Gibt das $password zurueck, nachdem es mit sha1 verschluesselt wurde
+        return sha1($password);
+    }
+}
+
+$simon = new User();
+$simon->name = "Simon Weis";
+$simon->setEmail("simon@web.de");
+
+echo "Die Email-Adresse von $simon->name ist: " . $simon->getEmail() . "<br>";
+
+$randomPW = $simon->setRandomPassword();
+
+echo "Zufaelliges Passwort: $randomPW <br>";
+
+echo "Ist das Passwort 5 korrekt: ";
+var_dump($simon->isCorrectPassword("5"));</code></pre>
+</div>
+<script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../../assets/vendor/prism/prism.js"></script>
+<script src="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../../assets/vendor/prism/plugins/command-line/prism-command-line.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-php.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-bash.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-twig.min.js"></script>
+</body>
+</html>

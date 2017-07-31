@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/ebur.png">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/command-line/prism-command-line.css">
+    <link rel="stylesheet" href="../../assets/style/main.css">
+    <title>arch pacman</title>
+</head>
+<body class="arcticle">
+<div class="container">
+    <h2>arch pacman</h2>
+    <p class="date">created: 20170509</p>
+    <h3><a href="../../index.html#index" class="index">back</a></h3>
+    <p>Install a single package or a list of packages (including dependencies)</p>
+    <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S package_name1 package_name2</code></pre>
+    <p>Search the repository for a search term</p>
+    <pre data-user="root"><code class="language-bash command-line-prompt">pacman -Ss package_name</code></pre>
+    <p>Remove a single package, leaving all of its dependencies installed</p>
+    <pre data-user="root"><code class="language-bash command-line-prompt">pacman -R package_name</code></pre>
+    <p>Remove a package and its dependencies which are not required by any other installed package</p>
+    <pre data-user="root"><code class="language-bash command-line-prompt">pacman -Rs package_name</code></pre>
+    <p>Remove a package, its dependencies and all the packages that depend on the target package
+        WARNING ! This operation is recursive !</p>
+    <pre data-user="root"><code class="language-bash command-line-prompt">pacman -Rsc package_name</code></pre>
+    <p>Update all packages</p>
+    <pre data-user="root"><code class="language-bash command-line-prompt">pacman -Syu</code></pre>
+    <p>To search allready installed packages</p>
+    <pre data-user="root"><code class="language-bash command-line-prompt">pacman -Qs</code></pre>
+    <p>Remove all cached packages that are not currently installed</p>
+    <pre data-user="root"><code class="language-bash command-line-prompt">pacman -Sc</code></pre>
+    <p>List all unused packages</p>
+    <pre data-user="root"><code class="language-bash command-line-prompt">pacman -Qdt</code></pre>
+    <p>Remove all unused packages</p>
+    <pre data-user="root"><code class="language-bash command-line-prompt">pacman -Rsn $(pacman -Qdtq)</code></pre>
+</div>
+<script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../../assets/vendor/prism/prism.js"></script>
+<script src="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../../assets/vendor/prism/plugins/command-line/prism-command-line.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-php.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-bash.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-twig.min.js"></script>
+</body>
+</html>
