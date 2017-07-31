@@ -3,17 +3,26 @@
   padding-top: 25px;
   position: relative;
   .last-update {
-    position: absolute;
-    top: -40px;
-    right: 15px;
-    font-family: "Courier New", monospace;
-    font-size: 12px;
-    text-align: center;
-    font-weight: bolder;
-    color: #31C854;
-    margin-bottom: 0;
-    background: rgba(51, 51, 51, .9);
-    padding: 5px 10px;
+    a {
+      position: absolute;
+      top: -40px;
+      right: 15px;
+      font-family: "Courier New", monospace;
+      font-size: 12px;
+      text-align: center;
+      font-weight: bolder;
+      color: #31C854;
+      margin-bottom: 0;
+      background: rgba(51, 51, 51, .9);
+      padding: 5px 10px;
+      text-decoration: none;
+      transition: all .3s;
+      &:hover {
+        background: #1793d1;
+        color: white;
+        transition: all .3s;
+      }
+    }
   }
 }
 
@@ -136,7 +145,6 @@ h5 {
   color: lightcoral;
 }
 
-
 p {
   font-size: 16px;
   text-align: justify;
@@ -253,7 +261,7 @@ ul.subindex {
 
 ul {
   list-style: none;
-  @media(max-width: 515px) {
+  @media (max-width: 515px) {
     padding: 0;
   }
   li:last-of-type {
@@ -359,7 +367,7 @@ span.command-line-prompt {
 
 footer {
   text-align: center;
-  background:  #1793d1;
+  background: #1793d1;
   padding: 20px;
   a.impressum {
     color: white;
