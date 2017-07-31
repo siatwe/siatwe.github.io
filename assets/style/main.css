@@ -126,29 +126,6 @@ h5 {
   font-weight: bolder;
   color: lightcoral;
 }
-span.date {
-  font-family: "Courier New", monospace;
-  font-size: 12px;
-  text-align: center;
-  font-weight: bolder;
-  color: #31C854;
-  margin-bottom: 0;
-}
-span.updated {
-  font-family: "Courier New", monospace;
-  font-size: 12px;
-  text-align: center;
-  font-weight: bolder;
-  color: lightcoral;
-  margin-top: 0;
-  margin-right: 10px;
-}
-@media (max-width: 395px) {
-  span.updated {
-    display: none;
-    margin-right: 0;
-  }
-}
 p {
   font-size: 16px;
   text-align: justify;
@@ -187,40 +164,6 @@ p.second {
   font-size: 20px;
   font-weight: bolder;
   font-family: 'Megrim', cursive;
-  margin-bottom: 20px;
-}
-p.second:before {
-  position: absolute;
-  content: 'created: ';
-  color: #31C854;
-  font-size: 12px;
-  font-family: "Courier New", monospace;
-  bottom: -22px;
-  left: 42px;
-}
-@media (max-width: 515px) {
-  p.second:before {
-    left: 2px;
-  }
-}
-p.second:after {
-  position: absolute;
-  content: 'updated: ';
-  color: lightcoral;
-  font-size: 12px;
-  font-family: "Courier New", monospace;
-  bottom: -22px;
-  left: 112px;
-}
-@media (max-width: 515px) {
-  p.second:after {
-    left: 72px;
-  }
-}
-@media (max-width: 395px) {
-  p.second:after {
-    display: none;
-  }
 }
 p.example {
   font-style: italic;
