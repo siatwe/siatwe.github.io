@@ -104,11 +104,13 @@ h4 {
   margin-top: 50px;
   font-family: 'Megrim', cursive;
 }
-p {
+p,
+span {
   font-size: 16px;
   text-align: justify;
 }
-p.date {
+p.date,
+span.date {
   font-family: "Courier New", monospace;
   font-size: 12px;
   text-align: center;
@@ -116,7 +118,8 @@ p.date {
   color: #31C854;
   margin-bottom: 0;
 }
-p.updated {
+p.updated,
+span.updated {
   font-family: "Courier New", monospace;
   font-size: 12px;
   text-align: center;
@@ -124,7 +127,8 @@ p.updated {
   color: lightcoral;
   margin-top: 0;
 }
-p.first {
+p.first,
+span.first {
   color: lightcoral;
   display: block;
   width: 100%;
@@ -133,7 +137,8 @@ p.first {
   font-size: 30px;
   font-family: 'Megrim', cursive;
 }
-p.second {
+p.second,
+span.second {
   color: #1793d1;
   margin-bottom: 0;
   display: block;
@@ -143,7 +148,8 @@ p.second {
   font-weight: bolder;
   font-family: 'Megrim', cursive;
 }
-p.example {
+p.example,
+span.example {
   font-style: italic;
   font-size: 13px;
   margin-top: 25px;
