@@ -1,6 +1,20 @@
 .index {
   background: #333333;
   padding-top: 25px;
+  position: relative;
+}
+.index .last-update {
+  position: absolute;
+  top: -40px;
+  right: 10px;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bolder;
+  color: #31C854;
+  margin-bottom: 0;
+  background: rgba(51, 51, 51, 0.9);
+  padding: 5px 10px;
 }
 .arcticle {
   background: #333;
@@ -92,6 +106,7 @@ h2 {
   font-size: 50px;
   color: #1793d1;
   font-family: 'Megrim', cursive;
+  font-weight: bolder;
 }
 h3 {
   text-align: center;
@@ -104,6 +119,7 @@ h4 {
   margin-top: 50px;
   font-family: 'Megrim', cursive;
   font-weight: bolder;
+  font-size: 30px;
 }
 span.date {
   font-family: "Courier New", monospace;
@@ -152,7 +168,7 @@ p.first {
   color: lightcoral;
   display: block;
   width: 100%;
-  border-bottom: 5px solid lightcoral;
+  border-bottom: 3px solid lightcoral;
   font-weight: bolder;
   font-size: 30px;
   font-family: 'Megrim', cursive;
