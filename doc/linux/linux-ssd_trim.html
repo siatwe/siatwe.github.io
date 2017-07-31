@@ -20,9 +20,17 @@
 <div class="container">
     <h2>ssd TRIM</h2>
     <p class="date">created: 20170510</p>
+    <p class="updated">updated: 20170731</p>
     <h3><a href="../../index.html#index" class="index">back</a></h3>
     <h4>Check ssd TRIM support</h4>
     <pre data-user="user"><code class="language-bash command-line-prompt">sudo lsblk -D</code></pre>
+    <pre><code class="language-bash">NAME   DISC-ALN DISC-GRAN DISC-MAX DISC-ZERO
+sr0           0        0B       0B         0
+sda           0      512B       2G         0
+├─sda2        0      512B       2G         0
+├─sda3        0      512B       2G         0
+└─sda1        0      512B       2G         0
+</code></pre>
     <p>And check the values of DISC-GRAN and DISC-MAX columns. Non-zero values indicate TRIM support.</p>
     <h4>Continuous TRIM</h4>
     <p>Using the discard option for a mount in /etc/fstab enables continuous TRIM in device operations:</p>
