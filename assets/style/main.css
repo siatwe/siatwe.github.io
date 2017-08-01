@@ -23,6 +23,9 @@
   color: white;
   transition: all .3s;
 }
+a.index {
+  font-weight: bolder;
+}
 .arcticle {
   background: #333;
   padding-bottom: 25px;
