@@ -348,3 +348,13 @@ footer {
 footer a.impressum {
   color: white;
 }
+input.form-control.input-sm {
+  display: block;
+  margin: 0 auto;
+  border-radius: 0;
+  outline: none;
+  width: 200px;
+}
+input.form-control.input-sm:focus {
+  border: none;
+}
