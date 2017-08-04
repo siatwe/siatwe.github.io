@@ -357,4 +357,5 @@ input.form-control.input-sm {
 }
 input.form-control.input-sm:focus {
   border: none;
+  box-shadow: none;
 }
