@@ -244,6 +244,22 @@ ul.subindex .subindex-link {
 .search div {
   display: inline-block;
 }
+.search-desktop {
+  display: block;
+}
+@media (max-width: 900px) {
+  .search-desktop {
+    display: none;
+  }
+}
+.search-mobil {
+  display: none!important;
+}
+@media (max-width: 900px) {
+  .search-mobil {
+    display: block!important;
+  }
+}
 ul {
   list-style: none;
 }
