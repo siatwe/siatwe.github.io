@@ -13,42 +13,15 @@
     <link rel="stylesheet" href="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
     <link rel="stylesheet" href="../../assets/vendor/prism/plugins/command-line/prism-command-line.css">
     <link rel="stylesheet" href="../../assets/style/main.css">
-    <title>php user input without enter key</title>
+    <title>ascii codes</title>
 </head>
 <body class="arcticle">
 <div class="article_bg"></div>
 <div class="container">
-    <h2>php user input without enter key</h2>
+    <h2>ascii codes</h2>
     <p class="date">created: 20170807</p>
     <h3><a href="../../index.html#index" class="index">back</a></h3>
-    <p>This function immediately returns the pressed key (ascii code).</p>
-    <pre><code class="language-php line-numbers">private function userInput()
-{
-    system('stty cbreak -echo');
-    $stdin = fopen('php://stdin', 'r');
-    while (1) {
-        $input = ord(fgetc($stdin));
-
-        return $input;
-    }
-
-    return null;
-}</code></pre>
-
-    <p>To get the ascii code, you can return the printed key id, e. g. with print_r(), or look <a
-            href="../misc/misc-ascii-codes.html">here</a>.</p>
-    <pre><code class="language-php line-numbers">private function userInput()
-{
-    system('stty cbreak -echo');
-    $stdin = fopen('php://stdin', 'r');
-    while (1) {
-        $input = ord(fgetc($stdin));
-        print_r($input);
-        return $input;
-    }
-
-    return null;
-}</code></pre>
+    <img src="../../assets/img/ASCII-Table-wide.svg.png" alt="" class="img-responsive">
 </div>
 <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../../assets/vendor/prism/prism.js"></script>
