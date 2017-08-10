@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/ebur.png">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/command-line/prism-command-line.css">
+    <link rel="stylesheet" href="../../assets/style/main.css">
+    <title>algorithms binary search</title>
+</head>
+<body class="arcticle">
+<div class="article_bg"></div>
+<div class="container">
+    <h2>algorithms binary search</h2>
+    <p class="date">created: 20170810</p>
+    <h3><a href="../../index.html#index" class="index">back</a></h3>
+    <p>Binary search works on sorted arrays. Binary search begins by comparing the middle element of the array with the
+        target value. If the target value matches the middle element, its position in the array is returned. If the
+        target value is less than or greater than the middle element, the search continues in the lower or upper half of
+        the array, respectively, eliminating the other half from consideration.</p>
+    <h4>Example with user input in php</h4>
+    <p class="example">Class Number</p>
+    <pre><code class="language-php line-numbers">require_once "Terminal.php";
+
+class Number
+{
+
+    private $numberRange;
+    private $determinedNumber;
+    private $numberRangeArray;
+
+
+    private function determine($numberRange)
+    {
+        $this->determinedNumber = mt_rand(1, $numberRange);
+    }
+
+
+    public function check($guessedNumber)
+    {
+        return ($guessedNumber === $this->determinedNumber) ? true : false;
+    }
+
+
+    public function determineNumberRange($numberRange)
+    {
+        if ($numberRange > 799 || $numberRange < 1) {
+            echo "\e[41mInvalid input! Press return and try again\e[0m";
+            $dump = readline();
+            Terminal::start();
+        } else {
+            $this->numberRange = $numberRange;
+            $this->generateNumberRangeArray();
+            $this->determine($numberRange);
+        }
+    }
+
+
+    private function generateNumberRangeArray()
+    {
+        for ($i = 0; $i < $this->numberRange; $i++) {
+            $this->numberRangeArray[$i] = $i;
+        }
+    }
+
+
+    public function guessANumber($guessedNumber)
+    {
+        if ($guessedNumber === $this->determinedNumber) {
+            $this->numberRangeArray[$guessedNumber] = "\e[45m".$guessedNumber."\e[0m";
+        } else {
+            if ($guessedNumber < $this->determinedNumber) {
+                for (; $guessedNumber >= 0; $guessedNumber--) {
+                    $this->numberRangeArray[$guessedNumber] = "\e[91m".$guessedNumber."\e[0m";
+                }
+            } else {
+                $newRange = $guessedNumber;
+                for (; $guessedNumber <= $this->numberRange; $guessedNumber++) {
+                    $this->numberRangeArray[$guessedNumber] = "\e[91m".$guessedNumber."\e[0m";
+                }
+                $this->numberRange = $newRange;
+            }
+        }
+        Terminal::drawNumberRange($this->numberRangeArray);
+    }
+
+
+    public function getNumberRange()
+    {
+        return $this->numberRange;
+    }
+
+
+    public function getNumberRangeArray()
+    {
+        return $this->numberRangeArray;
+    }
+
+
+    public function getDeterminedNumber()
+    {
+        return $this->determinedNumber;
+    }
+}</code></pre>
+    <p class="example">Class Terminal</p>
+    <pre><code class="language-php line-numbers">require_once "Number.php";
+
+class Terminal
+{
+    private $firstRun = 0;
+
+
+    public static function start()
+    {
+        echo "\033[H\033[2J";
+        echo "Number range (0 - 799): ";
+        $number = new Number();
+        $number->determineNumberRange(readline());
+        self::drawNumberRange($number->getNumberRangeArray());
+        $guessedNumber = -1;
+        while ($guessedNumber != $number->getDeterminedNumber()) {
+            echo "\nYour guess: ";
+            $guessedNumber = readline();
+            $number->guessANumber($guessedNumber);
+        }
+        echo "\nYes, ".$guessedNumber." was my determined number!\n";
+    }
+
+
+    public static function drawNumberRange($numberRange)
+    {
+        echo "\033[H\033[2JBinary Search Example\n";
+        $break = 0;
+        foreach ($numberRange as $number) {
+            echo "\e[92m".$number."\e[0m ";
+            $break++;
+            if ($break === 25) {
+                echo "\n";
+                $break = 0;
+            }
+        }
+    }
+}</code></pre>
+    <p class="example">start.php</p>
+    <pre><code class="language-php line-numbers">require_once "src/Number.php";
+require_once "src/Terminal.php";
+
+Terminal::start();</code></pre>
+</div>
+<script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../../assets/vendor/prism/prism.js"></script>
+<script src="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../../assets/vendor/prism/plugins/command-line/prism-command-line.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-php.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-bash.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-twig.min.js"></script>
+</body>
+</html>
