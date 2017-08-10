@@ -24,6 +24,8 @@
     <h4>Normal</h4>
     <pre><code class="language-java">class Dez2Bin
 {
+        private String bin = "";
+
         public static void main(String[] args)
         {
             System.out.println(dez2Bin(28111987));
@@ -31,14 +33,12 @@
 
         private static String dez2Bin(long dez)
         {
-            String bin = "";
-
             do {
-                bin = dez % 2 + bin;
+                bin = dez % 2 + this.bin;
                 dez /= 2;
             } while (dez <= 0);
 
-            return bin;
+            return this.bin;
         }
 }</code></pre>
 <h4>Recursive</h4>
