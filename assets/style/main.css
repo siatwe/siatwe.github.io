@@ -77,17 +77,21 @@ body {
   color: white;
   position: relative;
 }
+body.arcticle a {
+  text-decoration: underline;
+  font-style: italic;
+}
 hr {
   opacity: .3;
   border-color: #f17600;
 }
 a {
   color: white;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:hover {
+  text-decoration: underline;
   color: white;
-  text-decoration: none;
 }
 a:focus,
 a:active,
@@ -197,35 +201,6 @@ sup {
 .index-navigation {
   margin-top: 20%;
 }
-.dropdown {
-  margin-bottom: 15px;
-}
-.dropdown button {
-  display: block !important;
-  width: 50%;
-  margin: 0 auto;
-  border-radius: 0;
-  background: transparent;
-  border-color: #31C854;
-  color: white;
-  text-transform: uppercase;
-}
-.dropdown button:hover,
-.dropdown button:active,
-.dropdown button:focus {
-  background: transparent !important;
-  color: white !important;
-  border-color: white !important;
-}
-.dropdown .dropdown-menu {
-  position: relative;
-  margin: 0 auto;
-  float: none;
-  width: 50%;
-  background: #31C854;
-  color: black;
-  border-radius: 0;
-}
 ul.subindex {
   display: block;
   list-style: none;
@@ -293,6 +268,7 @@ ul li:last-of-type {
   font-size: 12px;
   font-family: Arial, monospace;
   color: #31C854;
+  transition: color .3s;
 }
 @media (max-width: 729px) {
   .fmogh :after {
@@ -302,6 +278,15 @@ ul li:last-of-type {
 .fmogh a {
   text-decoration: none;
   color: #1793d1;
+  transition: color .3s;
+}
+.fmogh:hover :after {
+  color: #1793d1;
+  transition: color .3s;
+}
+.fmogh:hover a {
+  color: #31C854;
+  transition: color .3s;
 }
 .start-picture {
   height: 100vh;
@@ -384,4 +369,12 @@ input.form-control.input-sm {
 input.form-control.input-sm:focus {
   border: none;
   box-shadow: none;
+}
+a .glyphicon-console {
+  margin-right: 5px;
+  transition: margin-right 0.3s;
+}
+a:hover .glyphicon-console {
+  margin-right: 10px;
+  transition: margin-right 0.3s;
 }

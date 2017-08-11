@@ -87,6 +87,12 @@ table {
 body {
   color: white;
   position: relative;
+  &.arcticle {
+    a {
+      text-decoration: underline;
+      font-style: italic;
+    }
+  }
 }
 
 hr {
@@ -96,10 +102,10 @@ hr {
 
 a {
   color: white;
-  text-decoration: underline;
+  text-decoration: none;
   &:hover {
+    text-decoration: underline;
     color: white;
-    text-decoration: none;
   }
   &:focus, &:active, &:visited {
     color: white;
@@ -214,34 +220,6 @@ sup {
   margin-top: 20%;
 }
 
-.dropdown {
-  margin-bottom: 15px;
-  button {
-    display: block !important;
-    width: 50%;
-    margin: 0 auto;
-    border-radius: 0;
-    background: transparent;
-    border-color: #31C854;
-    color: white;
-    text-transform: uppercase;
-    &:hover, &:active, &:focus {
-      background: transparent !important;
-      color: white !important;
-      border-color: white !important;
-    }
-  }
-  .dropdown-menu {
-    position: relative;
-    margin: 0 auto;
-    float: none;
-    width: 50%;
-    background: #31C854;
-    color: black;
-    border-radius: 0;
-  }
-}
-
 ul.subindex {
   display: block;
   list-style: none;
@@ -308,6 +286,7 @@ ul {
     font-size: 12px;
     font-family: Arial, monospace;
     color: #31C854;
+    transition: color .3s;
     @media (max-width: 729px) {
       display: none;
     }
@@ -315,6 +294,17 @@ ul {
   a {
     text-decoration: none;
     color: #1793d1;
+    transition: color .3s;
+  }
+  &:hover {
+    :after {
+      color: #1793d1;
+      transition: color .3s;
+    }
+    a {
+      color: #31C854;
+      transition: color .3s;
+    }
   }
 }
 
@@ -413,3 +403,17 @@ input.form-control.input-sm {
     box-shadow: none;
   }
 }
+
+a {
+  .glyphicon-console {
+    margin-right: 5px;
+    transition: margin-right .3s;
+  }
+  &:hover {
+    .glyphicon-console {
+      margin-right: 10px;
+      transition: margin-right .3s;
+    }
+  }
+}
+
