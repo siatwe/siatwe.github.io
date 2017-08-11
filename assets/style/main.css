@@ -157,10 +157,10 @@ p.updated {
   margin-top: 0;
 }
 p.first {
-  color: lightcoral;
+  color: #31C854;
   display: block;
   width: 100%;
-  border-bottom: 3px solid lightcoral;
+  border-bottom: 3px solid #31C854;
   font-weight: bolder;
   font-size: 30px;
   font-family: 'Megrim', cursive;
@@ -170,7 +170,17 @@ p.second {
   color: #1793d1;
   display: block;
   width: 100%;
-  border-bottom: 1px solid #1793d1;
+  border-bottom: 2px solid #1793d1;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: 'Megrim', cursive;
+}
+p.third {
+  position: relative;
+  color: lightcoral;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid lightcoral;
   font-size: 20px;
   font-weight: bolder;
   font-family: 'Megrim', cursive;
@@ -253,11 +263,11 @@ ul.subindex .subindex-link {
   }
 }
 .search-mobil {
-  display: none!important;
+  display: none !important;
 }
 @media (max-width: 900px) {
   .search-mobil {
-    display: block!important;
+    display: block !important;
   }
 }
 ul {
