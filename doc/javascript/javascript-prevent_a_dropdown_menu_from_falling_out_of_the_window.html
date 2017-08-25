@@ -13,24 +13,35 @@
     <link rel="stylesheet" href="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
     <link rel="stylesheet" href="../../assets/vendor/prism/plugins/command-line/prism-command-line.css">
     <link rel="stylesheet" href="../../assets/style/main.css">
-    <title>javascript scroll smoothly to anchor plain jquery</title>
+    <title>javascript prevent a dropdown menu from falling out of the window</title>
 </head>
 <body class="arcticle">
 <div class="article_bg"></div>
 <div class="container">
-    <h2>javascript scroll smoothly to anchor plain jquery</h2>
-    <p class="date">created: 20170824</p>
-    <p class="updated">updated: 20170825</p>
+    <h2>javascript prevent a dropdown menu from falling out of the window</h2>
+    <p class="date">created: 20170825</p>
     <h3><a href="../../index.html#index" class="index">back</a></h3>
+    <h4>The problem</h4>
+    <img src="../../assets/img/js-menu.png" alt="" class="img-responsive">
+    <h4>Solution</h4>
+    <p class="example">javascript</p>
     <pre><code class="language-javascript line-numbers">$(document).ready(function () {
-    // class- / id-name
-    $(".index-arrow").click(function () {
-        $('html, body').animate({
-            // target class- / id-name
-            scrollTop: $(".index").offset().top
-        }, 600);
-    });
+    $(".dropdown").on("click", function() {
+        setTimeout(function() {
+            var d = $(".open").find(".dropdown-menu");
+            if ((d.offset().left + d.width()) > $(window).width()) {
+                d.addClass("offscreen-menu")
+            }
+        }, 1)
+    })
 });</code></pre>
+    <p class="example">css</p>
+    <pre><code class="language-less line-numbers">.offscreen-menu {
+    left: auto;
+    right: 0;
+}</code></pre>
+    <h4>Voilà:</h4>
+    <img src="../../assets/img/js-menu2.png" alt="" class="img-responsive">
 </div>
 <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../../assets/vendor/prism/prism.js"></script>
@@ -41,5 +52,6 @@
 <script src="../../assets/vendor/prism/components/prism-php.min.js"></script>
 <script src="../../assets/vendor/prism/components/prism-bash.min.js"></script>
 <script src="../../assets/vendor/prism/components/prism-twig.min.js"></script>
+<script src="../../assets/vendor/prism/components/prism-less.min.js"></script>
 </body>
 </html>
