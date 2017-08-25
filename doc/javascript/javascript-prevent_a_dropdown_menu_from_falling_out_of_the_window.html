@@ -22,7 +22,14 @@
     <p class="date">created: 20170825</p>
     <h3><a href="../../index.html#index" class="index">back</a></h3>
     <h4>The problem</h4>
-    <img src="../../assets/img/js-menu.png" alt="" class="img-responsive">
+    <img src="../../assets/img/articles/js-menu.png" alt="" class="img-responsive">
+    <p class="example">related css</p>
+    <pre><code class="language-less line-numbers">.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}</code></pre>
     <h4>Solution</h4>
     <p class="example">javascript</p>
     <pre><code class="language-javascript line-numbers">$(document).ready(function () {
@@ -35,13 +42,16 @@
         }, 1)
     })
 });</code></pre>
+    <p>In this case you will need the setTimeout-function, because before the click, there is no dropdown menu for the
+        offset calculation (display:
+        hidden)! With the css property 'visibility: hidden', the setTimeout-function would become redundant.</p>
     <p class="example">css</p>
     <pre><code class="language-less line-numbers">.offscreen-menu {
     left: auto;
     right: 0;
 }</code></pre>
     <h4>Voilà:</h4>
-    <img src="../../assets/img/js-menu2.png" alt="" class="img-responsive">
+    <img src="../../assets/img/articles/js-menu2.png" alt="" class="img-responsive">
 </div>
 <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../../assets/vendor/prism/prism.js"></script>
