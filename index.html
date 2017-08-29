@@ -7,46 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/ebur.png">
     <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
-    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="assets/style/main.css">
     <title>docs/tuts/howtos</title>
 </head>
 <body>
-<script>
-    $(document).ready(function () {
-        $(".index-arrow").click(function () {
-            $('html, body').animate({
-                scrollTop: $(".index").offset().top
-            }, 600);
-        });
-
-        var markInstance = new Mark(document.querySelector(".context"));
-        var keywordInput = document.querySelector("input[name='keyword']");
-        var optionInputs = document.querySelectorAll("input[name='opt[]']");
-
-        function performMark() {
-
-            var keyword = keywordInput.value;
-
-            var options = {};
-            [].forEach.call(optionInputs, function (opt) {
-                options[opt.value] = opt.checked;
-            });
-            markInstance.unmark({
-                done: function () {
-                    markInstance.mark(keyword, options);
-                }
-            });
-        }
-
-        keywordInput.addEventListener("input", performMark);
-        for (var i = 0; i < optionInputs.length; i++) {
-            optionInputs[i].addEventListener("change", performMark);
-        }
-    });
-</script>
+<script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="assets/vendor/mark.js/dist/mark.min.js"></script>
+<script src="assets/js/main.js"></script>
 <div class="start-picture">
     <div class="start">
         <h1><span class="fmogh"><a href="http://www.github.com/siatwe" target="_blank">siatwe</a></span><br>docs/tuts/howtos
@@ -287,6 +256,5 @@
 <footer>
     <a href="impressum.html" class="impressum">Legal Notice</a>
 </footer>
-<script src="assets/vendor/mark.js/dist/mark.min.js"></script>
 </body>
 </html>
