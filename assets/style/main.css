@@ -3,32 +3,15 @@
   padding-top: 25px;
   position: relative;
 }
-.index .last-update a {
-  position: absolute;
-  top: -40px;
-  right: 15px;
-  font-family: "Courier New", monospace;
-  font-size: 12px;
-  text-align: center;
-  font-weight: bolder;
-  color: #31C854;
-  margin-bottom: 0;
-  background: rgba(51, 51, 51, 0.9);
-  padding: 5px 10px;
-  text-decoration: none;
-  transition: all .3s;
-}
-.index .last-update a:hover {
-  background: #1793d1;
-  color: white;
-  transition: all .3s;
-}
 a.index {
   font-weight: bolder;
 }
 .arcticle {
   background: #333;
   padding-bottom: 25px;
+}
+.arcticle ul li {
+  list-style: circle;
 }
 pre {
   border-radius: 0 !important;
@@ -261,31 +244,6 @@ ul.subindex li a {
 ul.subindex .subindex-link {
   margin-bottom: 15px;
 }
-.search {
-  font-style: italic;
-  display: block;
-  text-align: center;
-  margin-bottom: 50px;
-}
-.search div {
-  display: inline-block;
-}
-.search-desktop {
-  display: block;
-}
-@media (max-width: 900px) {
-  .search-desktop {
-    display: none;
-  }
-}
-.search-mobil {
-  display: none !important;
-}
-@media (max-width: 900px) {
-  .search-mobil {
-    display: block !important;
-  }
-}
 ul {
   list-style: none;
 }
@@ -344,7 +302,7 @@ ul li:last-of-type {
 }
 .start-picture .index-arrow {
   position: absolute;
-  top: 70vh;
+  top: 78vh;
   left: 50%;
   transform: translateX(-50%);
   font-size: 50px;
@@ -393,38 +351,21 @@ span.command-line-prompt {
   background-position-y: -236px;
 }
 footer {
+  background: #1793d1;
   text-align: center;
-  background: #333333;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #333333 0%, #2989d8 50%, #207cca 50%, #2989d8 50%, #2989d8 50%, #2989d8 50%, #1793d1 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #333333 0%, #2989d8 50%, #207cca 50%, #2989d8 50%, #2989d8 50%, #2989d8 50%, #1793d1 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #333333 0%, #2989d8 50%, #207cca 50%, #2989d8 50%, #2989d8 50%, #2989d8 50%, #1793d1 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#1793d1', GradientType=0);
-  /* IE6-9 */
-  padding: 5px;
-}
-footer a.impressum {
   color: white;
 }
-input.form-control.input-sm {
-  display: block;
-  margin: 0 auto;
-  border-radius: 0;
-  outline: none;
-  width: 200px;
+.second-lis a {
+  transition: all .3s;
 }
-input.form-control.input-sm:focus {
-  border: none;
-  box-shadow: none;
+.second-lis a:hover {
+  color: #1793d1;
+  transition: all .3s;
 }
-a .glyphicon-console {
-  margin-right: 5px;
-  transition: margin-right 0.3s;
+.third-lis a {
+  transition: all .3s;
 }
-a:hover .glyphicon-console {
-  margin-right: 10px;
-  transition: margin-right 0.3s;
+.third-lis a:hover {
+  color: #e74c3c;
+  transition: all .3s;
 }

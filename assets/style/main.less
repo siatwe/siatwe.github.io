@@ -2,28 +2,6 @@
   background: #333333;
   padding-top: 25px;
   position: relative;
-  .last-update {
-    a {
-      position: absolute;
-      top: -40px;
-      right: 15px;
-      font-family: "Courier New", monospace;
-      font-size: 12px;
-      text-align: center;
-      font-weight: bolder;
-      color: #31C854;
-      margin-bottom: 0;
-      background: rgba(51, 51, 51, .9);
-      padding: 5px 10px;
-      text-decoration: none;
-      transition: all .3s;
-      &:hover {
-        background: #1793d1;
-        color: white;
-        transition: all .3s;
-      }
-    }
-  }
 }
 
 a.index {
@@ -33,6 +11,11 @@ a.index {
 .arcticle {
   background: #333;
   padding-bottom: 25px;
+  ul {
+    li {
+      list-style: circle;
+    }
+  }
 }
 
 pre {
@@ -185,7 +168,7 @@ p {
       position: absolute;
       width: 3px;
       height: 71px;
-      background: #31C854;;
+      background: #31C854;
       left: 0;
       bottom: -71px;
       @media (max-width: 515px) {
@@ -230,7 +213,7 @@ p {
       position: absolute;
       width: 1px;
       height: 25px;
-      background:  #e74c3c;
+      background: #e74c3c;
       left: 0;
       bottom: -25px;
       @media (max-width: 515px) {
@@ -272,30 +255,6 @@ ul.subindex {
 
   .subindex-link {
     margin-bottom: 15px;
-  }
-}
-
-.search {
-  font-style: italic;
-  display: block;
-  text-align: center;
-  margin-bottom: 50px;
-  div {
-    display: inline-block;
-  }
-}
-
-.search-desktop {
-  display: block;
-  @media (max-width: 900px) {
-    display: none;
-  }
-}
-
-.search-mobil {
-  display: none !important;
-  @media (max-width: 900px) {
-    display: block !important;
   }
 }
 
@@ -356,7 +315,7 @@ ul {
   }
   .index-arrow {
     position: absolute;
-    top: 70vh;
+    top: 78vh;
     left: 50%;
     transform: translateX(-50%);
     font-size: 50px;
@@ -418,40 +377,27 @@ span.command-line-prompt {
 }
 
 footer {
+  background: #1793d1;
   text-align: center;
-  background: #333333; /* Old browsers */
-  background: -moz-linear-gradient(top, #333333 0%, #2989d8 50%, #207cca 50%, #2989d8 50%, #2989d8 50%, #2989d8 50%, #1793d1 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #333333 0%,#2989d8 50%,#207cca 50%,#2989d8 50%,#2989d8 50%,#2989d8 50%,#1793d1 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #333333 0%,#2989d8 50%,#207cca 50%,#2989d8 50%,#2989d8 50%,#2989d8 50%,#1793d1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#1793d1',GradientType=0 ); /* IE6-9 */
-  padding: 5px;
-  a.impressum {
-    color: white;
-  }
+  color: white;
 }
 
-input.form-control.input-sm {
-  display: block;
-  margin: 0 auto;
-  border-radius: 0;
-  outline: none;
-  width: 200px;
-  &:focus {
-    border: none;
-    box-shadow: none;
-  }
-}
-
-a {
-  .glyphicon-console {
-    margin-right: 5px;
-    transition: margin-right .3s;
-  }
-  &:hover {
-    .glyphicon-console {
-      margin-right: 10px;
-      transition: margin-right .3s;
+.second-lis {
+  a {
+    transition: all .3s;
+    &:hover {
+      color: #1793d1;
+      transition: all .3s;
     }
   }
 }
 
+.third-lis {
+  a {
+    transition: all .3s;
+    &:hover {
+      color: #e74c3c;
+      transition: all .3s;
+    }
+  }
+}
