@@ -364,7 +364,6 @@ footer {
   transition: all .3s;
 }
 .second-lis a:hover {
-  color: #1793d1;
   transition: all .3s;
 }
 .second-lis a:hover:after {
@@ -374,10 +373,10 @@ footer {
 .second-lis a:after {
   content: '';
   width: 0;
-  height: 1px;
+  height: 2px;
   position: absolute;
   background: #1793d1;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   transition: all .3s;
 }
@@ -387,7 +386,6 @@ footer {
   transition: all .3s;
 }
 .third-lis a:hover {
-  color: #e74c3c;
   transition: all .3s;
 }
 .third-lis a:hover:after {
@@ -400,7 +398,7 @@ footer {
   height: 1px;
   position: absolute;
   background: #e74c3c;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   transition: all .3s;
 }
