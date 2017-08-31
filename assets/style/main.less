@@ -263,40 +263,10 @@ ul {
   @media (max-width: 515px) {
     padding: 0;
   }
-  li:last-of-type {
-    margin-bottom: 25px;
-  }
-}
-
-.fmogh {
-  position: relative;
-  font-weight: bolder;
-  :after {
-    content: 'see github profile';
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 12px;
-    font-family: Arial, monospace;
-    color: #31C854;
-    transition: color .3s;
-    @media (max-width: 729px) {
-      display: none;
-    }
-  }
-  a {
-    text-decoration: none;
-    color: #1793d1;
-    transition: color .3s;
-  }
-  &:hover {
-    :after {
-      color: #1793d1;
-      transition: color .3s;
-    }
-    a {
-      color: #31C854;
-      transition: color .3s;
+  li {
+    margin-bottom: 10px;
+    &:last-of-type {
+      margin-bottom: 25px;
     }
   }
 }
@@ -312,6 +282,38 @@ ul {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    .fmogh {
+      position: relative;
+      font-weight: bolder;
+      :after {
+        content: 'see github profile';
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 12px;
+        font-family: Arial, monospace;
+        color: #31C854;
+        transition: color .3s;
+        @media (max-width: 729px) {
+          display: none;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: #1793d1;
+        transition: color .3s;
+      }
+      &:hover {
+        :after {
+          color: #1793d1;
+          transition: color .3s;
+        }
+        a {
+          color: #31C854;
+          transition: color .3s;
+        }
+      }
+    }
   }
   .index-arrow {
     position: absolute;
@@ -384,9 +386,25 @@ footer {
 
 .second-lis {
   a {
+    position: relative;
+    font-weight: normal;
     transition: all .3s;
     &:hover {
       color: #1793d1;
+      transition: all .3s;
+      &:after {
+        width: 100%;
+        transition: all .3s;
+      }
+    }
+    &:after {
+      content: '';
+      width: 0;
+      height: 1px;
+      position: absolute;
+      background: #1793d1;
+      bottom: 0;
+      left: 0;
       transition: all .3s;
     }
   }
@@ -394,9 +412,25 @@ footer {
 
 .third-lis {
   a {
+    position: relative;
+    font-weight: normal;
     transition: all .3s;
     &:hover {
       color: #e74c3c;
+      transition: all .3s;
+      &:after {
+        width: 100%;
+        transition: all .3s;
+      }
+    }
+    &:after {
+      content: '';
+      width: 0;
+      height: 1px;
+      position: absolute;
+      background: #e74c3c;
+      bottom: 0;
+      left: 0;
       transition: all .3s;
     }
   }

@@ -252,40 +252,11 @@ ul {
     padding: 0;
   }
 }
+ul li {
+  margin-bottom: 10px;
+}
 ul li:last-of-type {
   margin-bottom: 25px;
-}
-.fmogh {
-  position: relative;
-  font-weight: bolder;
-}
-.fmogh :after {
-  content: 'see github profile';
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 12px;
-  font-family: Arial, monospace;
-  color: #31C854;
-  transition: color .3s;
-}
-@media (max-width: 729px) {
-  .fmogh :after {
-    display: none;
-  }
-}
-.fmogh a {
-  text-decoration: none;
-  color: #1793d1;
-  transition: color .3s;
-}
-.fmogh:hover :after {
-  color: #1793d1;
-  transition: color .3s;
-}
-.fmogh:hover a {
-  color: #31C854;
-  transition: color .3s;
 }
 .start-picture {
   height: 100vh;
@@ -299,6 +270,38 @@ ul li:last-of-type {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.start-picture .start .fmogh {
+  position: relative;
+  font-weight: bolder;
+}
+.start-picture .start .fmogh :after {
+  content: 'see github profile';
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 12px;
+  font-family: Arial, monospace;
+  color: #31C854;
+  transition: color .3s;
+}
+@media (max-width: 729px) {
+  .start-picture .start .fmogh :after {
+    display: none;
+  }
+}
+.start-picture .start .fmogh a {
+  text-decoration: none;
+  color: #1793d1;
+  transition: color .3s;
+}
+.start-picture .start .fmogh:hover :after {
+  color: #1793d1;
+  transition: color .3s;
+}
+.start-picture .start .fmogh:hover a {
+  color: #31C854;
+  transition: color .3s;
 }
 .start-picture .index-arrow {
   position: absolute;
@@ -356,16 +359,48 @@ footer {
   color: white;
 }
 .second-lis a {
+  position: relative;
+  font-weight: normal;
   transition: all .3s;
 }
 .second-lis a:hover {
   color: #1793d1;
   transition: all .3s;
 }
+.second-lis a:hover:after {
+  width: 100%;
+  transition: all .3s;
+}
+.second-lis a:after {
+  content: '';
+  width: 0;
+  height: 1px;
+  position: absolute;
+  background: #1793d1;
+  bottom: 0;
+  left: 0;
+  transition: all .3s;
+}
 .third-lis a {
+  position: relative;
+  font-weight: normal;
   transition: all .3s;
 }
 .third-lis a:hover {
   color: #e74c3c;
+  transition: all .3s;
+}
+.third-lis a:hover:after {
+  width: 100%;
+  transition: all .3s;
+}
+.third-lis a:after {
+  content: '';
+  width: 0;
+  height: 1px;
+  position: absolute;
+  background: #e74c3c;
+  bottom: 0;
+  left: 0;
   transition: all .3s;
 }
