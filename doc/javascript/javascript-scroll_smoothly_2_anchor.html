@@ -20,8 +20,9 @@
 <div class="container">
     <h2>javascript scroll smoothly to anchor plain jquery</h2>
     <p class="date">created: 20170824</p>
-    <p class="updated">updated: 20170825</p>
+    <p class="updated">updated: 20170912</p>
     <h3><a href="../../index.html#index" class="index">back</a></h3>
+    <h4>With simple element</h4>
     <pre><code class="language-javascript line-numbers">$(document).ready(function () {
     // class- / id-name
     $(".index-arrow").click(function () {
@@ -31,6 +32,20 @@
         }, 600);
     });
 });</code></pre>
+    <h4>A tag element</h4>
+    <p class="example">js</p>
+    <pre><code class="language-javascript line-numbers">$('.scroll').on('click', function (e) {
+    e.preventDefault();
+    var href = $(this).attr('href');
+    $('html, body').stop().animate({
+    scrollTop: $(href).offset().top
+    }, 600);
+});</code></pre>
+    <p class="example">html</p>
+    <pre><code class="language-html line-numbers">&lt;a href="#example" class="scroll"&gt;
+...
+...
+&lt;span id="example"&gt;&lt;/span&gt;</code></pre>
 </div>
 <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../../assets/vendor/prism/prism.js"></script>
