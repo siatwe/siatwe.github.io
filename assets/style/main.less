@@ -330,36 +330,6 @@ ul {
   margin: 25px auto;
 }
 
-// Articles
-// bem
-.box {
-  padding: 20px;
-  border: 1px solid white;
-}
-
-.box__heading {
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-.box__text {
-  font-size: 13px;
-  color: gray;
-}
-
-.box__link {
-  color: #d30000;
-  text-decoration: none;
-  font-size: 14px;
-  &:hover {
-    font-weight: bolder;
-    color: indianred;
-  }
-  &.box__link--small {
-    font-size: 11px;
-  }
-}
-
 span.command-line-prompt {
   border-color: #1793d1;
 }
@@ -431,5 +401,57 @@ footer {
       left: 0;
       transition: all .3s;
     }
+  }
+}
+
+//
+// Articles
+//
+
+// html_css-block_element_modifier_(bem).html
+.box {
+  padding: 20px;
+  border: 1px solid white;
+}
+
+.box__heading {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.box__text {
+  font-size: 13px;
+  color: gray;
+}
+
+.box__link {
+  color: #d30000;
+  text-decoration: none;
+  font-size: 14px;
+  &:hover {
+    font-weight: bolder;
+    color: indianred;
+  }
+  &.box__link--small {
+    font-size: 11px;
+  }
+}
+
+// html_css-hover_bold_inline_jumping.html
+span.font-weight {
+  font-weight: normal;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    font-weight: bolder;
+  }
+}
+
+span.text-shadow {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    text-shadow: 1px 0 0 white;
   }
 }
