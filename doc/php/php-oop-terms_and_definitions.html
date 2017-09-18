@@ -20,22 +20,22 @@
 <div class="container">
     <h2>php oop terms and definitions</h2>
     <p class="date">created: 20170510</p>
-    <h3><a href="../../index.html#index" class="index">back</a></h3>
+    <h3><a href="../../index.html#index_php" class="index">back</a></h3>
     <ul>
-        <li>Klassen (begrifflicher (abstrakter) Entwurf (Konzept) - "Blaupause"
+        <li>Class (Blueprint, template)
             <ul>
-                <li>mit Eigenschaften</li>
-                <li>mit Methoden</li>
+                <li>with attributes</li>
+                <li>with methods</li>
             </ul>
         </li>
-        <li>Objekte (anschauliche) Klasse (gefüllt mit Daten)
+        <li>Objects, an instanced class, filled with data
             <ul>
-                <li>z. B.: Name = Simon</li>
-                <li>z. B.: Email = simon@netz.de</li>
+                <li>Name = Simon</li>
+                <li>Email = simon@netz.de</li>
             </ul>
         </li>
     </ul>
-    <pre><code class="language-php line-numbers">//Definition der Klasse: User
+    <pre><code class="language-php line-numbers">//Definition of the class user
 class User
 {
     public $name;
@@ -48,15 +48,15 @@ class User
     }
 }
 
-//Definition des Objects: Simon
+//Creating the object: simon
 $simon = new User();
 $simon->name = "Hans Wurst";
 $simon->email = "simon@web.de";
 
-// Aufrufen der Methode changeName($newName)
+// Call the method changeName($newName)
 $simon->changeName("Simon Weis");
 
-echo "$simon->name hat die Email $simon->email";</code></pre>
+echo "$simon->name have the following email adress: $simon->email";</code></pre>
 </div>
 <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../../assets/vendor/prism/prism.js"></script>

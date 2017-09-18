@@ -20,21 +20,21 @@
 <div class="container">
     <h2>php oop visibility</h2>
     <p class="date">created: 20170510</p>
-    <h3><a href="../../index.html#index" class="index">back</a></h3>
+    <h3><a href="../../index.html#index_php" class="index">back</a></h3>
     <ul>
         <li>public
             <ul>
-                <li>Vollzugriff: Jeder kann auf diese Variable oder Methode zugreifen</li>
+                <li>Public methods and attributes can be called everywhere in the code</li>
             </ul>
         </li>
         <li>protected
             <ul>
-                <li>Zugriff nur innerhalb der Klasse und vererbten Klassen</li>
+                <li>Access only within the class or extending classes</li>
             </ul>
         </li>
         <li>private
             <ul>
-                <li>Zugriff nur innerhalb der Klasse</li>
+                <li>Access only inside the class</li>
             </ul>
         </li>
     </ul>
@@ -46,25 +46,24 @@
 
     public function setEmail($newEmail)
     {
-        //Prueft ob $newEmail ueber die noch folgende Methode isValidEmail($email) gueltig ist...
+        //Check if $email is a valid email address
         if ($this->isValidEmail($newEmail)) {
-            //...wen ja, setze die Email
+            //if yes, set attribute $email
             $this->email = $newEmail;
         }
     }
 
     public function getEmail()
     {
-        //Wirft die Email-Adresse zurueck
+        //Returns the email address
         return $this->email;
     }
 
     public function setRandomPassword()
     {
-        //Erstellt eine zufaellige Zahl zwischen 1 und 10
+        //Creates a random number between 1 and 10
         $randomPassword = strval(rand(1, 10));
-        //Speichert die Zahl als $password, nachdem sie durch die noch folgende Funktion hashPassword in sha1
-        //verschluesselt wurde
+        //Saves the numbers as $password, after hashPassword encodes the number to sha1
         $this->password = $this->hashPassword($randomPassword);
 
         return $randomPassword;
@@ -72,20 +71,19 @@
 
     public function isCorrectPassword($password)
     {
-        //Gibt zurueck ob $password dem Klassen-Password entspricht
+        //Checks if $password is equal to given password
         return $this->hashPassword($password) == $this->password;
     }
 
     protected function isValidEmail($email)
     {
-        //Prueft, ab es sich um eine gueltige Email-Adresse handelt, wenn ja, wird sie zurueckgeworfen...
-        //...filter_var ueberprueft die uebergebende Variable dabei mit dem Filter FILTER_VALIDATE_EMAIL
-        return filter_var($email, FILTER_VALIDATE_EMAIL) !==false;
+        //Checks if the given email address is valid, if yes, return it
+        return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
     }
 
     private function hashPassword($password)
     {
-        //Gibt das $password zurueck, nachdem es mit sha1 verschluesselt wurde
+        //Encodes given variable und returns it
         return sha1($password);
     }
 }
@@ -94,13 +92,13 @@ $simon = new User();
 $simon->name = "Simon Weis";
 $simon->setEmail("simon@web.de");
 
-echo "Die Email-Adresse von $simon->name ist: " . $simon->getEmail() . "<br>";
+echo "Email address from $simon->name is: " . $simon->getEmail() . "<br>";
 
 $randomPW = $simon->setRandomPassword();
 
-echo "Zufaelliges Passwort: $randomPW <br>";
+echo "Random password: $randomPW <br>";
 
-echo "Ist das Passwort 5 korrekt: ";
+echo "Is 5 correct? ";
 var_dump($simon->isCorrectPassword("5"));</code></pre>
 </div>
 <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>

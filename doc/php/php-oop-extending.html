@@ -20,41 +20,39 @@
 <div class="container">
     <h2>php oop extending</h2>
     <p class="date">created: 20170510</p>
-    <h3><a href="../../index.html#index" class="index">back</a></h3>
-    <p>Mittels Vererbung kann man verschiedene Hierachiestufen in den Klassen ermoeglichen. Funktionen die in einer
-        Oberklasse programmiert wurden, vererben sich auf die Unterklassen und koennen dort verwendet werden. Um von
-        einer
-        Klasse zu erben, existiert in PHP das Schluesselwort **extends**.</p>
+    <h3><a href="../../index.html#index_php" class="index">back</a></h3>
+    <p>With the keyword **extends** you can extend methods and variables from
+    the parent class to the its children.</p>
     <p class="example">Example</p>
-    <pre><code class="language-php line-numbers">class Oberklasse
+    <pre><code class="language-php line-numbers">class Parent
 {
 
     function HelloWorld()
     {
-        echo "Hello World <br>";
+        echo "Hello World<br>";
     }
 }
 
-class Unterklasse extends Oberklasse {
+class Children extends Parent {
 
     function HelloWorld()
     {
-        //Aufruf der Elternmethode durch parent::
+        //Execute the parent class with 'parent::'
         parent::HelloWorld();
-        echo "Hallo Welt <br>";
+        echo "Hallo Welt<br>";
     }
 }
 
-class UnterUnterKlasse extends Unterklasse {
+class AnotherChildren extends Children {
 
     function HelloWorld()
     {
         parent::HelloWorld();
-        echo "Bonjour monde <br>";
+        echo "Bonjour monde<br>";
     }
 }
 
-$object = new UnterUnterKlasse();
+$object = new AnotherChildren();
 $object->HelloWorld();</code></pre>
 </div>
 <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>

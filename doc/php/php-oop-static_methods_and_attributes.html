@@ -20,18 +20,18 @@
 <div class="container">
     <h2>php oop static methods and attributes</h2>
     <p class="date">created: 20170510</p>
-    <h3><a href="../../index.html#index" class="index">back</a></h3>
-    <p> Statische Methoden und Eigenschaften, sind nicht an ein einzelnes Objekt gekoppelt, sondern sie gelten global. Um eine
-        statische Methode oder ein Attribut aufzurufen, muss die Klasse nicht instanziert werden.</p>
+    <h3><a href="../../index.html#index_php" class="index">back</a></h3>
+    <p>Static methods and attributes don't belong to a specific object, they are globally valid. To execute a
+    static method or access a static attribute, you don't have to create an instance of the belonging class.</p>
     <p class="example">Example</p>
     <pre><code class="language-php line-numbers">class User
 {
     public $name;
 
-    //Erstellt ein statisches Array
+    //Creates a static array
     public static $allUsers = [];
 
-    //Gibt die Anzahl der User die in diesem Array gespeichert wurden zurueck
+    //Returns the number of users
     public static function numberOfUsers()
     {
         return count(self::$allUsers);
@@ -40,7 +40,7 @@
     public static function createNewUser($name)
     {
         if (strlen($name) < 10) {
-            echo "Nur User mit langen Namen sind erlaubt!<br>";
+            echo "To Short!<br>";
             return null;
         } else {
             $user = new User();
@@ -53,14 +53,14 @@
     }
 }
 
-//Erstellt eines neues Objekt der Klassse User mit der statischen Methode createNewUser
+//Creates a new object with the static method createNewUser()
 User::createNewUser("Max Mustermann");
-//Gibt die Anzahl der Objekte der Klasse User ueber die statische Methode numberOfUsers aus
-echo "Anzahl Nutzer: " . User::numberOfUsers() . "<br>";
+//Returns the number of objects within the class User by the static method numberOfUser()
+echo "Number of users: " . User::numberOfUsers() . "<br>";
 User::createNewUser("Simon Attila Weis");
-echo "Anzahl Nutzer: " . User::numberOfUsers() . "<br>";
+echo "Number of users: " . User::numberOfUsers() . "<br>";
 User::createNewUser("Lisa Kurz");
-echo "Anzahl Nutzer: " . User::numberOfUsers() . "<br>";</code></pre>
+echo "Number of users: " . User::numberOfUsers() . "<br>";</code></pre>
 </div>
 <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../../assets/vendor/prism/prism.js"></script>
