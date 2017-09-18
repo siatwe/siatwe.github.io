@@ -5,20 +5,14 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Megrim"
-          rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon"
-          href="../../assets/img/ebur.png">
-    <link rel="stylesheet"
-          href="../../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet"
-          href="../../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
-    <link rel="stylesheet"
-          href="../../assets/vendor/prism/themes/prism-okaidia.css">
-    <link rel="stylesheet"
-          href="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
-    <link rel="stylesheet"
-          href="../../assets/vendor/prism/plugins/command-line/prism-command-line.css">
+    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/ebur.png">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/command-line/prism-command-line.css">
+    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/toolbar/prism-toolbar.css">
     <link rel="stylesheet" href="../../assets/style/main.css">
     <title>algorithms binary search</title>
 </head>
@@ -37,8 +31,8 @@
         the array, respectively, eliminating the other half from
         consideration.</p>
     <h4>Example with user input in php</h4>
-    <p class="example">Class Number</p>
-    <pre><code class="language-php line-numbers">require_once "Terminal.php";
+    <p class="example">Class: Number</p>
+    <pre class="code-toolbar"><code class="language-php line-numbers">require_once "Terminal.php";
 
 class Number
 {
@@ -120,7 +114,7 @@ class Number
         return $this->determinedNumber;
     }
 }</code></pre>
-    <p class="example">Class Terminal</p>
+    <p class="example">Class: Terminal</p>
     <pre><code class="language-php line-numbers">require_once "Number.php";
 
 class Terminal
@@ -166,6 +160,8 @@ require_once "src/Terminal.php";
 Terminal::start();</code></pre>
 </div>
 <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../../assets/vendor/prism/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+<script src="../../assets/vendor/prism/plugins/toolbar/prism-toolbar.min.js"></script>
 <script src="../../assets/vendor/prism/prism.js"></script>
 <script src="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
 <script src="../../assets/vendor/prism/plugins/command-line/prism-command-line.min.js"></script>
