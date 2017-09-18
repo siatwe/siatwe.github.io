@@ -1,9 +1,8 @@
 {
-  "name": "siatwe",
+  "name": "siatwe.github.io",
   "private": true,
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "prism": "^1.6.0",
-    "mark.js": "^8.11.0"
+    "prism": "^1.6.0"
   }
 }
