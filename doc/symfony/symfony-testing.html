@@ -5,13 +5,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/ebur.png">
-    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="../../assets/vendor/prism/themes/prism-okaidia.css">
-    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
-    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/command-line/prism-command-line.css">
+    <link href="https://fonts.googleapis.com/css?family=Megrim"
+          rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon"
+          href="../../assets/img/ebur.png">
+    <link rel="stylesheet"
+          href="../../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="../../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet"
+          href="../../assets/vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet"
+          href="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet"
+          href="../../assets/vendor/prism/plugins/command-line/prism-command-line.css">
     <link rel="stylesheet" href="../../assets/style/main.css">
     <title>symfony testing</title>
 </head>
@@ -22,16 +29,20 @@
     <p class="date">created: 20170512</p>
     <h3><a href="../../index.html#index_symfony" class="index">back</a></h3>
     <h4>Unit Tests</h4>
-    <p> Unit Tests sind Tests für einzelne Klassen (Units) und deren Methodenfunktionalität. Innerhalb des Symfony
-        Frameworks kann mit der unabhaengigen Bibliothek PHPUnit die Applikation getestet werden. Die Installation
+    <p> Unit Tests sind Tests für einzelne Klassen (Units) und deren
+        Methodenfunktionalität. Innerhalb des Symfony
+        Frameworks kann mit der unabhaengigen Bibliothek PHPUnit die Applikation
+        getestet werden. Die Installation
         erfolgt
         bspw. über Composer:</p>
     <pre data-user="user"><code
             class="language-bash command-line-prompt">composer require phpunit/phpunit</code></pre>
     <h4>Unit Tests Beispiel</h4>
-    <p>Angenommen im Pfad src/AppBundle/Util befindet sich die einfache Klasse Calculator, sollte sich der Unit Test
+    <p>Angenommen im Pfad src/AppBundle/Util befindet sich die einfache Klasse
+        Calculator, sollte sich der Unit Test
         dafuer
-        im Pfad tests/AppBundle/Util befinden. Die Namensgebung ist folgende: KlassennameTest. Die Testklasse erbt die
+        im Pfad tests/AppBundle/Util befinden. Die Namensgebung ist folgende:
+        KlassennameTest. Die Testklasse erbt die
         Klasse TestCase, welche mit PHPUnit mitgeliefert wird.</p>
     <p class="example">Example Hauptklasse</p>
     <pre><code class="language-php line-numbers">// src/AppBundle/Util/Calculator.php
@@ -63,7 +74,8 @@ class CalculatorTest extends TestCase
     }
 }</code></pre>
     <h4>Ausführen der/des Tests</h4>
-    <p>Alle Tests innerhalb der Applikation ausfuehren (dazu befindet man sich im Root des Verzeichnisses)</p>
+    <p>Alle Tests innerhalb der Applikation ausfuehren (dazu befindet man sich
+        im Root des Verzeichnisses)</p>
     <pre data-user="user"><code class="language-bash command-line-prompt">phpunit</code></pre>
     <p>Alle Tests im Util Verzeichnis durchfuehren</p>
     <pre data-user="user"><code class="language-bash command-line-prompt">phpunit /tests/AppBundle/Util</code></pre>
@@ -72,8 +84,10 @@ class CalculatorTest extends TestCase
     <p>Alle Tests im AppBundle durchfuehren</p>
     <pre data-user="user"><code class="language-bash command-line-prompt">phpunit tests/AppBundle</code></pre>
     <h4>Functional Tests</h4>
-    <p>    Functional Tests testen die Integration der verschiedenen Schichten der Anwendung (vom Routing bis zur View), sie
-        unterscheiden sich nicht von Unit Tests haben aber einen sehr spezifischen Workflow:</p>
+    <p> Functional Tests testen die Integration der verschiedenen Schichten der
+        Anwendung (vom Routing bis zur View), sie
+        unterscheiden sich nicht von Unit Tests haben aber einen sehr
+        spezifischen Workflow:</p>
     <ul>
         <li>Mache eine Anfrage</li>
         <li>Teste die Antwort</li>
@@ -81,7 +95,8 @@ class CalculatorTest extends TestCase
         <li>Teste die Antwort</li>
         <li>Zuruecksetzen und wiederholen</li>
     </ul>
-    <p>Functional Tests werden ueblicherweise in tests/AppBundle/Controller gespeichert und sind einfach PHP Dateien.</p>
+    <p>Functional Tests werden ueblicherweise in tests/AppBundle/Controller
+        gespeichert und sind einfach PHP Dateien.</p>
 </div>
 <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../../assets/vendor/prism/prism.js"></script>

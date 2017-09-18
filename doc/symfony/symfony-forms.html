@@ -5,13 +5,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/ebur.png">
-    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="../../assets/vendor/prism/themes/prism-okaidia.css">
-    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
-    <link rel="stylesheet" href="../../assets/vendor/prism/plugins/command-line/prism-command-line.css">
+    <link href="https://fonts.googleapis.com/css?family=Megrim"
+          rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon"
+          href="../../assets/img/ebur.png">
+    <link rel="stylesheet"
+          href="../../assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="../../assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet"
+          href="../../assets/vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet"
+          href="../../assets/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet"
+          href="../../assets/vendor/prism/plugins/command-line/prism-command-line.css">
     <link rel="stylesheet" href="../../assets/style/main.css">
     <title>symfony forms</title>
 </head>
@@ -21,9 +28,10 @@
     <h2>symfony forms</h2>
     <p class="date">created: 20170512</p>
     <h3><a href="../../index.html#index_symfony" class="index">back</a></h3>
-    <h4>Einfaches Formular</h4>
-    <p>Für ein einfaches Formular reicht zunaechst eine Enity Klasse, mit allen relevaten Variablen inkl. Settern und
-        Gettern.</p>
+    <h4>Simple form</h4>
+    <p>For a simple form you need only a <a
+            href="../doctrine/doctrine-entity_class.html">entity class</a>
+        with all relevant variables incl. getters and setters.</p>
     <p class="example">Example</p>
     <pre><code class="language-php line-numbers">namespace AppBundle\Entity;
 
@@ -53,7 +61,7 @@ class Task
     }
 }</code></pre>
     <h4>Controller</h4>
-    <p>In einem Controller wird nun ein 'Form Objekt' gebaut und einem Template zum rendern übergeben.</p>
+    <p>The controller now builds a 'form object' and transfer it to a template engine for rendering</p>
     <pre><code class="language-php line-numbers">namespace AppBundle\Controller;
 
 use AppBundle\Entity\Task;
@@ -84,7 +92,7 @@ class DefaultController extends Controller
     }
 }</code></pre>
     <h4>Template</h4>
-    <p>Im Template erfolgt nun die Ausgabe des Formobjekts.</p>
+    <p>Inside the template, the form output will be rendered.</p>
     <pre><code class="language-twig line-numbers">{{ form_start(form) }}
 {{ form_widget(form) }}
 {{ form_end(form) }}</code></pre>

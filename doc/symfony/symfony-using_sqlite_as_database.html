@@ -29,7 +29,8 @@ doctrine:
         driver: pdo_sqlite
         path: "%kernel.root_dir%/sqlite.db"
         charset: UTF8</code></pre>
-    <p>Then execute the following commands (Of cource, after creating some <a href="../doctrine/doctrine-entity_class.html">entities</a>):</p>
+    <p>Then execute the following commands (Of cource, after creating some <a
+            href="../doctrine/doctrine-entity_class.html">entities</a>):</p>
     <pre data-user="user"><code class="language-bash command-line-prompt">php bin/bash doctrine:database:create
 php bin/bash doctrine:schema:update --force</code></pre>
     <p>After that, you're able to add the database to your IDE, e. g. PHPStorm:</p>

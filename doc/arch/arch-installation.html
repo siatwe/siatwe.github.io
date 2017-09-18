@@ -54,17 +54,20 @@
         <li>Run cfdisk on selected hard disk and create a primary, bootable partition (and a swap partition, if needed)
             <pre data-user="root"><code class="language-bash command-line-prompt">cfdisk /dev/sdX</code></pre>
         </li>
-        <li>Format the created partition (e. g.: <a href="https://en.wikipedia.org/wiki/Btrfs" target="_blank">btrfs file system</a>)
+        <li>Format the created partition (e. g.: <a href="https://en.wikipedia.org/wiki/Btrfs" target="_blank">btrfs
+            file system</a>)
             <pre data-user="root"><code class="language-bash command-line-prompt">mkfs.btrfs /dev/sdaXX</code></pre>
         </li>
         <li>Mount generated partition to /mnt
             <pre data-user="root"><code class="language-bash command-line-prompt">mount /dev/sdXX /mnt</code></pre>
         </li>
         <li>Install the base system (-i: Install from existing arch linux)
-            <pre data-user="root"><code class="language-bash command-line-prompt">pacstrap -i /mnt base base-devel</code></pre>
+            <pre data-user="root"><code
+                    class="language-bash command-line-prompt">pacstrap -i /mnt base base-devel</code></pre>
         </li>
-        <li>Create fstab (-U: Use UUIDs for source identifiers, -p:  Avoid printing pseudofs mounts)
-            <pre data-user="root"><code class="language-bash command-line-prompt">genfstab -U -p /mnt >> /mnt/etc/fstab</code></pre>
+        <li>Create fstab (-U: Use UUIDs for source identifiers, -p: Avoid printing pseudofs mounts)
+            <pre data-user="root"><code
+                    class="language-bash command-line-prompt">genfstab -U -p /mnt >> /mnt/etc/fstab</code></pre>
         </li>
         <li>Change root into the new system
             <pre data-user="root"><code
@@ -83,7 +86,8 @@
             <pre data-user="root"><code class="language-bash command-line-prompt">hwclock --systohc --utc</code></pre>
         </li>
         <li>Create a hostname
-            <pre data-user="root"><code class="language-bash command-line-prompt">echo HOSTNAME > /etc/hostname</code></pre>
+            <pre data-user="root"><code
+                    class="language-bash command-line-prompt">echo HOSTNAME > /etc/hostname</code></pre>
         </li>
         <li>Edit /etc/hosts, add your HOSTNAME and some needed informations
             <pre data-user="root"><code class="language-bash command-line-prompt">nano /etc/hosts</code></pre>
@@ -95,14 +99,16 @@
         <li>Change root password
             <pre data-user="root"><code class="language-bash command-line-prompt">passwd</code></pre>
         </li>
-        <li>Install sudo (needed later) and grub (optional:  dialog, netctl and wpa_supplicant for wlan network functionality)
+        <li>Install sudo (needed later) and grub (optional: dialog, netctl and wpa_supplicant for wlan network
+            functionality)
             <pre data-user="root"><code class="language-bash command-line-prompt">pacman -S grub sudo dialog netctl wpa_supplicant</code></pre>
         </li>
         <li>Install grub on your hard disk
             <pre data-user="root"><code class="language-bash command-line-prompt">grub-install /dev/sdX</code></pre>
         </li>
         <li>Create grub configuration file (-o: --output=file)
-            <pre data-user="root"><code class="language-bash command-line-prompt">grub-mkconfig -o /boot/grub/grub.cfg</code></pre>
+            <pre data-user="root"><code
+                    class="language-bash command-line-prompt">grub-mkconfig -o /boot/grub/grub.cfg</code></pre>
         </li>
         <li>Exit the chroot environment
             <pre data-user="root"><code class="language-bash command-line-prompt">exit</code></pre>

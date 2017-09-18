@@ -21,39 +21,40 @@
     <h2>symfony create commands</h2>
     <p class="date">created: 20170512</p>
     <h3><a href="../../index.html#index_symfony" class="index">back</a></h3>
-    <h4>Konfiguration</h4>
-    <p>Die Konfiguration des Kommandos erfolgt in der configure() Methode.</p>
+    <h4>Configuration</h4>
+    <p>The commands configuration are written inside the configure() method.</p>
     <p class="example">Example</p>
     <pre><code class="language-php line-numbers">protected function configure()
 {
     $this
-        // Besimmt den Namen des Kommandos (der Teil nach "bin/console")
+        //The name of the command
         ->setName('app:create-user')
 
-        // Eine kurze Beschreibung des Kommandos, wird angezeigt bei: "php bin/console list"
+        //A short description of the command, will be listened in: php bin/console list
         ->setDescription('Creates a new user.')
 
-        // Die volle Beschreibung des Kommandos, wird angezeigt wenn das Kommando mit --help ausgefuehrt wird.
+        //The complete description of the commando, will be showed after execute it with --help
         ->setHelp('This command allows you to create a user...')
     ;
 }
     </code></pre>
     <h4>Execute</h4>
-    <p>Die execute()-Methode hat Zugriff zum in- und output Stream der Konsole. Der Input Stream beinhaltet z. B. Optionen
-        und Argumente. Der Output Stream schreibt Nachrichten in das Konsolenfenster.</p>
+    <p>The execute() method has access to the input and output stream of the terminal. The input stream contains options
+        and/or arguments.
+        The output stream writes messages to the terminal window.</p>
     <pre><code class="language-php line-numbers">protected function execute(InputInterface $input, OutputInterface $output)
 {
-    // Schreibt mehrere Zeilen mit Zeilenumbruch in die Konsole
+    // Writes a bulk of lines with wordwrap into the terminal
     $output->writeln([
         'User Creator',
         '============',
         '',
     ]);
 
-    // Schreibt eine Zeile mit Zeilenumbruch in die Konsole
+    // Writes a line into the terminal and finish it with one wordwrap
     $output->writeln('Whoa!');
 
-    // Schreibt eine Zeile ohne Zeilenumbruch in die Konsole
+    //Writes a line without wordwrap
     $output->write('You are about to ');
     $output->write('create a user.');
 }
