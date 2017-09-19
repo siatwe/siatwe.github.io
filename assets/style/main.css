@@ -83,16 +83,6 @@ h1 {
   font-size: 80px;
   font-family: 'Megrim', cursive;
 }
-@media (max-width: 729px) {
-  h1 {
-    font-size: 40px;
-  }
-}
-@media (max-width: 380px) {
-  h1 {
-    font-size: 30px;
-  }
-}
 h2 {
   position: relative;
   text-align: center;
@@ -285,11 +275,6 @@ ul li:last-of-type {
   font-family: Arial, monospace;
   color: #31C854;
   transition: color .3s;
-}
-@media (max-width: 729px) {
-  .start-picture .start .fmogh :after {
-    display: none;
-  }
 }
 .start-picture .start .fmogh a {
   text-decoration: none;
