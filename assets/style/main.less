@@ -20,16 +20,13 @@ a.index {
 
 pre {
   border-radius: 0 !important;
-  //border: 2px solid #1793d1;
-  border: none!important;
-  margin-bottom: 50px!important;
-  -webkit-box-shadow: 11px 12px 0px -4px rgb(0, 0, 0);
-  -moz-box-shadow: 11px 12px 0px -4px rgb(0, 0, 0);
+  border: none !important;
+  margin-bottom: 50px !important;
   box-shadow: 11px 12px 0px -4px rgb(0, 0, 0);
-  background: #1b1b1b!important;
+  background: #1b1b1b !important;
   span.line-numbers-rows {
     border-color: #31C854 !important;
-    top: -2px!important;
+    top: -2px !important;
     span:before {
       color: #1793d1;
     }
@@ -55,9 +52,7 @@ a {
   border-radius: 5px;
   color: black;
   font-family: "Courier New", monospace;
-  -webkit-box-shadow: 0px 6px 3px -2px rgb(192, 192, 192);
-  -moz-box-shadow: 0px 6px 3px -2px rgb(192, 192, 192);
-  box-shadow: 0px 6px 3px -2px rgb(192, 192, 192);
+  box-shadow: 0 6px 3px -2px rgb(192, 192, 192);
   margin: 5px;
   min-width: 30px;
   text-align: center;
@@ -329,6 +324,19 @@ ul {
     font-size: 50px;
     cursor: pointer;
     color: #1793d1;
+    animation: arrow-button 1.2s infinite;
+    padding: 20px;
+  }
+}
+
+@keyframes arrow-button {
+  0%, 100% {
+    top: 78vh;
+    color: #1793d1;
+  }
+  50% {
+    top: 80vh;
+    color: #31C854;
   }
 }
 
