@@ -4,7 +4,8 @@
   position: relative;
 }
 a.index {
-  font-weight: bolder;
+  font-family: "Courier New", monospace;
+  font-style: normal!important;
 }
 .arcticle {
   background: #333;
@@ -251,8 +252,9 @@ ul li:last-of-type {
 }
 .start-picture {
   height: 100vh;
-  background: url(../img/start.jpg) no-repeat center center fixed;
+  background: url(../img/start.jpg) no-repeat fixed;
   position: relative;
+  background-size: 103%;
 }
 .start-picture .start {
   position: absolute;
@@ -296,19 +298,22 @@ ul li:last-of-type {
   transform: translateX(-50%);
   font-size: 50px;
   cursor: pointer;
-  color: #1793d1;
+  color: rgba(49, 200, 84, 0.3);
   animation: arrow-button 1.2s infinite;
   padding: 20px;
+  transition: color .3s;
+}
+.start-picture .index-arrow:hover {
+  color: rgba(49, 200, 84, 0.7);
+  transition: color .3s;
 }
 @keyframes arrow-button {
   0%,
   100% {
     top: 78vh;
-    color: #1793d1;
   }
   50% {
     top: 80vh;
-    color: #31C854;
   }
 }
 .img-responsive {
