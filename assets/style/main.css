@@ -146,10 +146,10 @@ p.first:before {
   content: '';
   position: absolute;
   width: 3px;
-  height: 71px;
+  height: 40px;
   background: #31C854;
   left: 0;
-  bottom: -71px;
+  bottom: -43px;
 }
 @media (max-width: 515px) {
   p.first:before {
@@ -166,20 +166,6 @@ p.second {
   font-weight: bolder;
   font-family: 'Megrim', cursive;
 }
-p.second:before {
-  content: '';
-  position: absolute;
-  width: 2px;
-  height: 30px;
-  background: #1793d1;
-  left: 0;
-  bottom: -30px;
-}
-@media (max-width: 515px) {
-  p.second:before {
-    display: none;
-  }
-}
 p.third {
   position: relative;
   color: #e74c3c;
@@ -190,20 +176,6 @@ p.third {
   font-weight: bolder;
   font-family: 'Megrim', cursive;
   margin-top: 15px;
-}
-p.third:before {
-  content: '';
-  position: absolute;
-  width: 1px;
-  height: 25px;
-  background: #e74c3c;
-  left: 0;
-  bottom: -25px;
-}
-@media (max-width: 515px) {
-  p.third:before {
-    display: none;
-  }
 }
 p.example {
   font-style: italic;
@@ -245,16 +217,16 @@ ul {
   }
 }
 ul li {
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 ul li:last-of-type {
   margin-bottom: 25px;
 }
 .start-picture {
   height: 100vh;
-  background: url(../img/start.jpg) no-repeat fixed;
+  background: url(../img/start.jpg) no-repeat center center fixed;
   position: relative;
-  background-size: 103%;
+  background-size: cover;
 }
 .start-picture .start {
   position: absolute;
@@ -313,7 +285,7 @@ ul li:last-of-type {
     top: 78vh;
   }
   50% {
-    top: 80vh;
+    top: 79vh;
   }
 }
 .img-responsive {
@@ -338,19 +310,19 @@ footer {
   text-align: center;
   color: white;
 }
-.second-lis a {
+ul.second-lis a {
   position: relative;
   font-weight: normal;
   transition: all .3s;
 }
-.second-lis a:hover {
+ul.second-lis a:hover {
   transition: all .3s;
 }
-.second-lis a:hover:after {
+ul.second-lis a:hover:after {
   width: 100%;
   transition: all .3s;
 }
-.second-lis a:after {
+ul.second-lis a:after {
   content: '';
   width: 0;
   height: 2px;
@@ -381,6 +353,9 @@ footer {
   bottom: -1px;
   left: 0;
   transition: all .3s;
+}
+hr {
+  border-top: 3px solid #e74c3c;
 }
 .box {
   padding: 20px;
