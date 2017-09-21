@@ -20,7 +20,7 @@
 <div class="container">
     <h2>php 32 bit add/sub machine in php</h2>
     <p class="date">created: 20170720</p>
-    <p class="updated">updated: 20170721</p>
+    <p class="updated">updated: 20170921</p>
     <h3><a href="../../index.html#index_php" class="index">back</a></h3>
     <h4>AND Gutter</h4>
     <p>The AND gutter returns 1 if all inputs are 1.</p>
@@ -33,7 +33,7 @@
 |1 0   0|
 |1 1   1|
 +-------+</code></pre>
-    <pre><code class="language-php">namespace Gutter;
+    <pre><code class="language-php line-numbers">namespace Gutter;
 
 class AndGutter
 {
@@ -63,7 +63,7 @@ class AndGutter
 |1 0   1|
 |1 1   1|
 +-------+</code></pre>
-    <pre><code class="language-php">namespace Gutter;
+    <pre><code class="language-php line-numbers">namespace Gutter;
 
 class OrGutter
 {
@@ -93,7 +93,7 @@ class OrGutter
 |1 0   1|
 |1 1   0|
 +-------+</code></pre>
-    <pre><code class="language-php">namespace Gutter;
+    <pre><code class="language-php line-numbers">namespace Gutter;
 
 class XorGutter
 {
@@ -114,7 +114,7 @@ class XorGutter
 }</code></pre>
     <h4>NOT Gutter</h4>
     <p>The NOT gutter inverts all incoming streams.</p>
-    <pre><code class="language-php">namespace Gutter;
+    <pre><code class="language-php line-numbers">namespace Gutter;
 
 class NotGutter
 {
@@ -144,7 +144,7 @@ class NotGutter
 |1 0   1 0|
 |1 1   0 1|
 +---------+</code></pre>
-    <pre><code class="language-php">namespace Gutter;
+    <pre><code class="language-php line-numbers">namespace Gutter;
 
 class HalfAdder
 {
@@ -180,7 +180,7 @@ class HalfAdder
 |1 1 0     0 1   |
 |1 1 1     1 1   |
 +----------------+</code></pre>
-    <pre><code class="language-php">namespace Gutter;
+    <pre><code class="language-php line-numbers">namespace Gutter;
 
 class FullAdder
 {
@@ -206,7 +206,7 @@ class FullAdder
 }</code></pre>
     <h4>32 Bit Add Sub Machine</h4>
     <p>placeholder...</p>
-    <pre><code class="language-php">use Gutter\FullAdder;
+    <pre><code class="language-php line-numbers">use Gutter\FullAdder;
 use Gutter\XorGutter;
 
 class _32BitAddSubMachine
@@ -236,7 +236,7 @@ class _32BitAddSubMachine
     }
 }</code></pre>
     <h4>Machine test</h4>
-    <pre><code class="language-php">require_once 'src/Gutter/AndGutter.php';
+    <pre><code class="language-php line-numbers">require_once 'src/Gutter/AndGutter.php';
 require_once 'src/Gutter/OrGutter.php';
 require_once 'src/Gutter/NotGutter.php';
 require_once 'src/Gutter/XorGutter.php';
