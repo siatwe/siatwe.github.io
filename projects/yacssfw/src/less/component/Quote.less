@@ -1,0 +1,54 @@
+//
+// COMPONENT: QUOTE
+//
+
+.Quote {
+  display: block;
+  border-left: solid 5px @color-light;
+  padding: 5px 0 5px 15px;
+  margin: 10px 0;
+  &__Footer {
+    display: block;
+    position: relative;
+    color: @color-dark;
+    padding: 5px 0 5px 15px;
+    font-style: italic;
+    &:before {
+      position: absolute;
+      content: '';
+      width: 5px;
+      height: 1px;
+      background: @color-dark;
+      left: 5px;
+      top: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  //
+  // MODIFIER
+  //
+  &--info {
+    border-color: @color-info;
+    .Quote__Footer {
+      color: @color-info--text;
+    }
+  }
+  &--success {
+    border-color: @color-success;
+    .Quote__Footer {
+      color: @color-success--text;
+    }
+  }
+  &--warning {
+    border-color: @color-warning;
+    .Quote__Footer {
+      color: @color-warning--text;
+    }
+  }
+  &--error {
+    border-color: @color-error;
+    .Quote__Footer {
+      color: @color-error--text;
+    }
+  }
+}

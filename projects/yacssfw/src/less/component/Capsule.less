@@ -1,0 +1,42 @@
+//
+// COMPONENT: CAPUSULE
+//
+
+.Capsule {
+  padding: 0 10px;
+  margin: 0 auto;
+  &:before {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    display: table;
+    content: " ";
+    clear: both;
+    box-sizing: border-box;
+  }
+}
+
+//
+// MEDIAQ
+//
+@media (min-width: @bp-L-min) {
+  .Capsule {
+    width: 900px;
+  }
+}
+@media (max-width: @bp-M-max) {
+  .Capsule {
+    width: 700px;
+  }
+}
+@media (max-width: @bp-S-max) {
+  .Capsule {
+    width: 700px;
+  }
+}
+@media (max-width: @bp-XS-max) {
+  .Capsule {
+    width: 90%;
+  }
+}

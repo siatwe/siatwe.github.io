@@ -1,0 +1,24 @@
+//
+// COMPONENT: LINK
+//
+
+.Link {
+  font-weight: bolder;
+  text-decoration: none;
+  color: darken(@color-dark, @dark--more);
+  &:hover {
+    text-decoration: underline;
+  }
+  &--info {
+    color: @color-info--text;
+  }
+  &--success {
+    color: @color-success--text;
+  }
+  &--warning {
+    color: @color-warning--text;
+  }
+  &--error {
+    color: @color-error--text;
+  }
+}
