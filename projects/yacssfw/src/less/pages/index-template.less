@@ -1,0 +1,65 @@
+@import "../abstract/variables";
+
+.header {
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+section {
+  padding: 25px 0 50px 0;
+  &:nth-child(even) {
+    background: #bad954;
+  }
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+.keyboard {
+  text-align: center;
+}
+
+.Grid {
+  p {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 20px;
+    font-weight: bolder;
+  }
+  .dis:not(:last-of-type) {
+    border-right: 1px solid white;
+  }
+}
+
+.full {
+  min-height: 20px;
+  background: #173017;
+  color: white;
+}
+
+.half {
+  min-height: 20px;
+  background: @color-info;
+  color: @color-info--text;
+}
+
+.third {
+  min-height: 20px;
+  background: @color-warning;
+  color: @color-warning--text;
+}
+
+.quarter {
+  min-height: 20px;
+  background: @color-success;
+  color: @color-success--text;
+}
+
+.fifth {
+  min-height: 20px;
+  background: @color-error;
+  color: @color-error--text;
+}

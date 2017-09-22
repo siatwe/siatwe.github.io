@@ -1,0 +1,56 @@
+.header {
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+section {
+  padding: 25px 0 50px 0;
+}
+section:nth-child(even) {
+  background: #bad954;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+.keyboard {
+  text-align: center;
+}
+.Grid p {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 20px;
+  font-weight: bolder;
+}
+.Grid .dis:not(:last-of-type) {
+  border-right: 1px solid white;
+}
+.full {
+  min-height: 20px;
+  background: #173017;
+  color: white;
+}
+.half {
+  min-height: 20px;
+  background: #87cefa;
+  color: #054f7d;
+}
+.third {
+  min-height: 20px;
+  background: #fff089;
+  color: #897800;
+}
+.quarter {
+  min-height: 20px;
+  background: #90ee90;
+  color: #116e11;
+}
+.fifth {
+  min-height: 20px;
+  background: #f08080;
+  color: #650c0c;
+}

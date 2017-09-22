@@ -1,0 +1,7 @@
+.Form input {
+  display: block;
+  width: 100%;
+}
+.Form input:not(:last-of-type) {
+  margin-bottom: 15px;
+}

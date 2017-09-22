@@ -401,23 +401,23 @@ template {
 .display--block {
   display: block!important;
 }
-.bg--info {
-  background: #87cefa;
-}
-.bg--success {
-  background: #90ee90;
-}
-.bg--warning {
-  background: #fff089;
-}
-.bg--error {
-  background: #f08080;
-}
 .no--margin {
   margin: 0!important;
 }
-.oi {
-  font-size: 20px;
+.bg--info {
+  background: #87cefa !important;
+}
+.bg--success {
+  background: #90ee90 !important;
+}
+.bg--warning {
+  background: #fff089 !important;
+}
+.bg--error {
+  background: #f08080 !important;
+}
+.bg--transparent {
+  background: transparent!important;
 }
 body {
   font-family: monospace;
@@ -489,6 +489,10 @@ h6 {
   display: table;
   content: " ";
   clear: both;
+}
+.Grid__Full {
+  display: block;
+  width: 100%;
 }
 .Grid__L-half {
   display: block;
@@ -666,6 +670,13 @@ h6 {
     float: left;
   }
 }
+.Form input {
+  display: block;
+  width: 100%;
+}
+.Form input:not(:last-of-type) {
+  margin-bottom: 15px;
+}
 .Alert {
   display: block;
   padding: 10px 15px;
@@ -794,7 +805,15 @@ h6 {
   margin: 15px 0;
   box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.75);
   transition: all 0.3s;
-  min-width: 150px;
+  min-width: 130px;
+}
+.Button[disabled] {
+  opacity: .5;
+  cursor: not-allowed;
+}
+.Button[disabled]:hover {
+  background: #b6b6b6;
+  color: #454545;
 }
 .Button:hover {
   background: #454545;
@@ -810,6 +829,10 @@ h6 {
   background: #054f7d;
   color: #b8e2fc;
 }
+.Button--info[disabled]:hover {
+  background: #87cefa;
+  color: #054f7d;
+}
 .Button--success {
   background: #90ee90;
   color: #116e11;
@@ -817,6 +840,10 @@ h6 {
 .Button--success:hover {
   background: #116e11;
   color: #bcf5bc;
+}
+.Button--success[disabled]:hover {
+  background: #90ee90;
+  color: #116e11;
 }
 .Button--warning {
   background: #fff089;
@@ -826,6 +853,10 @@ h6 {
   background: #897800;
   color: #fff6bc;
 }
+.Button--warning[disabled]:hover {
+  background: #fff089;
+  color: #897800;
+}
 .Button--error {
   background: #f08080;
   color: #650c0c;
@@ -833,6 +864,10 @@ h6 {
 .Button--error:hover {
   background: #650c0c;
   color: #f5aeae;
+}
+.Button--error[disabled]:hover {
+  background: #f08080;
+  color: #650c0c;
 }
 .Key {
   position: relative;

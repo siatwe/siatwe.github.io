@@ -1,3 +1,7 @@
+//==========================================================================
+// BUTTON
+//==========================================================================
+
 .Button {
   outline: none;
   border: none;
@@ -13,19 +17,34 @@
   margin: 15px 0;
   box-shadow: 5px 5px 0 0 rgba(0,0,0,0.75);
   transition: all @transform;
-  min-width: 150px;
+  min-width: 130px;
+  &[disabled] {
+    opacity: .5;
+    cursor: not-allowed;
+    &:hover {
+      background: @color-light;
+      color: @color-dark;
+    }
+  }
   &:hover {
     background: @color-dark;
     color: #bfbfbf;
     border-right: 1px solid white;
     border-bottom: 1px solid white;
   }
+  //
+  // Modifier
+  //
   &--info {
     background: @color-info;
     color: @color-info--text;
     &:hover {
       background: @color-info--dark;
       color: @color-info--light;
+    }
+    &[disabled]:hover {
+      background: @color-info;
+      color: @color-info--text;
     }
   }
   &--success {
@@ -35,6 +54,10 @@
       background: @color-success--dark;
       color: @color-success--light;
     }
+    &[disabled]:hover {
+      background: @color-success;
+      color: @color-success--text;
+    }
   }
   &--warning {
     background: @color-warning;
@@ -43,6 +66,10 @@
       background: @color-warning--dark;
       color: @color-warning--light;
     }
+    &[disabled]:hover {
+      background: @color-warning;
+      color: @color-warning--text;
+    }
   }
   &--error {
     background: @color-error;
@@ -50,6 +77,10 @@
     &:hover {
       background: @color-error--dark;
       color: @color-error--light;
+    }
+    &[disabled]:hover {
+      background: @color-error;
+      color: @color-error--text;
     }
   }
 }
