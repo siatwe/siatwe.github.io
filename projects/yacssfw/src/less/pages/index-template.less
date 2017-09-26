@@ -7,10 +7,14 @@
 
 section {
   padding: 25px 0 50px 0;
+  min-height: 100vh;
+  position: relative;
   &:nth-child(even) {
-    background: #bad954;
+    background: rgba(117, 84, 217, 0.52);
   }
+  .content {
 
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,44 +26,59 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .Grid {
-  p {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+section.Layout {
+  .Flex {
+  }
+  .Col {
+    height: 25px;
+    line-height: 25px;
     text-align: center;
+    &:nth-child(even) {
+      background: @color-error;
+      color: @color-error--text;
+    }
+    &:nth-child(odd) {
+      background: @color-info;
+      color: @color-info--text;
+    }
+  }
+}
+
+.Grid__Examples {
+  height: auto;
+}
+
+.Header {
+  background: rgba(135, 206, 250, 1);
+  background: -moz-linear-gradient(top, rgba(135, 206, 250, 1) 0%, rgba(144, 238, 144, 1) 34%, rgba(255, 239, 137, 1) 68%, rgba(240, 128, 128, 1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(135, 206, 250, 1)), color-stop(34%, rgba(144, 238, 144, 1)), color-stop(68%, rgba(255, 239, 137, 1)), color-stop(100%, rgba(240, 128, 128, 1)));
+  background: -webkit-linear-gradient(top, rgba(135, 206, 250, 1) 0%, rgba(144, 238, 144, 1) 34%, rgba(255, 239, 137, 1) 68%, rgba(240, 128, 128, 1) 100%);
+  background: -o-linear-gradient(top, rgba(135, 206, 250, 1) 0%, rgba(144, 238, 144, 1) 34%, rgba(255, 239, 137, 1) 68%, rgba(240, 128, 128, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(135, 206, 250, 1) 0%, rgba(144, 238, 144, 1) 34%, rgba(255, 239, 137, 1) 68%, rgba(240, 128, 128, 1) 100%);
+  background: linear-gradient(to bottom, rgba(135, 206, 250, 1) 0%, rgba(144, 238, 144, 1) 34%, rgba(255, 239, 137, 1) 68%, rgba(240, 128, 128, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#87cefa', endColorstr='#f08080', GradientType=0);
+  h1, p {
     margin: 0;
     padding: 0;
-    line-height: 20px;
+  }
+  p {
+    color: @color-info--text;
+  }
+  a {
+    margin-top: 10px;
+  }
+  .Header__Description {
+    position: absolute;
+    color: @color-success--text;
+    bottom: 10px;
+    left: 10px;
     font-weight: bolder;
+    padding: 30px;
+    background: @color-success;
   }
-  .dis:not(:last-of-type) {
-    border-right: 1px solid white;
-  }
-}
-
-.full {
-  min-height: 20px;
-  background: #173017;
-  color: white;
-}
-
-.half {
-  min-height: 20px;
-  background: @color-info;
-  color: @color-info--text;
-}
-
-.third {
-  min-height: 20px;
-  background: @color-warning;
-  color: @color-warning--text;
-}
-
-.quarter {
-  min-height: 20px;
-  background: @color-success;
-  color: @color-success--text;
-}
-
-.fifth {
-  min-height: 20px;
-  background: @color-error;
-  color: @color-error--text;
 }

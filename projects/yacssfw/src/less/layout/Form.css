@@ -1,7 +1,43 @@
-.Form input {
-  display: block;
-  width: 100%;
+form input {
+  margin-bottom: 10px;
+  background: #f0f0f0;
+  border: none;
+  outline: none;
+  transition: background .3s;
 }
-.Form input:not(:last-of-type) {
-  margin-bottom: 15px;
+form input:hover,
+form input:active,
+form input:focus {
+  background: #d7d7d7;
+  transition: background .3s;
+}
+form input:not(:last-of-type) {
+  margin-right: 10px;
+}
+form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-family: monospace;
+}
+form input[type="radio"] {
+  margin-top: 10px;
+}
+form input[type="checkbox"] {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+form textarea {
+  border: none;
+  outline: none;
+  background: #f0f0f0;
+  width: 100%;
+  min-height: 150px;
+  font-family: monospace;
+  transition: background .3s;
+}
+form textarea:hover,
+form textarea:active,
+form textarea:focus {
+  background: #d7d7d7;
+  transition: background .3s;
 }

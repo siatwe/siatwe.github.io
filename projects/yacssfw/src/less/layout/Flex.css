@@ -1,0 +1,9 @@
+.Flex {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.Col {
+  flex: 1;
+  flex-grow: 4;
+}
