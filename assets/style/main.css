@@ -28,9 +28,6 @@ pre span.line-numbers-rows {
 pre span.line-numbers-rows span:before {
   color: #1793d1;
 }
-a.footer {
-  margin-top: 50px;
-}
 a.index {
   font-size: 16px;
   background: transparent !important;
@@ -356,6 +353,12 @@ ul.second-lis a:after {
 }
 hr {
   border-top: 3px solid #e74c3c;
+}
+footer a {
+  display: block;
+}
+footer a.mh_login {
+  color: #e74c3c;
 }
 .box {
   padding: 20px;
