@@ -1,5 +1,78 @@
 @import "../vendor/yacssfw/dist/yacssfw.min.css";
+@import url('https://fonts.googleapis.com/css?family=Megrim');
 @font-face {
   font-family: 'Bradley Hand ITC';
   src: url('../../font/Bradley_Hand_ITC.woff') format('woff'), url('../../font/Bradley_Hand_ITC.ttf') format('truetype');
+}
+.Header {
+  background-image: url("../img/start2.jpg");
+  background-position: center center;
+}
+.Header__Description {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+.Header__Logo {
+  font-family: "Megrim", monospace;
+  color: white;
+  font-weight: bolder;
+  transition: all .3s;
+  background: rgba(0, 0, 0, 0.25);
+}
+.Header__Logo:hover {
+  background: #000000;
+}
+.Header__Logo:hover span {
+  transition: all .3s;
+  color: #31C854;
+}
+.Header__Logo:hover span:before {
+  width: 206px;
+  transition: all .3s;
+}
+.Header__Logo:hover span:after {
+  height: 83px;
+  transition: all .3s;
+}
+.Header__Logo:hover p {
+  color: transparent;
+  transition: all .3s;
+}
+.Header__Logo p {
+  color: white;
+  font-size: 40px;
+  margin: 0;
+  transition: all .3s;
+}
+.Header__Logo span {
+  position: absolute;
+  color: transparent;
+  font-size: 12px;
+  font-family: monospace;
+  transition: all .3s;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Header__Logo span:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background: #E34C26;
+  transition: all .3s;
+  top: -37px;
+  left: 0;
+}
+.Header__Logo span:after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 3px;
+  background: #1793d0;
+  transition: all .3s;
+  left: 0;
+  top: -34px;
 }

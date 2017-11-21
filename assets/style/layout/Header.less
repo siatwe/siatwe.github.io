@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Megrim');
+
+.Header {
+  background-image: url("../img/start2.jpg");
+  background-position: center center;
+  &__Description {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+  }
+  &__Logo {
+    font-family: "Megrim", monospace;
+    color: white;
+    font-weight: bolder;
+    transition: all .3s;
+    background: rgba(0, 0, 0, 0.25);
+    &:hover {
+      background: rgba(0, 0, 0, 1);
+      span {
+        transition: all .3s;
+        color: #31C854;
+        &:before {
+          width: 206px;
+          transition: all .3s;
+        }
+        &:after {
+          height: 83px;
+          transition: all .3s;
+        }
+      }
+      p {
+        color: transparent;
+        transition: all .3s;
+      }
+    }
+    p {
+      color: white;
+      font-size: 40px;
+      margin: 0;
+      transition: all .3s;
+    }
+    span {
+      position: absolute;
+      color: transparent;
+      font-size: 12px;
+      font-family: monospace;
+      transition: all .3s;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        background: #E34C26;
+        transition: all .3s;
+        top: -37px;
+        left: 0;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        height: 0;
+        width: 3px;
+        background: #1793d0;
+        transition: all .3s;
+        left: 0;
+        top: -34px;
+      }
+    }
+  }
+}
