@@ -23,7 +23,7 @@
   transition: all .3s;
 }
 .Header__Logo:hover span:after {
-  height: 83px;
+  height: 84px;
   transition: all .3s;
 }
 .Header__Logo:hover p {
