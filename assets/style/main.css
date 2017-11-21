@@ -111,7 +111,7 @@ body {
   list-style: none;
 }
 .Content__Home {
-  background: black;
+  background: rgba(0, 0, 0, 0.7);
   padding: 25px 10px;
   margin-bottom: 25px;
 }
@@ -119,7 +119,7 @@ body {
   color: #1793d0;
 }
 .Content__Work {
-  background: black;
+  background: rgba(0, 0, 0, 0.7);
   padding: 25px 10px;
   margin-bottom: 25px;
 }
