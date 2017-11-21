@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Megrim');
 
 .Header {
-  background-image: url("../img/start2.jpg");
-  background-position: center center;
   &__Description {
     position: absolute;
     left: 10px;
@@ -13,7 +11,7 @@
     color: white;
     font-weight: bolder;
     transition: all .3s;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.4);
     &:hover {
       background: rgba(0, 0, 0, 1);
       span {
@@ -70,5 +68,14 @@
         top: -34px;
       }
     }
+  }
+  i {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #E34C26;
+    font-size: 90px;
+    bottom: 17px;
+    cursor: pointer;
   }
 }
