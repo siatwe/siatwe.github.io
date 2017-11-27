@@ -89,6 +89,13 @@ body {
   bottom: 17px;
   cursor: pointer;
 }
+@media (max-width: 510px) {
+  .Header__Description {
+    left: 50%;
+    bottom: 55px;
+    transform: translateX(-50%);
+  }
+}
 .Content {
   background: rgba(0, 0, 0, 0.4);
   color: white;

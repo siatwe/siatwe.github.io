@@ -76,3 +76,10 @@
   bottom: 17px;
   cursor: pointer;
 }
+@media (max-width: 510px) {
+  .Header__Description {
+    left: 50%;
+    bottom: 55px;
+    transform: translateX(-50%);
+  }
+}
