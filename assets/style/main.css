@@ -103,14 +103,21 @@
   transform: translateX(-50%);
   color: #E34C26;
   font-size: 90px;
-  bottom: 17px;
+  bottom: 30%;
   cursor: pointer;
 }
 @media (max-width: 510px) {
-  .Header__Description {
+  .Header__DescriptionYacssfw {
     left: 50%;
-    bottom: 55px;
+    bottom: 30px;
     transform: translateX(-50%);
+    text-align: center;
+  }
+  .Header__DescriptionParticleGround {
+    left: 50%;
+    bottom: 80px;
+    transform: translateX(-50%);
+    text-align: center;
   }
 }
 .Content {
