@@ -5,12 +5,51 @@
   font-family: 'Bradley Hand ITC';
   src: url('../../font/Bradley_Hand_ITC.woff') format('woff'), url('../../font/Bradley_Hand_ITC.ttf') format('truetype');
 }
-body {
+.Body__Wallpaper {
   background-image: url("../img/start2.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  height: 800vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: block;
+  filter: hue-rotate(0deg);
+  animation: bodyAnimation 20s infinite;
+}
+@-webkit-keyframes bodyAnimation {
+  0% {
+    filter: hue-rotate(360deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
+@-moz-keyframes bodyAnimation {
+  0% {
+    filter: hue-rotate(360deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
+@-o-keyframes bodyAnimation {
+  0% {
+    filter: hue-rotate(360deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
+@keyframes bodyAnimation {
+  0% {
+    filter: hue-rotate(360deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
 }
 .Header__Description {
   position: absolute;
@@ -97,6 +136,8 @@ body {
   }
 }
 .Content {
+  position: relative;
+  z-index: 99;
   background: rgba(0, 0, 0, 0.4);
   color: white;
   padding: 50px 0;
