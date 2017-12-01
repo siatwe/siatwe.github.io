@@ -107,17 +107,9 @@
   cursor: pointer;
 }
 @media (max-width: 510px) {
-  .Header__DescriptionYacssfw {
-    left: 50%;
-    bottom: 30px;
-    transform: translateX(-50%);
-    text-align: center;
-  }
+  .Header__DescriptionYacssfw,
   .Header__DescriptionParticleGround {
-    left: 50%;
-    bottom: 80px;
-    transform: translateX(-50%);
-    text-align: center;
+    display: none;
   }
 }
 .Content {
