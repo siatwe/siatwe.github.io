@@ -6,8 +6,8 @@ $(document).ready(function () {
     });
 
     $('.Body__WallpaperParticles').particleground({
-        dotColor: '#E34C26',
-        lineColor: '#1793d0',
+        dotColor: 'rgba(227, 76, 38, .7)',
+        lineColor: 'rgba(23, 147, 208, .7)',
         particleRadius: 4,
         density: 8000,
         proximity: 60
