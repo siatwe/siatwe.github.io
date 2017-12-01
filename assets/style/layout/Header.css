@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Megrim');
-.Header__Description {
+.Header__DescriptionYacssfw {
   position: absolute;
   left: 10px;
+  bottom: 10px;
+}
+.Header__DescriptionParticleGround {
+  position: absolute;
+  right: 10px;
   bottom: 10px;
 }
 .Header__Logo {

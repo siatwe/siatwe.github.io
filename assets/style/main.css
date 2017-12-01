@@ -11,49 +11,27 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 800vh;
+  height: 100vh;
   position: fixed;
   left: 0;
   right: 0;
   display: block;
-  filter: hue-rotate(0deg);
-  animation: bodyAnimation 20s infinite;
 }
-@-webkit-keyframes bodyAnimation {
-  0% {
-    filter: hue-rotate(360deg);
-  }
-  100% {
-    filter: hue-rotate(0deg);
-  }
+.Body__Wallpaper .Body__WallpaperParticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 35vh;
 }
-@-moz-keyframes bodyAnimation {
-  0% {
-    filter: hue-rotate(360deg);
-  }
-  100% {
-    filter: hue-rotate(0deg);
-  }
-}
-@-o-keyframes bodyAnimation {
-  0% {
-    filter: hue-rotate(360deg);
-  }
-  100% {
-    filter: hue-rotate(0deg);
-  }
-}
-@keyframes bodyAnimation {
-  0% {
-    filter: hue-rotate(360deg);
-  }
-  100% {
-    filter: hue-rotate(0deg);
-  }
-}
-.Header__Description {
+.Header__DescriptionYacssfw {
   position: absolute;
   left: 10px;
+  bottom: 10px;
+}
+.Header__DescriptionParticleGround {
+  position: absolute;
+  right: 10px;
   bottom: 10px;
 }
 .Header__Logo {

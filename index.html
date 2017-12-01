@@ -10,7 +10,9 @@
     <title>siatwe - projects</title>
 </head>
 <body class="Body">
-<div class="Body__Wallpaper"></div>
+<div class="Body__Wallpaper">
+    <div class="Body__WallpaperParticles"></div>
+</div>
 <header class="Header">
     <a href="https://github.com/siatwe" target="_blank">
         <div class="Header__Logo">
@@ -18,10 +20,16 @@
             <span>see github profile</span>
         </div>
     </a>
-    <div class="Header__Description">
+    <div class="Header__DescriptionYacssfw">
         <div class="Alert Alert--success">Built with
             <a class="Link Link--info" href="https://siatwe.github.io/yacssfw/"
                target="_blank">yacssfw</a>!
+        </div>
+    </div>
+    <div class="Header__DescriptionParticleGround">
+        <div class="Alert Alert--warning">Animation by
+            <a class="Link Link--error" href="https://github.com/jnicol/particleground"
+               target="_blank">particleground</a>!
         </div>
     </div>
     <i class="fa fa-sort-down" aria-hidden="true"></i>
@@ -111,6 +119,7 @@
     </div>
 </div>
 <script src="assets/vendor/jQuery/jquery-3.2.1.min.js"></script>
+<script src="assets/vendor/particleground/jquery.particleground.min.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
