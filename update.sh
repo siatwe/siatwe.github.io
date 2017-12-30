@@ -1,5 +1,5 @@
 #! /bin/bash
-DATE=`date +%Y%M%D%H%M` 
+DATE=(date +%Y-%m-%d)
 git add .
 git commit -m "update.sh: $DATE"
 git push
