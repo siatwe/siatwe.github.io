@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Waldkraiburg Tarifrechner</title>
+<meta name="author" content="(Simon Attila Weis)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="./reveal.js/css/theme/black.css" id="theme"/>
+
+<link rel="stylesheet" href="./custom.css"/>
+<link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide" data-background="./images/hintergrund-lila.png" data-background-size="cover"><h1 class="title">Waldkraiburg Tarifrechner</h1><h2 class="author">Simon Attila Weis</h2><p class="date">Created: 2019-07-09 Tue 20:20</p>
+</section>
+<section>
+<section id="slide-org2431275" data-background="./images/hintergrund-lila.png" data-background-size="cover" data-background-transition="zoom">
+<h2 id="org2431275">Einführung</h2>
+</section>
+<section id="slide-org8aadde3" data-background="./images/hintergrund-lila.png" data-background-size="cover" data-background-transition="zoom">
+<h3 id="org8aadde3">makrohaus crossmedia AG</h3>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Aktiengesellschaft</li>
+<li data-fragment-index="2" class="fragment roll-in">Sitz in Bad Reichenhall</li>
+<li data-fragment-index="3" class="fragment roll-in">Besteht seit 18 Jahren</li>
+<li data-fragment-index="4" class="fragment roll-in">40 Mitarbeiter</li>
+<li data-fragment-index="5" class="fragment roll-in">Davon 15 Mitarbeiter im Bereich Digitale Medien</li>
+
+</ul>
+</section>
+<section id="slide-orga03e14d" data-background="./images/hintergrund-lila.png" data-background-size="cover" data-background-transition="zoom">
+<h3 id="orga03e14d">Kernbereiche Digitale Medien</h3>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Web (Webseiten)</li>
+<li data-fragment-index="2" class="fragment roll-in">App (E-Bike Sharing für Unternehmen)</li>
+<li data-fragment-index="3" class="fragment roll-in">Design (Logos, Animationen)</li>
+<li data-fragment-index="4" class="fragment roll-in">DigiAIR (Gastgeberkataloge)</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgddfd58f" data-background="./images/hintergrund-gruen.png" data-background-size="cover" data-background-transition="zoom">
+<h2 id="orgddfd58f">Projektziele</h2>
+</section>
+<section id="slide-org547727b" data-background="./images/hintergrund-gruen.png" data-background-size="cover" data-background-transition="zoom">
+<h3 id="org547727b">Relaunch 2019</h3>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">"Alte" Seite ebenfalls von uns</li>
+<li data-fragment-index="2" class="fragment roll-in">Technologisch überholt</li>
+<li data-fragment-index="3" class="fragment roll-in">Im Rahmen des Relaunches, eine neue Möglichkeit Tarife abzuschließen</li>
+
+</ul>
+</section>
+<section id="slide-org3aa330c" data-background="./images/hintergrund-gruen.png" data-background-size="cover" data-background-transition="zoom">
+<h3 id="org3aa330c">Kernziele des Tarifrechners</h3>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Optimale und geräteunabhängige Darstellung in allen Browsern</li>
+<li data-fragment-index="2" class="fragment roll-in">Unkomplizierte, schnelle Möglichkeit für Vertragsabschluss</li>
+<li data-fragment-index="3" class="fragment roll-in">Zielgruppe "Junge Erwachsene"</li>
+<li data-fragment-index="4" class="fragment roll-in">Vergleich mehrerer Tarife</li>
+
+</ul>
+</section>
+<section id="slide-org3aa330c-split" data-background="./images/hintergrund-gruen.png" data-background-size="cover" data-background-transition="zoom">
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Tarife sollen über das CMS leicht zu bearbeiten sein</li>
+<li data-fragment-index="2" class="fragment roll-in">Nachvollziehbarkeit des Preises</li>
+<li data-fragment-index="3" class="fragment roll-in">Integration in die neue Webseite</li>
+
+</ul>
+</section>
+<section id="slide-org7044edd" data-background="./images/hintergrund-gruen.png" data-background-size="cover" data-background-transition="zoom">
+<h3 id="org7044edd">Projektbegründung</h3>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Tarife für lokale Anwohner besser anbieten können</li>
+<li data-fragment-index="2" class="fragment roll-in">Junge Bürger dazu bewegen, das Angebot zu nutzen</li>
+<li data-fragment-index="3" class="fragment roll-in">Popularität erhöhen</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org3157328" data-background="./images/hintergrund-orange.png" data-background-size="cover" data-background-transition="zoom">
+<h2 id="org3157328">Analysephase</h2>
+</section>
+<section id="slide-org2a93e00" data-background="./images/hintergrund-orange.png" data-background-size="cover" data-background-transition="zoom">
+<h3 id="org2a93e00">Ist Analyse</h3>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Tarife wurden bisher als Textinformation angeboten</li>
+<li data-fragment-index="2" class="fragment roll-in">Problem: Bei Anpassungen =&gt; Änderungen in allen Textpassagen</li>
+<li data-fragment-index="3" class="fragment roll-in">Responsivenes der "Alten" Seite nicht gegeben</li>
+<li data-fragment-index="4" class="fragment roll-in">Unzureichende SEO Informationen</li>
+
+</ul>
+</section>
+<section id="slide-org055b385" data-background="./images/hintergrund-orange.png" data-background-size="cover" data-background-transition="zoom">
+<h3 id="org055b385">Wirtschaftlichkeitsanalyse</h3>
+</section>
+<section id="slide-org90b8600" data-background="./images/hintergrund-orange.png" data-background-size="cover" data-background-transition="zoom">
+<h4 id="org90b8600">"Make or Buy" Entscheidung</h4>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Kundenanforderungen zu spezifisch, daher "Make"!</li>
+
+</ul>
+</section>
+<section id="slide-org7e9e504" data-background="./images/hintergrund-orange.png" data-background-size="cover" data-background-transition="zoom">
+<h4 id="org7e9e504">Projektkosten</h4>
+</section>
+<section id="slide-org7e9e504-split" data-background="./images/hintergrund-orange.png" data-background-size="cover" data-background-transition="zoom">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Vorgang</th>
+<th scope="col" class="org-left">Zeit</th>
+<th scope="col" class="org-left">Kosten/h</th>
+<th scope="col" class="org-left">Kosten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Projektmanagment</td>
+<td class="org-left">10h</td>
+<td class="org-left">65 €</td>
+<td class="org-left">650 €</td>
+</tr>
+
+<tr>
+<td class="org-left">Screendesign</td>
+<td class="org-left">4h</td>
+<td class="org-left">65 €</td>
+<td class="org-left">260 €</td>
+</tr>
+
+<tr>
+<td class="org-left">Entwicklung</td>
+<td class="org-left">70h</td>
+<td class="org-left">65 €</td>
+<td class="org-left">4550 €</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">5460 €</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="slide-orgc6d12c0" data-background="./images/hintergrund-orange.png" data-background-size="cover" data-background-transition="zoom">
+<h3 id="orgc6d12c0">Amortisierungsdauer</h3>
+</section>
+<section id="slide-orgc43283d" data-background="./images/hintergrund-orange.png" data-background-size="cover" data-background-transition="zoom">
+<h4 id="orgc43283d">Erklärung</h4>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Externes Projekt</li>
+<li data-fragment-index="2" class="fragment roll-in">Alle Kosten inkl. Gewinn bei Bezahlung der Rechnung gedeckt</li>
+<li data-fragment-index="3" class="fragment roll-in">Deshalb hypothetische Berechnung für den Kunden:</li>
+<li data-fragment-index="4" class="fragment roll-in">220 Arbeitstage, 20 Minuten Ersparnis je Abschluss, 5 Vertragsabschlüsse täglich</li>
+<li data-fragment-index="5" class="fragment roll-in">50 € Stundensatz</li>
+
+</ul>
+</section>
+<section id="slide-org382d97c" data-background="./images/hintergrund-orange.png" data-background-size="cover" data-background-transition="zoom">
+<h4 id="org382d97c">Berechnung</h4>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">220 T/Jahr * 20m * 5 K/Tag</li>
+<li data-fragment-index="2" class="fragment roll-in">22000 m/Jahr = 367 h/Jahr</li>
+<li data-fragment-index="3" class="fragment roll-in">367h * 50 € = 18350 €</li>
+<li data-fragment-index="4" class="fragment roll-in">5460 € / 18350 € = 0.3 J = 16 W</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgb0b8f4b" data-background="./images/hintergrund-blau.png" data-background-size="cover" data-background-transition="zoom">
+<h2 id="orgb0b8f4b">Projektplanung</h2>
+</section>
+<section id="slide-org447c11c" data-background="./images/hintergrund-blau.png" data-background-size="cover" data-background-transition="none">
+<h3 id="org447c11c">Projektphasen</h3>
+</section>
+<section id="slide-org447c11c-split" data-background="./images/hintergrund-blau.png" data-background-size="cover" data-background-transition="none">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Projektphase</th>
+<th scope="col" class="org-left">Geplante Zeit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Start- /Analysephase</td>
+<td class="org-left">2h</td>
+</tr>
+
+<tr>
+<td class="org-left">Projektplanung</td>
+<td class="org-left">5h</td>
+</tr>
+
+<tr>
+<td class="org-left">Durchführungsphase</td>
+<td class="org-left">43h</td>
+</tr>
+
+<tr>
+<td class="org-left">Projektabschluss</td>
+<td class="org-left">13h</td>
+</tr>
+
+<tr>
+<td class="org-left">Erstellen der Dokumentation</td>
+<td class="org-left">7h</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Gesamt</td>
+<td class="org-left">70h</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="slide-org9ad66bf" data-background="./images/hintergrund-blau.png" data-background-size="cover" data-background-transition="none">
+<h3 id="org9ad66bf">Ressourcenplanung</h3>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Betriebssystem Ubuntu 16.04 mit Kernel 4.5</li>
+<li data-fragment-index="2" class="fragment roll-in">PHPStorm</li>
+<li data-fragment-index="3" class="fragment roll-in">GIT</li>
+<li data-fragment-index="4" class="fragment roll-in">phpMyAdmin</li>
+<li data-fragment-index="5" class="fragment roll-in">Filezilla</li>
+
+</ul>
+</section>
+<section id="slide-org13ced42" data-background="./images/hintergrund-blau.png" data-background-size="cover" data-background-transition="none">
+<h3 id="org13ced42">Entwicklungsprozess</h3>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Agiler Entwicklungsprozess</li>
+
+</ul>
+</section>
+<section id="slide-org13ced42-split" data-background="./images/hintergrund-blau.png" data-background-size="cover" data-background-transition="none">
+
+<div class="figure">
+<p><img src="./images/agile.png" alt="agile.png" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orga8c3513" data-background="./images/hintergrund-lila.png" data-background-size="cover" data-background-transition="none">
+<h2 id="orga8c3513">Enwurfsphase</h2>
+</section>
+<section id="slide-org07886a2" data-background="./images/hintergrund-lila.png" data-background-size="cover" data-background-transition="none">
+<h3 id="org07886a2">Zielplattform</h3>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Integration in die neue Webseite</li>
+<li data-fragment-index="2" class="fragment roll-in">Externer Webserver (Apache 2)</li>
+<li data-fragment-index="3" class="fragment roll-in">Auf Basis von PHP und JavaScript</li>
+<li data-fragment-index="4" class="fragment roll-in">Frontend: HTML5/LESS/jQuery</li>
+
+</ul>
+</section>
+<section id="slide-orgcc74649" data-background="./images/hintergrund-lila.png" data-background-size="cover" data-background-transition="none">
+<h3 id="orgcc74649">Architekturdesign</h3>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">conTRANCE6: cakePHP Version 2.8</li>
+<li data-fragment-index="2" class="fragment roll-in">Frontend: Bootstrap Version 3.7</li>
+
+</ul>
+</section>
+<section id="slide-org4cc9bb5" data-background="./images/hintergrund-lila.png" data-background-size="cover" data-background-transition="none">
+<h3 id="org4cc9bb5">cakePHP</h3>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Aktive, freundliche Community</li>
+<li data-fragment-index="2" class="fragment roll-in">Flexible Lizens</li>
+<li data-fragment-index="3" class="fragment roll-in">Schöne URLS</li>
+<li data-fragment-index="4" class="fragment roll-in">Validierung</li>
+<li data-fragment-index="5" class="fragment roll-in">"Helferleins" z. B. <code>Hash::get($x,'y');</code></li>
+
+</ul>
+</section>
+<section id="slide-org8938f79" data-background="./images/hintergrund-lila.png" data-background-size="cover" data-background-transition="none">
+<h3 id="org8938f79">Model View Controller</h3>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Architekturkonzept zur Trennung von Komponenten</li>
+<li data-fragment-index="2" class="fragment roll-in">Model: Enthält Daten / Weiß wo diese zu finden sind</li>
+<li data-fragment-index="3" class="fragment roll-in">Controller: Bearbeitet anstehende Ereignisse</li>
+<li data-fragment-index="4" class="fragment roll-in">View: Darstellung der Ergebnisse</li>
+<li data-fragment-index="5" class="fragment roll-in">Bessere Wartbarkeit bei Änderungen und Erweiterungen</li>
+
+</ul>
+</section>
+<section id="slide-org8938f79-split" data-background="./images/hintergrund-lila.png" data-background-size="cover" data-background-transition="none">
+<p>
+TODO: Bild
+<img src="./images/mvc.png" alt="mvc.png" />
+</p>
+</section>
+<section id="slide-org80b6187" data-background="./images/hintergrund-lila.png" data-background-size="cover" data-background-transition="none">
+<h3 id="org80b6187">Convention over Configuration</h3>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Model: (CamelCase, Singular) z. B.: TariffType =&gt; Datenbank tariff<sub>type</sub></li>
+<li data-fragment-index="2" class="fragment roll-in">Controller: (CamelCase, Plural) + Controller z. B.: TariffTypesController</li>
+<li data-fragment-index="3" class="fragment roll-in">View: (snake<sub>case</sub>, Singular) z. B.: tariff<sub>type</sub></li>
+
+</ul>
+</section>
+<section id="slide-org898ae15" data-background="./images/hintergrund-lila.png" data-background-size="cover" data-background-transition="none">
+<h3 id="org898ae15">Grundlage: Tarifberechnungen</h3>
+<p data-fragment-index="(1 2 3)" class="fragment (roll-in roll-in roll-in)">
+TODO: Bild
+</p>
+<ul>
+<li>Excel Tabelle, geliefert vom Kunden mit richtigen Lösungen</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org23176ed" data-background="./images/hintergrund-gruen.png" data-background-size="cover" data-background-transition="none">
+<h2 id="org23176ed">Implementierungsphase</h2>
+</section>
+<section id="slide-orgadeb80a" data-background="./images/hintergrund-gruen.png" data-background-size="cover" data-background-transition="none">
+<h3 id="orgadeb80a">5 Schritte</h3>
+<ul>
+<li data-fragment-index="1" class="fragment roll-in">Implementieren und Validieren der Datenstrukturen</li>
+<li data-fragment-index="2" class="fragment roll-in">Erstellen des Backends</li>
+<li data-fragment-index="3" class="fragment roll-in">Verknüpfen von Orten mit gültigen Tarifen</li>
+<li data-fragment-index="4" class="fragment roll-in">Implementieren der Geschäftslogik</li>
+<li data-fragment-index="5" class="fragment roll-in">Implementieren der Benutzeroberfläche</li>
+
+</ul>
+</section>
+<section id="slide-org2d2ca36" data-background="./images/hintergrund-gruen.png" data-background-size="cover" data-background-transition="none">
+<h3 id="org2d2ca36">Validieren der Datenstrukturen</h3>
+</section>
+<section id="slide-org2d2ca36-split" data-background="./images/hintergrund-gruen.png" data-background-size="cover" data-background-transition="none">
+<div class="org-src-container">
+
+<pre><code class="php" >public $validate = [
+    'title'                                   => [
+	'rule'    => 'notBlank',
+	'message' => 'Dieses Feld ist ein Pflichtfeld',
+    ],
+    'one_tariff_basic_charge_supply_point'    => [
+	'notBlank' => [
+	    'rule'    => 'notBlank',
+	    'message' => 'Dieses Feld ist ein Pflichtfeld',
+	],
+	'decimal'  => [
+	    'rule'    => ['decimal'],
+	    'message' => 'Dieses Feld muss eine Zahl sein',
+	],
+    ],
+];
+</code></pre>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="./reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'convex', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }]
+});
+</script>
+</body>
+</html>

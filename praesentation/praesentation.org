@@ -1,0 +1,315 @@
+#+OPTIONS: num:nil toc:nil date:nil
+#+REVEAL_TRANS: convex
+#+REVEAL_THEME: black
+#+REVEAL_EXTRA_CSS: ./custom.css
+#+REVEAL_TITLE_SLIDE_BACKGROUND: ./images/hintergrund-lila.png
+#+REVEAL_TITLE_SLIDE_BACKGROUND_SIZE: cover
+#+REVEAL_PLUGINS: (highlight)
+#+Title: Waldkraiburg Tarifrechner
+#+Author: Simon Attila Weis
+#+Email: simonattilaweis@gmail.com
+* Einführung
+  :PROPERTIES:
+  :reveal_background: ./images/hintergrund-lila.png
+  :reveal_background_size: cover
+  :reveal_background_trans: zoom
+  :END:
+** makrohaus crossmedia AG
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-lila.png
+   :reveal_background_size: cover
+   :reveal_background_trans: zoom
+   :END:
+   #+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in roll-in) :frag_idx (1 2 3 4 5)
+    * Aktiengesellschaft
+    * Sitz in Bad Reichenhall
+    * Besteht seit 18 Jahren
+    * 40 Mitarbeiter
+    * Davon 15 Mitarbeiter im Bereich Digitale Medien
+** Kernbereiche Digitale Medien
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-lila.png
+   :reveal_background_size: cover
+   :reveal_background_trans: zoom
+   :END:
+   #+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag_idx (1 2 3 4)
+    * Web (Webseiten)
+    * App (E-Bike Sharing für Unternehmen)
+    * Design (Logos, Animationen)
+    * DigiAIR (Gastgeberkataloge)
+* Projektziele
+  :PROPERTIES:
+  :reveal_background: ./images/hintergrund-gruen.png
+  :reveal_background_size: cover
+  :reveal_background_trans: zoom
+  :END:
+** Relaunch 2019
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-gruen.png
+   :reveal_background_size: cover
+   :reveal_background_trans: zoom
+   :END:
+   #+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag_idx (1 2 3)
+   * "Alte" Seite ebenfalls von uns
+   * Technologisch überholt
+   * Im Rahmen des Relaunches, eine neue Möglichkeit Tarife abzuschließen
+** Kernziele des Tarifrechners
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-gruen.png
+   :reveal_background_size: cover
+   :reveal_background_trans: zoom
+   :END:
+   #+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag_idx (1 2 3 4)
+   * Optimale und geräteunabhängige Darstellung in allen Browsern
+   * Unkomplizierte, schnelle Möglichkeit für Vertragsabschluss
+   * Zielgruppe "Junge Erwachsene"
+   * Vergleich mehrerer Tarife
+   #+REVEAL: split
+   #+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag_idx (1 2 3)
+   * Tarife sollen über das CMS leicht zu bearbeiten sein
+   * Nachvollziehbarkeit des Preises
+   * Integration in die neue Webseite
+** Projektbegründung
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-gruen.png
+   :reveal_background_size: cover
+   :reveal_background_trans: zoom
+   :END:
+   #+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag_idx (1 2 3)
+   * Tarife für lokale Anwohner besser anbieten können
+   * Junge Bürger dazu bewegen, das Angebot zu nutzen
+   * Popularität erhöhen
+* Analysephase
+  :PROPERTIES:
+  :reveal_background: ./images/hintergrund-orange.png
+  :reveal_background_size: cover
+  :reveal_background_trans: zoom
+  :END:
+** Ist Analyse
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-orange.png
+   :reveal_background_size: cover
+   :reveal_background_trans: zoom
+   :END:
+   #+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag_idx (1 2 3 4)
+   * Tarife wurden bisher als Textinformation angeboten
+   * Problem: Bei Anpassungen => Änderungen in allen Textpassagen
+   * Responsivenes der "Alten" Seite nicht gegeben
+   * Unzureichende SEO Informationen
+** Wirtschaftlichkeitsanalyse
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-orange.png
+   :reveal_background_size: cover
+   :reveal_background_trans: zoom
+   :END:
+*** "Make or Buy" Entscheidung
+    :PROPERTIES:
+    :reveal_background: ./images/hintergrund-orange.png
+    :reveal_background_size: cover
+    :reveal_background_trans: zoom
+    :END:
+    #+ATTR_REVEAL: :frag (roll-in) :frag_idx (1)
+    * Kundenanforderungen zu spezifisch, daher "Make"!
+*** Projektkosten
+    :PROPERTIES:
+    :reveal_background: ./images/hintergrund-orange.png
+    :reveal_background_size: cover
+    :reveal_background_trans: zoom
+    :END:
+    #+REVEAL: split
+    | Vorgang          | Zeit | Kosten/h | Kosten |
+    |------------------+------+----------+--------|
+    | Projektmanagment | 10h  | 65 €     | 650 €  |
+    | Screendesign     | 4h   | 65 €     | 260 €  |
+    | Entwicklung      | 70h  | 65 €     | 4550 € |
+    |------------------+------+----------+--------|
+    |                  |      |          | 5460 € |
+** Amortisierungsdauer
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-orange.png
+   :reveal_background_size: cover
+   :reveal_background_trans: zoom
+   :END:
+*** Erklärung
+    :PROPERTIES:
+    :reveal_background: ./images/hintergrund-orange.png
+    :reveal_background_size: cover
+    :reveal_background_trans: zoom
+    :END:
+    #+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in roll-in) :frag_idx (1 2 3 4 5)
+    * Externes Projekt
+    * Alle Kosten inkl. Gewinn bei Bezahlung der Rechnung gedeckt
+    * Deshalb hypothetische Berechnung für den Kunden:
+    * 220 Arbeitstage, 20 Minuten Ersparnis je Abschluss, 5 Vertragsabschlüsse täglich
+    * 50 € Stundensatz
+*** Berechnung
+    :PROPERTIES:
+    :reveal_background: ./images/hintergrund-orange.png
+    :reveal_background_size: cover
+    :reveal_background_trans: zoom
+    :END:
+    #+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag_idx (1 2 3 4)
+    * 220 T/Jahr * 20m * 5 K/Tag
+    * 22000 m/Jahr = 367 h/Jahr
+    * 367h * 50 € = 18350 €
+    * 5460 € / 18350 € = 0.3 J = 16 W
+* Projektplanung
+  :PROPERTIES:
+  :reveal_background: ./images/hintergrund-blau.png
+  :reveal_background_size: cover
+  :reveal_background_trans: zoom
+  :END:
+** Projektphasen
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-blau.png
+   :reveal_background_size: cover
+   :reveal_background_trans: none
+   :END:
+   #+REVEAL: split
+   | Projektphase                | Geplante Zeit |
+   |-----------------------------+---------------|
+   | Start- /Analysephase        | 2h            |
+   | Projektplanung              | 5h            |
+   | Durchführungsphase          | 43h           |
+   | Projektabschluss            | 13h           |
+   | Erstellen der Dokumentation | 7h            |
+   |-----------------------------+---------------|
+   | Gesamt                      | 70h           |
+** Ressourcenplanung
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-blau.png
+   :reveal_background_size: cover
+   :reveal_background_trans: none
+   :END:
+   #+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in roll-in) :frag_idx (1 2 3 4 5)
+  * Betriebssystem Ubuntu 16.04 mit Kernel 4.5
+  * PHPStorm
+  * GIT
+  * phpMyAdmin
+  * Filezilla
+** Entwicklungsprozess
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-blau.png
+   :reveal_background_size: cover
+   :reveal_background_trans: none
+   :END:
+   #+ATTR_REVEAL: :frag (roll-in) :frag_idx (1)
+   * Agiler Entwicklungsprozess
+   #+REVEAL: split
+   [[./images/agile.png]]
+* Enwurfsphase
+  :PROPERTIES:
+  :reveal_background: ./images/hintergrund-lila.png
+  :reveal_background_size: cover
+  :reveal_background_trans: none
+  :END:
+** Zielplattform
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-lila.png
+   :reveal_background_size: cover
+   :reveal_background_trans: none
+   :END:
+   #+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in) :frag_idx (1 2 3 4)
+   * Integration in die neue Webseite
+   * Externer Webserver (Apache 2)
+   * Auf Basis von PHP und JavaScript
+   * Frontend: HTML5/LESS/jQuery
+** Architekturdesign
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-lila.png
+   :reveal_background_size: cover
+   :reveal_background_trans: none
+   :END:
+   #+ATTR_REVEAL: :frag (roll-in roll-in) :frag_idx (1 2)
+   * conTRANCE6: cakePHP Version 2.8
+   * Frontend: Bootstrap Version 3.7
+** cakePHP
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-lila.png
+   :reveal_background_size: cover
+   :reveal_background_trans: none
+   :END:
+   #+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in roll-in) :frag_idx (1 2 3 4 5)
+   * Aktive, freundliche Community
+   * Flexible Lizens
+   * Schöne URLS
+   * Validierung
+   * "Helferleins" z. B. =Hash::get($x,'y');=
+** Model View Controller
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-lila.png
+   :reveal_background_size: cover
+   :reveal_background_trans: none
+   :END:
+   #+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in roll-in) :frag_idx (1 2 3 4 5)
+   * Architekturkonzept zur Trennung von Komponenten
+   * Model: Enthält Daten / Weiß wo diese zu finden sind
+   * Controller: Bearbeitet anstehende Ereignisse
+   * View: Darstellung der Ergebnisse
+   * Bessere Wartbarkeit bei Änderungen und Erweiterungen
+   #+REVEAL: split
+   TODO: Bild
+   [[./images/mvc.png]]
+** Convention over Configuration
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-lila.png
+   :reveal_background_size: cover
+   :reveal_background_trans: none
+   :END:
+   #+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag_idx (1 2 3)
+   * Model: (CamelCase, Singular) z. B.: TariffType => Datenbank tariff_type
+   * Controller: (CamelCase, Plural) + Controller z. B.: TariffTypesController
+   * View: (snake_case, Singular) z. B.: tariff_type
+** Grundlage: Tarifberechnungen
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-lila.png
+   :reveal_background_size: cover
+   :reveal_background_trans: none
+   :END:
+   #+ATTR_REVEAL: :frag (roll-in roll-in roll-in) :frag_idx (1 2 3)
+   TODO: Bild
+   * Excel Tabelle, geliefert vom Kunden mit richtigen Lösungen
+* Implementierungsphase
+  :PROPERTIES:
+  :reveal_background: ./images/hintergrund-gruen.png
+  :reveal_background_size: cover
+  :reveal_background_trans: none
+  :END:
+** 5 Schritte
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-gruen.png
+   :reveal_background_size: cover
+   :reveal_background_trans: none
+   :END:
+   #+ATTR_REVEAL: :frag (roll-in roll-in roll-in roll-in roll-in) :frag_idx (1 2 3 4 5)
+   * Implementieren und Validieren der Datenstrukturen
+   * Erstellen des Backends
+   * Verknüpfen von Orten mit gültigen Tarifen
+   * Implementieren der Geschäftslogik
+   * Implementieren der Benutzeroberfläche
+** Validieren der Datenstrukturen
+   :PROPERTIES:
+   :reveal_background: ./images/hintergrund-gruen.png
+   :reveal_background_size: cover
+   :reveal_background_trans: none
+   :END:
+   #+REVEAL: split
+   #+BEGIN_SRC php
+     public $validate = [
+	 'title' => [
+	     'rule'    => 'notBlank',
+	     'message' => 'Dieses Feld ist ein Pflichtfeld',
+	 ],
+	 // Auch mehrere Rules sind erlaubt
+	 'one_tariff_basic_charge_supply_point' => [
+	     'notBlank' => [
+		 'rule'    => 'notBlank',
+		 'message' => 'Dieses Feld ist ein Pflichtfeld',
+	     ],
+	     'decimal'  => [
+		 'rule'    => ['decimal'],
+		 'message' => 'Dieses Feld muss eine Zahl sein',
+	     ],
+	 ],
+     ];
+   #+END_SRC

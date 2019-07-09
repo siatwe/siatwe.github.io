@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Title of Presentation</title>
+<meta name="author" content="([YOUR NAME])"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="./reveal.js/css/theme/black.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Title of Presentation</h1><h2 class="author">[YOUR NAME]</h2><p class="date">Created: 2019-06-26 Wed 06:47</p>
+</section>
+<section>
+<section id="slide-sec-">
+<h2 id="org9c7419e">Title of Presentation</h2>
+<p>
+by: [YOUR NAME]
+</p>
+</section>
+</section>
+<section>
+<section id="slide-sec-">
+<h2 id="org8253f8f">This is my slide</h2>
+<aside class="notes">
+<p>
+Enter speaker notes here.
+</p>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-sec-">
+<h2 id="org23aa349">This is another slide</h2>
+<p>
+There be text here!
+</p>
+</section>
+</section>
+<section>
+<section id="slide-sec-" data-background="/home/siatwe/Cloud/Images/Wallpaper/mountain1.jpg" data-background-size="cover" data-background-transition="slide">
+<h2 id="org13db52c">Slide with an image background (remove this text)</h2>
+</section>
+</section>
+<section>
+<section id="slide-sec-">
+<h2 id="orgef4c1f8">Yet another slide</h2>
+</section>
+</section>
+<section>
+<section id="slide-sec-">
+<h2 id="org5d87791">Questions?</h2>
+</section>
+</section>
+<section>
+<section id="slide-sec-">
+<h2 id="orgec15a48">Connect with Me</h2>
+<ul>
+<li>Web: [YOUR WEBSITE]</li>
+<li>Twitter: [YOUR TWITTER HANDLE]</li>
+
+</ul>
+<p>
+-* Welcome to Org mode
+</p>
+
+<p>
+Welcome, and thanks for trying out Org mode. Making outlines in
+Org is very simple. It is just text! Just start typing.
+</p>
+</section>
+</section>
+<section>
+<section id="slide-sec-">
+<h2 id="orgde8762f">This is a headline, it starts with one or more stars</h2>
+<p>
+A heading has one star, a sub-heading two, etc.
+</p>
+</section>
+</section>
+<section>
+<section id="slide-sec-">
+<h2 id="org9cfc44a">Working with lists</h2>
+<div class="outline-text-2" id="text-org9cfc44a">
+</div>
+</section>
+<section id="slide-sec-">
+<h3 id="orgff5f2fe">Moving around in our outline</h3>
+<ol>
+<li>Nein</li>
+<li>Ja</li>
+
+</ol>
+
+</section>
+<section id="slide-sec-">
+<h3 id="orgb937e78">Moving around headlines Blog: [YOUR BLOG]</h3>
+<ol>
+<li>Nein</li>
+
+</ol>
+<ol>
+<li>Ja
+<ol>
+<li>Nein</li>
+
+</ol></li>
+
+</ol>
+</section>
+</section>
+</div>
+</div>
+<script src="./reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
