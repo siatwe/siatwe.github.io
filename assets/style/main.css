@@ -64,21 +64,12 @@
   color: white;
 }
 .Header__Logo--dev {
-  color: #00AF81;
+  color: j00AF81;
 }
 .Header__Logo--dev:hover,
 .Header__Logo--dev:active,
 .Header__Logo--dev:focus {
   background-color: #00AF81;
-  color: white;
-}
-.Header__Logo--mail {
-  color: #840010;
-}
-.Header__Logo--mail:hover,
-.Header__Logo--mail:active,
-.Header__Logo--mail:focus {
-  background-color: #840010;
   color: white;
 }
 .Header__Logo--twitter {
@@ -88,6 +79,15 @@
 .Header__Logo--twitter:active,
 .Header__Logo--twitter:focus {
   background-color: #1DA1F2;
+  color: white;
+}
+.Header__Logo--mail {
+  color: #840010;
+}
+.Header__Logo--mail:hover,
+.Header__Logo--mail:active,
+.Header__Logo--mail:focus {
+  background-color: #840010;
   color: white;
 }
 @media (max-width: 510px) {
