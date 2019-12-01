@@ -1,29 +1,90 @@
-//==============================================================================
-// VENDOR
-//==============================================================================
-@import "../vendor/font-awesome/css/font-awesome.min.css";
-@import "../vendor/yacssfw/dist/yacssfw.min.css";
-//==============================================================================
-// ABSTRACTS
-//==============================================================================
-@import "abstracts/variables.less";
-//==============================================================================
-// BASE
-//==============================================================================
-@import "base/typography.less";
-//==============================================================================
-// COMPONENTS
-//==============================================================================
-//==============================================================================
-// LAYOUT
-//==============================================================================
-@import "layout/Body";
-@import "layout/Header";
-@import "layout/Content";
-@import "layout/Footer";
-//==============================================================================
-// PAGES
-//==============================================================================
-//==============================================================================
-// THEMES
-//==============================================================================
+@import url('https://fonts.googleapis.com/css?family=Megrim');
+@import "yacssfw.min.css";
+
+.Body {
+	&__Wallpaper {
+		background-image: url("../img/start2.jpg");
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		right: 0;
+		display: block;
+
+		.Body__WallpaperParticles {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 35vh;
+		}
+	}
+}
+
+.Header {
+    &__Logo {
+        font-family: "Megrim", monospace;
+        color: white;
+        font-weight: bolder;
+        transition: all 0.3s;
+        background: rgba(0, 0, 0, 0.5);
+        border: 5px solid white;
+
+        p {
+            color: white;
+            font-size: 40px;
+            margin: 0;
+            transition: all 0.3s;
+        }
+        a {
+            display: block;
+            background-color: white;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            margin-bottom: 5px;
+            text-decoration: none;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        &--github {
+            color: #4078c0;
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: #4078c0;
+                color: white;
+            }
+        }
+        &--dev {
+            color: j00AF81;
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: #00AF81;
+                color: white;
+            }
+        }
+        &--twitter {
+            color: #1DA1F2;
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: #1DA1F2;
+                color: white;
+            }
+        }
+        &--mail {
+            color: #840010;
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: #840010;
+                color: white;
+            }
+        }
+    }
+}
