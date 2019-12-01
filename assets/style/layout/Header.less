@@ -1,48 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Megrim');
 
 .Header {
-    &__DescriptionYacssfw {
-        position: absolute;
-        left: 10px;
-        bottom: 10px;
-    }
-
-    &__DescriptionParticleGround {
-        position: absolute;
-        right: 10px;
-        bottom: 10px;
-    }
-
     &__Logo {
         font-family: "Megrim", monospace;
         color: white;
         font-weight: bolder;
         transition: all 0.3s;
-        background: rgba(0, 0, 0, .4);
-
-        &:hover {
-            background: rgba(0, 0, 0, 1);
-
-            span {
-                transition: all 0.3s;
-                color: #31C854;
-
-                &:before {
-                    width: 206px;
-                    transition: all 0.3s;
-                }
-
-                &:after {
-                    height: 84px;
-                    transition: all 0.3s;
-                }
-            }
-
-            p {
-                color: transparent;
-                transition: all 0.3s;
-            }
-        }
+        background: rgba(0, 0, 0, 0.5);
+        border: 5px solid white;
 
         p {
             color: white;
@@ -50,50 +15,53 @@
             margin: 0;
             transition: all 0.3s;
         }
-
-        span {
-            position: absolute;
-            color: transparent;
-            font-size: 12px;
-            font-family: monospace;
-            transition: all 0.3s;
-            width: 100%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            &:before {
-                content: "";
-                position: absolute;
-                width: 0;
-                height: 3px;
-                background: #E34C26;
-                transition: all 0.3s;
-                top: -37px;
-                left: 0;
-            }
-
-            &:after {
-                content: "";
-                position: absolute;
-                height: 0;
-                width: 3px;
-                background: #1793d0;
-                transition: all 0.3s;
-                left: 0;
-                top: -34px;
+        a {
+            display: block;
+            background-color: white;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            margin-bottom: 5px;
+            text-decoration: none;
+            &:last-of-type {
+                margin-bottom: 0;
             }
         }
-    }
-
-    i {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        color: #E34C26;
-        font-size: 90px;
-        bottom: 30%;
-        cursor: pointer;
+        &--github {
+            color: #4078c0;
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: #4078c0;
+                color: white;
+            }
+        }
+        &--dev {
+            color: #00AF81;
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: #00AF81;
+                color: white;
+            }
+        }
+        &--mail {
+            color: #840010;
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: #840010;
+                color: white;
+            }
+        }
+        &--twitter {
+            color: #1DA1F2;
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: #1DA1F2;
+                color: white;
+            }
+        }
     }
 }
 // Mediaqueries

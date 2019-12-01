@@ -1,0 +1,140 @@
+@import "../vendor/font-awesome/css/font-awesome.min.css";
+@import "../vendor/yacssfw/dist/yacssfw.min.css";
+@font-face {
+  font-family: 'Bradley Hand ITC';
+  src: url("../../font/Bradley_Hand_ITC.woff") format('woff'), url("../../font/Bradley_Hand_ITC.ttf") format('truetype');
+}
+.Body__Wallpaper {
+  background-image: url("../img/start2.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: block;
+}
+.Body__Wallpaper .Body__WallpaperParticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 35vh;
+}
+@font-face {
+  font-family: 'Megrim';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Megrim'), url(https://fonts.gstatic.com/s/megrim/v10/46kulbz5WjvLqJZVam_k.ttf) format('truetype');
+}
+.Header__Logo {
+  font-family: "Megrim", monospace;
+  color: white;
+  font-weight: bolder;
+  transition: all 0.3s;
+  background: rgba(0, 0, 0, 0.5);
+  border: 5px solid white;
+}
+.Header__Logo p {
+  color: white;
+  font-size: 40px;
+  margin: 0;
+  transition: all 0.3s;
+}
+.Header__Logo a {
+  display: block;
+  background-color: white;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+.Header__Logo a:last-of-type {
+  margin-bottom: 0;
+}
+.Header__Logo--github {
+  color: #4078c0;
+}
+.Header__Logo--github:hover,
+.Header__Logo--github:active,
+.Header__Logo--github:focus {
+  background-color: #4078c0;
+  color: white;
+}
+.Header__Logo--dev {
+  color: #00AF81;
+}
+.Header__Logo--dev:hover,
+.Header__Logo--dev:active,
+.Header__Logo--dev:focus {
+  background-color: #00AF81;
+  color: white;
+}
+.Header__Logo--mail {
+  color: #840010;
+}
+.Header__Logo--mail:hover,
+.Header__Logo--mail:active,
+.Header__Logo--mail:focus {
+  background-color: #840010;
+  color: white;
+}
+.Header__Logo--twitter {
+  color: #1DA1F2;
+}
+.Header__Logo--twitter:hover,
+.Header__Logo--twitter:active,
+.Header__Logo--twitter:focus {
+  background-color: #1DA1F2;
+  color: white;
+}
+@media (max-width: 510px) {
+  .Header__DescriptionParticleGround,
+  .Header__DescriptionYacssfw {
+    display: none;
+  }
+}
+.Content {
+  position: relative;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 50px 0;
+}
+.Content h2 {
+  text-align: center;
+}
+.Content h3 {
+  margin: 0;
+}
+.Content a {
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.Content li {
+  color: white;
+  font-size: 15px;
+  list-style: none;
+}
+.Content__Home {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 25px 10px;
+  margin-bottom: 25px;
+}
+.Content__Home a {
+  color: #1793d0;
+}
+.Content__Work {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 25px 10px;
+  margin-bottom: 25px;
+}
+.Content__Work a {
+  color: #E34C26;
+}
+.Content__List {
+  margin-bottom: 25px;
+}
