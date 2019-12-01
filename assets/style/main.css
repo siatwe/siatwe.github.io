@@ -6,7 +6,7 @@
   src: local('Megrim'), url(https://fonts.gstatic.com/s/megrim/v10/46kulbz5WjvLqJZVam_k.ttf) format('truetype');
 }
 .Body__Wallpaper {
-  background-image: url("../img/start2.jpg");
+  background-image: url("../img/koenigssee.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
