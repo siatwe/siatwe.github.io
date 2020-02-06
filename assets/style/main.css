@@ -59,7 +59,7 @@
   color: white;
 }
 .Header__Logo--dev {
-  color: j00AF81;
+  color: #00AF81;
 }
 .Header__Logo--dev:hover,
 .Header__Logo--dev:active,
@@ -83,5 +83,14 @@
 .Header__Logo--mail:active,
 .Header__Logo--mail:focus {
   background-color: #840010;
+  color: white;
+}
+.Header__Logo--blog {
+  color: #ffb86c;
+}
+.Header__Logo--blog:hover,
+.Header__Logo--blog:active,
+.Header__Logo--blog:focus {
+  background-color: #ffb86c;
   color: white;
 }
