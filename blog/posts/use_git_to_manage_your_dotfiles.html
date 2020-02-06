@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>use_git_to_manage_your_dotfiles</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="pandoc.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="use-git-to-manage-your-dotfiles">Use Git To Manage Your Dotfiles</h1>
+<p><em>created: 2020-02-06</em></p>
+<p>If you are a Linux user like me and have done a lot of configuration in a few years of use, you should store your dotfiles in a safe place. Or even better, share them with others. In this little tutorial I’ll show you how to use Git to manage your dotfiles and upload them to github.com without any additional tools.</p>
+<p><strong>Create a .dotfiles folder in your home directory:</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">git</span> init --bare <span class="va">$HOME</span>/.dotfiles</span></code></pre></div>
+<p><strong>Now create an alias for your dotfiles git command and store it in your .bashrc or .zshrc:</strong></p>
+<ul>
+<li><code>--git-dir</code>: Specify the directory where to store the git relevant files and folders</li>
+<li><code>--work-tree</code>: Specify the work tree, in this case the home directory path, which is stored in a variable called $HOME</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="bu">alias</span> dotfiles=<span class="st">&#39;/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME&#39;</span></span></code></pre></div>
+<p><strong>Set git status to hide untracked files:</strong> This is very important. Otherwise all files in your $HOME path will be noted as untracked.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">dotfiles</span> config --local status.showUntrackedFiles no</span></code></pre></div>
+<p><strong>Usage:</strong> It’s done, now you can use all your known git commands. E.g.:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">dotfiles</span> status</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="ex">dotfiles</span> add .vimrc</span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="ex">dotfiles</span> add .config/bspwm/config</span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="ex">dotfiles</span> commit -m <span class="st">&quot;initial&quot;</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="ex">dotfiles</span> add .bashrc</span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="ex">dotfiles</span> commit -m <span class="st">&quot;Add: bashrc&quot;</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="ex">dotfiles</span> push</span></code></pre></div>
+<p>If you are not sure which dotfiles you have edited, just run…</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">dotfiles</span> status</span></code></pre></div>
+<p>… and you will see a list of changed tracked files.</p>
+<p><strong>Create a new github or gitlab repository and add it as remote for your .dotfiles repository:</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">dotfiles</span> remote add origin https://github.com/USERNAME/REPOSITORY_NAME.git </span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="ex">dotfiles</span> push origin master</span></code></pre></div>
+<p><strong>Checkout your .dotfiles repository on a new computer:</strong> Clone the repository as .dotfiles to your $HOME path:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">git</span> clone --bare https://github.com/USERNAME/REPOSITORY_NAME.git <span class="va">$HOME</span>/.dotfiles</span></code></pre></div>
+<p>Define the alias showed before in your current terminal session (don’t safe it in your .bashrc oder .zshrc) and checkout the actual content from the remote git repository:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="ex">dotfiles</span> checkout</span></code></pre></div>
+<p>Make sure that none of the tracked files and/or folders exist that you want to checkout, otherwise you will get error messages.</p>
+</body>
+</html>
