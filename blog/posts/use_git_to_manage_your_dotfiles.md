@@ -1,6 +1,8 @@
 # Use Git To Manage Your Dotfiles
 *created: 2020-02-06*
 
+*sneaked from: [https://medium.com/toutsbrasil/how-to-manage-your-dotfiles-with-git-f7aeed8adf8b](https://medium.com/toutsbrasil/how-to-manage-your-dotfiles-with-git-f7aeed8adf8b)*
+
 If you are a Linux user like me and have done a lot of configuration in a few years of use, you should store your dotfiles in a safe place. Or even better, share them with others. In this little tutorial I'll show you how to use Git to manage your dotfiles and upload them to github.com without any additional tools. 
 
 __Create a .dotfiles folder in your home directory:__
