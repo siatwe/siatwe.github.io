@@ -13,14 +13,24 @@
   src: url(https://fonts.gstatic.com/s/firacode/v8/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_NprJVD7Mw.ttf) format('truetype');
 }
 body {
-  padding: 50px 25%;
+  display: block;
+  padding: 100px 0;
   background-color: #282a36;
   font-family: 'Fira Code', monospace;
   font-size: 20px;
+  width: 850px;
+  margin: 0 auto;
 }
-@media (max-width: 1200px) {
+@media (max-width: 920px) {
   body {
-    padding: 50px 15%;
+    width: auto;
+    margin: 0;
+    padding: 50px 15px;
+  }
+}
+@media (max-width: 680px) {
+  body {
+    font-size: 14px;
   }
 }
 p {
@@ -30,7 +40,7 @@ em {
   color: #ffb86c;
 }
 ul {
-  padding: 0;
+  padding: 0 0 0 15px;
   margin: 0;
 }
 li {

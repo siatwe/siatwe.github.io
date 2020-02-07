@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Code:400,700&display=swap');
 body {
-    padding: 50px 25%;
+    display: block;
+    padding: 100px 0;
     background-color: #282a36;
     font-family: 'Fira Code', monospace;
     font-size: 20px;
-    @media(max-width: 1200px) {
-        padding: 50px 15%;
+    width: 850px;
+    margin: 0 auto;
+    @media(max-width: 920px) {
+        width: auto;
+        margin: 0;
+        padding: 50px 15px;
+    }
+    @media(max-width: 680px) {
+        font-size: 14px;
     }
 }
 
@@ -18,7 +26,7 @@ em {
 }
 
 ul {
-    padding: 0;
+    padding: 0 0 0 15px;
     margin: 0;
 }
 
